@@ -1,0 +1,6 @@
+FIX ME
+
+properly check config file on init
+if no JWT_SECRET utils line 30 will bomb
+
+

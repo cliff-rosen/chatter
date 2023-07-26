@@ -157,6 +157,7 @@ class Hello(Resource):
     def get(self):
         return "hello"
 
+
 api = Api(application)
 api.add_resource(Token, '/auth/token')
 api.add_resource(Conversation, '/conversation')

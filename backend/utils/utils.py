@@ -45,3 +45,5 @@ def num_tokens_from_string(string: str, model: str) -> int:
 
     num_tokens = len(encoding.encode(string))
     return num_tokens
+
+#print(encrypt_password('cmr123'))

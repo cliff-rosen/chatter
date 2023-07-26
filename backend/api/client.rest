@@ -6,24 +6,13 @@ accept: application/json
 
 ###
 
-POST http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/auth/token
-content-type: application/json
-accept: application/json
-
-{
-    "username": "poc",
-    "password": "xogene5!"
-}
-
-###
-
 POST http://127.0.0.1:5000/auth/token
 content-type: application/json
 accept: application/json
 
 {
-    "username": "poc",
-    "password": "xogene5!"
+    "username": "cliff",
+    "password": "cmr123"
 }
 
 ###

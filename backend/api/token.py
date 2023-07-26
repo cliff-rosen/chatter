@@ -12,7 +12,7 @@ def get_token(username, password):
             return {'status': 'INVALID_LOGIN'}
         else:
             print('get_token error', res)
-            return {'status', 'db error'}
+            return {'status': 'db error'}
     
     # verify and return
     hashed_password = res['hashed_password']
