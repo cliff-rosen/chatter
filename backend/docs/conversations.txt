@@ -1,0 +1,59 @@
+Conversations
+
+All calls from frontend to get_answer occurs in the context of a conversation.
+Each conversation has a unique conversation_id
+Front end assigns either an existing id or "NEW" for each all
+
+If conversation_id is "NEW":
+ a new 20 character conversation_id is generated
+ the submitted prompt is created from create_prompt(question, chunks_with_text, prompt)
+ conversation_text is set to submitted prompt + answer
+ a new record is inserted into the conversation table with submitted_prompt + answer
+
+If conversation_id is provided:
+ existing conversation record is retrieved from db
+ the submitted prompt is a concatation of:
+    conversation_text from db + create_prompt(question, chunks_with_text, prompt)
+ existing conversation record is updated with submitted_prompt + answer
+ NOTE: prompt in this case should only consist of:
+    Question: {query}
+    Answer: 
+
+-------------------------------
+
+configuration:
+1. initial prompt template (with or withut context)
+2. follow-up prompt template (with or without context)
+3. initial message
+
+RAG
+FE
+1. user selects domain
+2. prompts and greeting retrieved and initial prompt loaded
+3. no greeting retrieved so no message shown
+4. user submits question
+5. follow-up prompt loaded containing q/c
+BE
+1. assemble prompt:
+a. context token found so
+ - context retrieved
+ - only last 10 q/a history retrieved
+b. question token found so initial prompt plus q/a history plus 
+    question and context submitted
+2. question and answer added to history
+
+Interview
+FE
+1. user selects domain
+2. prompts and greeting retrieved and initial prompt loaded
+3. greeting loaded for user
+4. user submits question
+5. follow-up prompt loaded containing q only
+BE
+1. assemble prompt:
+a. no context token found so
+ - no context retrieved
+ - full q/a history retrieved
+b. initial prompt plus q/a history plus question submitted
+2. question and answer added to history
+

@@ -1,0 +1,177 @@
+#http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/auth/token
+#https://api.trippersalmanac.com/hello
+
+GET http://127.0.0.1:5000/hello
+accept: application/json
+
+###
+
+POST http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/auth/token
+content-type: application/json
+accept: application/json
+
+{
+    "username": "poc",
+    "password": "xogene5!"
+}
+
+###
+
+POST http://127.0.0.1:5000/auth/token
+content-type: application/json
+accept: application/json
+
+{
+    "username": "poc",
+    "password": "xogene5!"
+}
+
+###
+
+#POST http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/conversation
+POST http://127.0.0.1:5000/conversation
+content-type: application/json
+accept: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNywidXNlcm5hbWUiOiJwb2MiLCJleHAiOjE2Nzk5OTU0ODR9.XVOZXc-vZqvAaAJTJbDqlRK98FP4c-edgLmNv_QfKwM
+
+{
+    "promptHeader": "You are a clinical trial assistant.  Answer the following question as honestly as possible based on the below context and using simple language that a child could understand and if you don't know the answer say I don't know:",
+    "initialMessage": "How may I help you?",
+    "userRoleName": "User",
+    "botRoleName": "Assistant",
+    "conversationHistory": [ 
+
+                ],
+    "userMessage": "Who is eligible for this study",
+    "max_tokens": 200,
+    "temperature": 0.1,
+    "domain_id": 35,
+    "model_id": 2
+}
+
+###
+        {
+            "userMessage": "Who is eligible for this study?", 
+            "userMessageTimeStamp": 1,
+            "response": "The United States.",
+            "responseTimeStamp": 2
+        },
+        {
+            "userMessage": "yes", 
+            "userMessageTimeStamp": 1,
+            "response": "What can I do for you?",
+            "responseTimeStamp": 2
+        },
+        {
+            "userMessage": "I don't feel fulfilled", 
+            "userMessageTimeStamp": 3,
+            "response": "How long have you felt that way",
+            "responseTimeStamp": 4
+        }
+
+GET http://127.0.0.1:5000/login?username=cliff&password=cmr
+accept: application/json
+
+###
+
+GET http://127.0.0.1:5000/domain/30
+accept: application/json
+
+###
+#POST http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/answer
+POST http://127.0.0.1:5000/answer
+content-type: application/json
+accept: application/json
+
+{
+    "conversation_id": "NEW",
+    "use_new_model": false,
+    "domain_id": 1,
+    "user_id": 1,
+    "query": "how can i used large language models for my business",
+    "prompt_template": "Answer the question as honestly as you can.",
+    "temp": 0.4
+}
+
+############################
+
+POST http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/conversation
+content-type: application/json
+accept: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNywidXNlcm5hbWUiOiJwb2MiLCJleHAiOjE2NzkzMzkxNDl9.EiTEeWsQISYseQ-sr8-iBInayPR9KLWhvRZ_RJFXv8Q
+
+{
+    "promptHeader": "You are a clinical trial assistant.  Answer the following question as honestly as possible based on the below context:",
+    "initialMessage": "How can I help you?",
+    "userRoleName": "User",
+    "botRoleName": "Assistant",
+    "conversationHistory": [
+
+    ],
+    "userMessage": "What is the study title?",
+    "max_tokens": 200,
+    "temperature": 0.5,
+    "domain_id": 35
+ 
+}
+
+
+###
+
+POST http://127.0.0.1:5000/conversation
+content-type: application/json
+accept: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNywidXNlcm5hbWUiOiJwb2MiLCJleHAiOjE2NzkzMzkxNDl9.EiTEeWsQISYseQ-sr8-iBInayPR9KLWhvRZ_RJFXv8Q
+
+{
+    "promptHeader": "You are a clinical trial assistant.  Answer the following question as honestly as possible:",
+    "initialMessage": "How can I help you?",
+    "userRoleName": "User",
+    "botRoleName": "Assistant",
+    "conversationHistory": [
+        {
+            "userMessage": "Who is eligible for this study?", 
+            "userMessageTimeStamp": 1,
+            "response": "Anyone who is 18 years of age or older.",
+            "responseTimeStamp": 2
+        },
+        {
+            "userMessage": "Who are you?", 
+            "userMessageTimeStamp": 3,
+            "response": "I am here to help you with information about this trial.",
+            "responseTimeStamp": 4
+        }
+    ],
+    "userMessage": "What is the study for?",
+    "max_tokens": 200,
+    "temperature": 0.5,
+    "domain_id": 36,
+    "model_id": 1
+}
+
+###
+
+        
+POST http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/conversation
+content-type: application/json
+accept: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyNywidXNlcm5hbWUiOiJwb2MiLCJleHAiOjE2NzkzMzkxNDl9.EiTEeWsQISYseQ-sr8-iBInayPR9KLWhvRZ_RJFXv8Q
+
+{
+    "promptHeader": "You are a clinical trial research assistant.  Answer the following question as honestly as possible based on the below context:",
+    "initialMessage": "How may I help you?",
+    "userRoleName": "User",
+    "botRoleName": "Assistant",
+    "conversationHistory": [
+        {
+            "userMessage": "Where is this study located?", 
+            "userMessageTimeStamp": 1,
+            "response": "The study is located at 8 centers in the EU",
+            "responseTimeStamp": 2
+        }
+    ],
+    "userMessage": "What is it for?",
+    "max_tokens": 200,
+    "temperature": 0.2,
+    "domain_id": 27
+}

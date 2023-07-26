@@ -1,0 +1,11 @@
+Logger started
+
+---------------------------------------------------
+Starting spider for https://pangaia.com/collections/men-shop-all
+
+---------------------------------------------------
+DONE
+
+---------------------------------------------------
+https://pangaia.com/collections/men-shop-all: {"status": "COMPLETE"}
+
