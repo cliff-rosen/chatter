@@ -1,5 +1,7 @@
+import { Routes, Route } from "react-router-dom";
 import { useSessionManager } from "./utils/Auth";
 import Main from "./components/Main";
+import Kb from "./components/Kb";
 import SessionMessage from "./components/SessionMessage";
 import LoginFormModal from "./components/LoginFormModal";
 import Nav from "./components/Nav";
@@ -14,7 +16,10 @@ function App() {
       <LoginFormModal sessionManager={sessionManager} />
       <Nav sessionManager={sessionManager} />
       <div style={{ margin: "20px" }}></div>
-      <Main sessionManager={sessionManager} />
+      <Routes>
+        <Route path="/" element={<Main sessionManager={sessionManager} />} />
+        <Route path="/kb" element={<Kb sessionManager={sessionManager} />} />
+      </Routes>
     </Container>
   );
 }
