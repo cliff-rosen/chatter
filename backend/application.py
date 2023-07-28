@@ -1,16 +1,19 @@
+import time
 from flask import Flask, request
 from flask_restful import Resource, Api, reqparse, abort
 from flask_cors import CORS
-from api import login, domain, prompt, answer, conversation, token
+from api import login, document, domain, prompt, answer, conversation, token
 from api.errors import InputError
 from utils.utils import decode_token
 import logging
+from werkzeug.datastructures import ImmutableMultiDict as md
 
 MAX_TOKENS_DEFAULT = 200
 TEMPERATURE_DEFAULT = .4
 
 LOG_LEVEL = logging.INFO
-logging.basicConfig(format='%(asctime)s  %(levelname)s - %(message)s', level=LOG_LEVEL, filename='app2.log', filemode='w')
+logging.basicConfig(format='%(asctime)s  %(levelname)s - %(message)s',
+                    level=LOG_LEVEL, filename='app2.log', filemode='w')
 logger = logging.getLogger()
 
 application = Flask(__name__)
@@ -21,13 +24,14 @@ logger.info('Initializing application...')
 parser = reqparse.RequestParser()
 parser.add_argument('domain_id', type=int)
 
+
 def authenticate():
     auth_header = request.headers.get('Authorization')
     if auth_header:
         try:
             auth_token = auth_header.split(" ")[1]
             decoded_token = decode_token(auth_token)
-            #print(decoded_token)
+            # print(decoded_token)
             if 'error' in decoded_token:
                 return False
         except IndexError:
@@ -36,12 +40,15 @@ def authenticate():
         return False
     return True
 
+
 """
 @app.route('/hello', methods=['POST'])
 def hello():
     print(request.json)
     return 'Hello!'
 """
+
+
 class Conversation(Resource):
     def post(self):
         logger.debug('Conversation called')
@@ -49,7 +56,7 @@ class Conversation(Resource):
         if not authenticate():
             logger.warning('Conversation - Authentication failure')
             abort(401)
-            #return {"status": "INVALID_TOKEN"}
+            # return {"status": "INVALID_TOKEN"}
 
         try:
             data = None
@@ -91,20 +98,22 @@ class Conversation(Resource):
 
         return res
 
+
 class Token(Resource):
     def post(self):
         data = request.get_json()
-        username=data["username"]
-        password=data["password"]
+        username = data["username"]
+        password = data["password"]
         print("token", username, password)
         res = token.get_token(username, password)
         if res['status'] != "SUCCESS":
             if res['status'] == 'INVALID_LOGIN':
-                return(res, 401)
+                return (res, 401)
             else:
                 res['status'] = 'SERVER_ERROR'
-                return(res, 500)
+                return (res, 500)
         return res
+
 
 class Login(Resource):
     def get(self):
@@ -113,32 +122,35 @@ class Login(Resource):
         res = login.login(username, password)
         if res['status'] == "ERROR":
             if res['error'] == 'UNAUTHORIZED':
-                return(res, 401)
+                return (res, 401)
             else:
-                return(res, 500)
+                return (res, 500)
         return res
+
 
 class Domain(Resource):
     def get(self, domain_id=None):
         print("domain_id", domain_id)
-        if domain_id is None:        
+        if domain_id is None:
             res = domain.get_domains()
             return res
         else:
             res = domain.get_domain(domain_id)
             return res
 
+
 class Prompt(Resource):
     def get(self):
         res = prompt.get_prompt()
         return res
 
+
 class Answer(Resource):
     def post(self):
         # retrieve inputs
         data = request.get_json()
-        #print("body", data)
-        conversation_id=data["conversation_id"]
+        # print("body", data)
+        conversation_id = data["conversation_id"]
         domain_id = data["domain_id"]
         user_id = data["user_id"]
         query = data["query"]
@@ -150,11 +162,42 @@ class Answer(Resource):
         print("temp", temp)
 
         # execute call to get_answer()
-        res = answer.get_answer(conversation_id, domain_id, query, prompt_template, temp, user_id, use_new_model)
+        res = answer.get_answer(
+            conversation_id, domain_id, query, prompt_template, temp, user_id, use_new_model)
         return res
+
+
+class Document(Resource):
+    def post(self):
+        print(time.ctime())
+        print('document')
+        print("Content Type: " + request.headers.get('Content-Type'))
+        # print(request.headers)
+        print(request.get_data())
+        try:
+            print('files:')
+            # print(request.files)
+            file = request.files['file']
+            filename = file.filename
+            content_type = file.content_type
+            file_data = file.read()
+            print(filename, content_type, file_data)
+            document.insert_document(
+                1,
+                "",
+                filename,
+                "",
+                file_data
+            )
+        except Exception as e:
+            print(e)
+
+        return ({'status': 'ok'})
+
 
 class Hello(Resource):
     def get(self):
+        print(request.get_data())
         return "hello"
 
 
@@ -166,6 +209,7 @@ api.add_resource(Domain, '/domain', '/domain/<int:domain_id>')
 api.add_resource(Prompt, '/prompt')
 api.add_resource(Answer, '/answer')
 api.add_resource(Hello, '/hello')
+api.add_resource(Document, '/document')
 
 if __name__ == '__main__':
     application.run(debug=True)

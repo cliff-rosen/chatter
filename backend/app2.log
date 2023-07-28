@@ -1,16 +1,4 @@
-2023-07-26 17:56:50,406  INFO - Initializing application...
-2023-07-26 17:56:50,412  WARNING -  * Debugger is active!
-2023-07-26 17:56:50,420  INFO -  * Debugger PIN: 114-974-855
-2023-07-26 17:56:56,901  INFO - 127.0.0.1 - - [26/Jul/2023 17:56:56] "OPTIONS /login?username=cliff&password=cmr123x HTTP/1.1" 200 -
-2023-07-26 17:56:57,028  INFO - 127.0.0.1 - - [26/Jul/2023 17:56:57] "[31m[1mGET /login?username=cliff&password=cmr123x HTTP/1.1[0m" 401 -
-2023-07-26 17:56:58,650  INFO - 127.0.0.1 - - [26/Jul/2023 17:56:58] "OPTIONS /login?username=cliff&password=cmr123 HTTP/1.1" 200 -
-2023-07-26 17:56:58,763  INFO - 127.0.0.1 - - [26/Jul/2023 17:56:58] "GET /login?username=cliff&password=cmr123 HTTP/1.1" 200 -
-2023-07-26 17:56:58,802  INFO - 127.0.0.1 - - [26/Jul/2023 17:56:58] "OPTIONS /domain/1 HTTP/1.1" 200 -
-2023-07-26 17:56:58,920  INFO - 127.0.0.1 - - [26/Jul/2023 17:56:58] "GET /domain/1 HTTP/1.1" 200 -
-2023-07-26 20:25:54,260  INFO - 127.0.0.1 - - [26/Jul/2023 20:25:54] "OPTIONS /prompt HTTP/1.1" 200 -
-2023-07-26 20:25:54,264  INFO - 127.0.0.1 - - [26/Jul/2023 20:25:54] "GET /prompt HTTP/1.1" 200 -
-2023-07-26 20:25:54,275  INFO - 127.0.0.1 - - [26/Jul/2023 20:25:54] "OPTIONS /domain/1 HTTP/1.1" 200 -
-2023-07-26 20:25:54,290  INFO - 127.0.0.1 - - [26/Jul/2023 20:25:54] "OPTIONS /domain HTTP/1.1" 200 -
-2023-07-26 20:25:54,411  INFO - 127.0.0.1 - - [26/Jul/2023 20:25:54] "GET /domain/1 HTTP/1.1" 200 -
-2023-07-26 20:25:54,412  INFO - 127.0.0.1 - - [26/Jul/2023 20:25:54] "GET /domain HTTP/1.1" 200 -
-2023-07-26 20:25:54,525  INFO - 127.0.0.1 - - [26/Jul/2023 20:25:54] "GET /domain/1 HTTP/1.1" 200 -
+2023-07-28 17:44:26,886  INFO - Initializing application...
+2023-07-28 17:44:26,892  WARNING -  * Debugger is active!
+2023-07-28 17:44:26,899  INFO -  * Debugger PIN: 114-974-855
+2023-07-28 17:44:32,033  INFO - 127.0.0.1 - - [28/Jul/2023 17:44:32] "POST /document HTTP/1.1" 200 -

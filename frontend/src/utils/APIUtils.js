@@ -8,6 +8,9 @@ function getHeaders() {
     "Content-Type": "application/json",
   };
 
+  const xheaders = {
+    "Content-Type": "multi-part/formdata",
+  };
   /*
   const authProperty = getUserToken();
 
@@ -26,21 +29,28 @@ function getHeaders() {
         fetch doesn't return parsable json
         parsed json includes "error" property
 */
-async function doFetch(method, endpoint, body) {
+async function doFetch(method, endpoint, body, isFileUpload) {
   if (method !== "GET" && method !== "POST" && method !== "PUT") {
     console.log("doFetch called with invalid method:", method);
     throw new Error("doFetch called with invalid method:" + method);
   }
 
-  const headers = getHeaders();
+  //const headers = getHeaders();
   const options = {
     method,
-    headers,
+    //headers,
   };
-  if (body) {
-    options.body = JSON.stringify(body);
-  }
 
+  if (body) {
+    if (isFileUpload) {
+      options.body = body;
+    } else {
+      options.headers = {
+        "Content-Type": "application/json",
+      };
+      options.body = JSON.stringify(body);
+    }
+  }
   const res = await fetch(`${BASE_API_URL}/${endpoint}`, options);
   const data = await res.json();
 
@@ -60,9 +70,9 @@ export async function fetchGet(endpoint) {
   return doFetch("GET", endpoint);
 }
 
-export async function fetchPost(endpoint, body) {
+export async function fetchPost(endpoint, body, isFileUpload) {
   console.log("fetchPost", endpoint);
-  return doFetch("POST", endpoint, body);
+  return doFetch("POST", endpoint, body, isFileUpload);
 }
 
 export async function fetchPut(endpoint, body) {

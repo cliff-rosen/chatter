@@ -51,20 +51,21 @@ const Navbar = ({ sessionManager }) => {
                   location.pathname === "/profile" ? "bold" : "normal",
               }}
               to="/profile"
-
             >
               {sessionManager.user.userName}
             </Link>{" "}
             |{" "}
             <Link
               style={{
-                textDecoration: "none", color: "gray"
+                textDecoration: "none",
+                color: location.pathname === "/kb" ? "#1976d2" : "gray",
+                fontWeight: location.pathname === "/kb" ? "bold" : "normal",
               }}
               to="/kb"
             >
               KB
-            </Link>
-            {" "}|{" "}
+            </Link>{" "}
+            |{" "}
             <Link
               style={{ textDecoration: "none", color: "gray" }}
               to="#"
