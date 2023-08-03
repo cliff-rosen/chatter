@@ -13,7 +13,7 @@ TEMPERATURE_DEFAULT = .4
 
 LOG_LEVEL = logging.INFO
 logging.basicConfig(format='%(asctime)s  %(levelname)s - %(message)s',
-                    level=LOG_LEVEL, filename='app2.log', filemode='w')
+                    level=LOG_LEVEL, filename='app.log', filemode='w')
 logger = logging.getLogger()
 
 application = Flask(__name__)

@@ -1,4 +1,0 @@
-2023-07-28 17:44:26,886  INFO - Initializing application...
-2023-07-28 17:44:26,892  WARNING -  * Debugger is active!
-2023-07-28 17:44:26,899  INFO -  * Debugger PIN: 114-974-855
-2023-07-28 17:44:32,033  INFO - 127.0.0.1 - - [28/Jul/2023 17:44:32] "POST /document HTTP/1.1" 200 -
