@@ -15,6 +15,8 @@ import { Link } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
 
 export default function Main({ sessionManager }) {
+
+  /////////////////////////////// STATE ///////////////////////////////
   const [domainList, setDomainList] = useState([]);
   const [domainID, setDomainID] = useState("");
   const [query, setQuery] = useState("");
@@ -28,7 +30,7 @@ export default function Main({ sessionManager }) {
   const [chatHistory, setChatHistory] = useState([]);
   const [conversationID, setConversationID] = useState("NEW");
   const [initialMessage, setInitialMessage] = useState("");
-  const [useNewModel, setUseNewModel] = useState(false);
+  const [deepSearch, setDeepSearch] = useState(false);
   const [x, setX] = useState(0);
   const NEW_CONVERSATION_ID = "NEW";
 
@@ -63,6 +65,7 @@ export default function Main({ sessionManager }) {
     setPrompt(data.initial_prompt_template || promptDefault);
   }
 
+  /////////////////////////////// EFFECTS ///////////////////////////////
   // Main useEffect
   useEffect(() => {
     console.log("useEffect -> Main");
@@ -109,6 +112,7 @@ export default function Main({ sessionManager }) {
     sessionManager.requireUser();
   }, [sessionManager.user.userID]);
 
+  /////////////////////////////// FORM FUNCTIONS ///////////////////////////////
   const formSubmit = async (e) => {
     e.preventDefault();
 
@@ -125,7 +129,7 @@ export default function Main({ sessionManager }) {
       temp,
       user_id: sessionManager.user.userID,
       conversation_id: conversationID,
-      use_new_model: useNewModel,
+      deep_search: deepSearch,
     };
 
     try {
@@ -147,6 +151,7 @@ export default function Main({ sessionManager }) {
     }
   };
 
+  /////////////////////////////// RETURN ///////////////////////////////
   return (
     <Box
       component="form"
@@ -211,10 +216,10 @@ export default function Main({ sessionManager }) {
               paddingLeft: 10,
             }}
           >
-            use new model:
+            deep search:
             <Checkbox
-              checked={useNewModel}
-              onChange={(e) => setUseNewModel(e.target.checked)}
+              checked={deepSearch}
+              onChange={(e) => setDeepSearch(e.target.checked)}
               size="small"
             />
           </div>

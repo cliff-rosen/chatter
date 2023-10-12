@@ -1,0 +1,1875 @@
+****************************************************************
+9/14/23, 1:52 PM Accessing DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2284779-accessing-dosemerx 1/2
+Search for articles...
+All CollectionsGet started with DoseMeRxAccessing DoseMeRx
+Accessing DoseMeRx
+How to access DoseMeRx from the web, your phone or tablet
+Written by Sharmeen Roy, PharmD, BCPS
+Updated in the last 15 minutes
+With a DoseMeRx subscription, you can access DoseMeRx on your desktop, phone or tablet.
+DoseMeRx via the Web
+DoseMeRx supports versions of web browsers that are still vendor-supported:
+Internet Explorer 11 (without compatibility mode enabled)
+Microsoft Edge
+Mozilla Firefox
+Google Chrome
+Safari (latest release only)
+Login to DoseMeRx
+9/14/23, 1:52 PM Accessing DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2284779-accessing-dosemerx 2/2doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 1:49 PM Adding a patient in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323579-adding-a-patient-in-dosemerx 1/4
+Search for articles...
+All CollectionsGet started with DoseMeRxAdding a patient in DoseMeRx
+Adding a patient in DoseMeRx
+How do I add a patient in DoseMeRx?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+To get started and enjoy the benefits of DoseMeRx, the first step is to add your patient's details.
+Once you've logged into DoseMeRx you will be brought to the patients tab, displaying all of your 
+active patients in your institution. To begin adding a patient, select 'Add Patient' and complete 
+the information for your patient including patient ID number, full name, date of birth, sex, weight, 
+height, and unit. 
+9/14/23, 1:49 PM Adding a patient in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323579-adding-a-patient-in-dosemerx 2/4
+==============
+height, and unit. 
+9/14/23, 1:49 PM Adding a patient in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323579-adding-a-patient-in-dosemerx 2/4
+Once the patient information is entered then select Save Patient. 9/14/23, 1:49 PM Adding a patient in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323579-adding-a-patient-in-dosemerx 3/4doseme-rx.com
+Did this answer your question?
+9/14/23, 1:49 PM Adding a patient in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323579-adding-a-patient-in-dosemerx 4/4
+==============
+
+
+****************************************************************
+9/14/23, 1:48 PM Adding and viewing patient courses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323648-adding-and-viewing-patient-courses 1/5
+Search for articles...
+All CollectionsGet started with DoseMeRxAdding and viewing patient courses
+Adding and viewing patient courses
+How do I add a course and view my patient's courses?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+After entering your patient information you have the ability to add a course to your patient from 
+the dropdown menu.
+9/14/23, 1:48 PM Adding and viewing patient courses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323648-adding-and-viewing-patient-courses 2/5
+If you have selected to add a course with the patient, saving the patient will direct you to the 
+historical plot tab for your patient. If you have not selected to add a course, saving the patient 
+will direct you to the patient course page.
+==============
+historical plot tab for your patient. If you have not selected to add a course, saving the patient 
+will direct you to the patient course page.  
+To view your patient courses, simply select a patient to open the patient preview then select  
+View all courses. 9/14/23, 1:48 PM Adding and viewing patient courses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323648-adding-and-viewing-patient-courses 3/5
+The courses page will display your patient information at the top of the page. To add a new 
+course simply select, Add course above the course list. 9/14/23, 1:48 PM Adding and viewing patient courses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323648-adding-and-viewing-patient-courses 4/5
+Did this answer your question?
+9/14/23, 1:48 PM Adding and viewing patient courses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323648-adding-and-viewing-patient-courses 5/5doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 1/8
+Search for articles...
+All CollectionsGet started with DoseMeRxAdding Doses and Lab Results
+Adding Doses and Lab Results
+How do I add doses and lab results?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Adding Doses and Lab results are now easier than ever inside of DoseMeRx!
+You can quickly add a dose or multiple doses from the patients tab of DoseMeRx.  To do this 
+simply select the patient to open the patient preview for your patient.  Then simply select 'Add 
+Doses' on the course you would like to add doses for.
+9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 2/8
+You can also add doses from the courses page.  To do this, select a patient to open up the
+==============
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 2/8
+You can also add doses from the courses page.  To do this, select a patient to open up the 
+patient preview then select View all courses.9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 3/8
+Select the course you want to add doses for to display the course preview. Then select Add 
+Doses above the Recent Doses table.9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 4/8
+You can quickly add a lab result from the patients tab as well!  To do this simply select the 
+patient to open the patient preview.  Then simply select Add Result on the course you would 
+like to add a result for.9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 5/8
+==============
+like to add a result for.9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 5/8
+You can also add lab results from the courses page.  To do this, select a patient to open up the 
+patient preview then select View all courses.9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 6/8
+Select the course you want to add a lab result for, to display the course preview. Then select 
+Add Lab Result above the Recent Lab Results table.9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 7/8
+Did this answer your question?
+9/14/23, 1:49 PM Adding Doses and Lab Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323707-adding-doses-and-lab-results 8/8doseme-rx.com
+==============
+
+
+****************************************************************
+Adding New Units to Hospital  
+How do I add a new unit to my Hospital?  
+If you are an Administrat ive User  within DoseMeRx,  you are able to add new units  or update 
+existing units.  
+Once youve logged into DoseMeRx,  click on the ADMIN tab in the top right corner  of the 
+screen . You will automatically be brought to the Admin - Main page.  
+In the Hospital and Clinician Details box, click on  Add Units  to your hospital.  
+ 
+In the Edit Hospital screen, locate the Units  section .  
+ Click on the bolded + plus button and enter new unit names  
+ 
+Click Save Details . 
+ 
+You can access the units for your particular hospital in the Hospitals tab of the Admin section 
+of DoseMeRx. Upon selecting the admin tab of DoseMeRx , you will then be able to select the 
+Hospitals tab on the left -hand side. After, you will then select the Edit function to bring 
+you into the edit page for your hospital.
+==============
+Hospitals tab on the left -hand side. After, you will then select the Edit function to bring 
+you into the edit page for your hospital.  
+When you are on the Hospitals edit page, you can note the ability to edit a un it by editing 
+the text field (1). You can delete hospital units by selecting the X function (2). Finally, you can 
+continue to add units to your hospital by selecting the + (3). To save, select Save Details.
+==============
+
+
+****************************************************************
+Adding New Users  
+How do I add a new user to  my Hospital?  
+ 
+If you are an  Administrat ive User within DoseMeRx,  you are able to add new users  to your 
+hospital .  
+Once youve logged into DoseMeRx, click on the ADMIN tab in the top right corner of the screen. 
+You will automatically be brought to the Admin-  Main page.  
+Next, click the Clinicians tab on the left -hand side.  
+ 
+From here you can see the current users at the hospital and have the ability to Add a  clinician .  
+ 
+You will be asked to populate the following fields onc e selecting Add a clinician :  
+ Email  
+ Title (Optional)  
+ Given  Names  
+ Family Names  
+ Department (Optional)  
+ 
+Once clicking save the clinician will be sent an automatic email with instructions to set up their 
+new password .
+==============
+
+
+****************************************************************
+Disabling Access and Removing Users  
+How do I disable access  or remove an  existing user from  my 
+Hospital?  
+ 
+If you are an Administrat ive User within DoseMeRx, you are able to disable  users  access  or 
+remove an  existing user .  
+Once youve logged into DoseMeRx, click on the ADMIN tab in the top right corner of the screen. 
+You will automatically be brought to the Admin-  Main page.  
+Next, click the Clinicians tab on the left -hand side.  
+ 
+From here you can see the current users at  the hospital and can search for a specific clinician 
+using the search bar.   To Disable  access for a specific clinician, select and swipe the Enabled 
+button . 
+ 
+ 
+ 
+Once doing so the clinicians access will be Disabled .  
+ 
+The Disabled  action is a temporary restriction of access to DoseMeRx that  can be reversed at the 
+appropriate time by an Administrative user.  
+On the other hand, t o permanently remove a user and their associated access  to DoseMeRx,
+==============
+appropriate time by an Administrative user.  
+On the other hand, t o permanently remove a user and their associated access  to DoseMeRx,  
+within  the Clinicians tab select the Remove button  associated with the specific user .
+==============
+
+
+****************************************************************
+Manually Changing a Clinicians Password  
+How do I create a new password for a clinician at my hospital?  
+ 
+If you are an Administrat ive User within DoseMeRx, you are able  to manually change a 
+password for an authorized user at your facility.  
+However, the first step if a clinician is having issues logging into DoseMeRx is to instruct the 
+clinician to head to https://doseme- rx.com/login  and select "Forgot  Password?"  
+ 
+The user will then be sent an email with password reset instructions.  
+ 
+ 
+If login issues persist  or password reset email was not received , an Administrative User is able to 
+manually reset a password  for a clinician.   
+Once youve logged into DoseMeRx, click on the ADMIN tab in the top right corner of the screen. 
+You will automatically be brought to the Admin-  Main page.  
+Next, click the Clinicians tab on the left -hand side.  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+For a quick find , you can type in the users email  in the search field and  select Edit
+==============
+Next, click the Clinicians tab on the left -hand side.  
+ 
+ 
+ 
+ 
+  
+ 
+ 
+For a quick find , you can type in the users email  in the search field and  select Edit  
+ 
+ 
+Complete sections Update Password  and Confirm Password . Click save.  
+ 
+ 
+ Please communicate with clinician, informing he/she of new password . 
+ Encourage clinician once  logged -in to reset password again to something more secure, 
+confidential, and easy to remember.   They are able to do so by click ing on their name in the top right -hand corner and enter ing new  
+password and password confirmation.
+==============
+
+
+****************************************************************
+Resetting Two-Factor Authentication  How do I reset my two-factor authentication?   If you are an Administrative User within DoseMeRx, you are able to reset your teams two-factor authentication.  Once youve logged into DoseMeRx, click on the ADMIN tab in the top right corner of the screen. You will automatically be brought to the Admin- Main page.  Next, click the Clinicians tab on the left-hand side. 
+       
+You will see a list of all individuals who have access to your DoseMeRx environment. In the actions column you will simply select Reset 2FA, prompting you to confirm this action. Once confirmed, the user will need to manually set their two-factor authentication again on their mobile device.
+==============
+
+
+****************************************************************
+Updating Drug Limits and Constraints 
+How do I change or update drug limits set for my Hospital?  
+ 
+If you are an Administrat ive User within DoseMeRx , you are able to change the drug limits and 
+constraints that have been set at your Hospital .   
+Once youve logged into DoseMeRx, click on the ADMIN tab in the top right corner of the screen. 
+You will automatically be brought to the Admin-  Main page.  
+Next, click the Drug Limits  tab on the left -hand side.  
+ 
+You will see a list of available drug models at your Hospital. Click the Edit button  on the left -hand 
+side of the applicable drug.  
+ 
+ 
+ 
+ 
+Upon selecting Edit, you will be able to change the default dosing method and any hospital drug 
+limits .  
+Default paramet ers are in grey.  
+Any changes made will be highlighted in a yellow as show n in the image below.  
+ 
+Once you have made the appropriate changes, ensure that you select the Save Changes button 
+at the  top or bottom of the screen.
+==============
+
+
+****************************************************************
+9/14/23, 2:22 PM Archiving and unarchiving patients in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323747-archiving-and-unarchiving-patients-in-dosemerx 1/6
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedArchiving and unarchiving patients in DoseMeRx
+Archiving and unarchiving patients in
+DoseMeRx
+How do I archive and unarchive patients?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+To archive one or more patients from your active patient list:
+1. Select the patients tab to display current active patients inside of DoseMeRx
+2. Select one or more patients from active patients list
+3. Select the 'Archive Patients' button at the bottom of the list.
+9/14/23, 2:22 PM Archiving and unarchiving patients in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323747-archiving-and-unarchiving-patients-in-dosemerx 2/6
+You have the ability to archive a single patient from the patient preview display.  To archive a
+==============
+https://help.doseme-rx.com/en/articles/4323747-archiving-and-unarchiving-patients-in-dosemerx 2/6
+You have the ability to archive a single patient from the patient preview display.  To archive a 
+single patient from the Patient Preview:
+1. Select the patient you would like to archive to display the Patient Preview
+2. Select the archive patient button on the right-hand side of the Patient Preview display.9/14/23, 2:22 PM Archiving and unarchiving patients in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323747-archiving-and-unarchiving-patients-in-dosemerx 3/6
+To unarchive one or more patients from your archived patient list:
+1.Switch to archived patients view
+2.Select one or more patients from archived patients list
+3.select the Unarchive patients button at the bottom of the list.9/14/23, 2:22 PM Archiving and unarchiving patients in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323747-archiving-and-unarchiving-patients-in-dosemerx 4/6
+==============
+https://help.doseme-rx.com/en/articles/4323747-archiving-and-unarchiving-patients-in-dosemerx 4/6
+You have the ability to unarchive a single patient from the patient preview display.  To unarchive 
+a single patient from the Patient Preview:
+1.Switch to Archived Patients list
+2. Select the patient you would like to unarchive 
+3. Select the unarchive patient button on the right-hand side of the Patient Preview display.9/14/23, 2:22 PM Archiving and unarchiving patients in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323747-archiving-and-unarchiving-patients-in-dosemerx 5/6doseme-rx.com
+Did this answer your question?
+9/14/23, 2:22 PM Archiving and unarchiving patients in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323747-archiving-and-unarchiving-patients-in-dosemerx 6/6
+==============
+
+
+****************************************************************
+9/14/23, 2:22 PM Calculate next dose with DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3792899-calculate-next-dose-with-dosemerx 1/3
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedCalculate next dose with DoseMeRx
+Calculate next dose with DoseMeRx
+Calculate an individualized, patient-specific dose in DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Once you've added previous doses and/or lab results, now you're ready to experience the true 
+power of DoseMeRx to calculate your patient's next dose individualized to them and your target. 
+From the historical plot tab, select calculate next dose and enter the time you would like to 
+administer the dose.
+9/14/23, 2:22 PM Calculate next dose with DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3792899-calculate-next-dose-with-dosemerx 2/3doseme-rx.com
+Tip: If you're logged into DoseMeRx select Help from the top menus, where you can watch our
+==============
+https://help.doseme-rx.com/en/articles/3792899-calculate-next-dose-with-dosemerx 2/3doseme-rx.com
+Tip: If you're logged into DoseMeRx select Help from the top menus, where you can watch our 
+on-boarding videos which quickly show you how to easily calculate the next dose.
+Did this answer your question?
+9/14/23, 2:22 PM Calculate next dose with DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3792899-calculate-next-dose-with-dosemerx 3/3
+==============
+
+
+****************************************************************
+9/14/23, 1:57 PM Can I switch between vancomycin models in DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5509301-can-i-switch-between-vancomycin-models-in-dosemerx 1/4
+Search for articles...
+All CollectionsDoseMeRx's Key Features Explained
+Can I switch between vancomycin models in DoseMeRx?
+Can I switch between vancomycin models in
+DoseMeRx?
+How do I compare different vancomycin drug models without having to re-enter historic
+information?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+On the Course Page and the Dose Recommendation page, for Vancomycin models, users can 
+easily change the drug model with no additional data entry required.
+Next to the drug name, you will see the current model in use and have the option to change this 
+where applicable. 
+Course Page: 
+9/14/23, 1:57 PM Can I switch between vancomycin models in DoseMeRx? | DoseMe Help Center
+==============
+where applicable. 
+Course Page: 
+9/14/23, 1:57 PM Can I switch between vancomycin models in DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5509301-can-i-switch-between-vancomycin-models-in-dosemerx 2/4
+Recommendation Page:
+Selecting this will present a Change Drug Model for this Course window. The drop-down menu 
+will allow you to select and compare different models as long as the patient's demographics are 
+within the validated range for the model. 9/14/23, 1:57 PM Can I switch between vancomycin models in DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5509301-can-i-switch-between-vancomycin-models-in-dosemerx 3/4
+Once selecting a new drug model and acknowledging the warning message, a user can select 
+Update Course.
+DoseMeRx will then use the new model selected to provide dose recommendations and 
+predicted outcomes.
+Note: Updating the drug model for this course may impact the current dosing
+==============
+Update Course.
+DoseMeRx will then use the new model selected to provide dose recommendations and 
+predicted outcomes.
+Note: Updating the drug model for this course may impact the current dosing 
+recommendations, historical plot, and/or predicted outcomes for prior doses. Any course-
+specific data fields that were adjusted from the default settings will need to be confirmed.
+Helpful FAQs
+For more information, check out these DoseMeRx Help documents.
+Why do dosing recommendations differ between models?
+Adult Model Selection Guide: Non-Hemodialysis Patients
+How does DoseMeRx learn over time?
+Understanding the Model Fit Indicator 9/14/23, 1:57 PM Can I switch between vancomycin models in DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5509301-can-i-switch-between-vancomycin-models-in-dosemerx 4/4doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:09 PM Changes in Drug Level Laboratory Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3353676-changes-in-drug-level-laboratory-results 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingChanges in Drug Level Laboratory Results
+Changes in Drug Level Laboratory Results
+How does DoseMeRx respond when there is a drug level significantly different than previous
+ones?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Throughout a patients course of therapy, there may be times where a drug level may be 
+significantly higher than previous drug levels.
+When there are multiple laboratory results that disagree with one another, it may be because 
+one is incorrect (e.g. it was drawn at the wrong time) or the patients pharmacokinetic 
+parameters have changed.
+DoseMeRx wont ignore earlier laboratory results just because a subsequent one has been 
+added. While newer results are considered somewhat more trustworthy, if both are quite
+==============
+parameters have changed.
+DoseMeRx wont ignore earlier laboratory results just because a subsequent one has been 
+added. While newer results are considered somewhat more trustworthy, if both are quite 
+different, DoseMeRx will tend to prefer the one most like the population model (as this is more 
+common in the population). Therefore, it may recommend a different dose than what would be 
+customary for a patient if only the most recent result was considered.
+Here are two approaches to consider when this is encountered:
+If the accuracy of the outlier drug level is questionable:
+ . Consider obtaining another level if possible to validate the accuracy of the most recent 
+level.
+ . If you cannot obtain a level, exclude the last level and DoseMeRx will calculate the dose 
+based on the prior existing levels.
+If the most recent drug level value is considered to be correct:
+9/14/23, 4:09 PM Changes in Drug Level Laboratory Results | DoseMe Help Center
+==============
+based on the prior existing levels.
+If the most recent drug level value is considered to be correct:
+9/14/23, 4:09 PM Changes in Drug Level Laboratory Results | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3353676-changes-in-drug-level-laboratory-results 2/2doseme-rx.com
+ . Exclude earlier drug levels (if the last result is considered correct and you think a change 
+has taken place).
+Laboratory results can be excluded in DoseMeRx by selecting the Lab Results tab and selecting 
+Edit on the laboratory value. A pop up box will show the time stamp of the laboratory result, 
+the drug concentration, and serum creatinine if available. Unselect the checkbox include in 
+calculations and then select Save. 
+Related articles:
+Laboratory result not fitting for my patient?
+How important is the time I take a patent's blood test?
+Excluding lab results in DoseMeRx
+Questions?
+If you have any questions about DoseMeRx, please contact DoseMeRx Support.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 3:12 PM Continuous Infusion and DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2316801-continuous-infusion-and-dosemerx 1/2
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedContinuous Infusion and DoseMeRx
+Continuous Infusion and DoseMeRx
+Simulate continuous infusion in DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Simulating the outcome of continuous infusion for your patient is quick and easy in DoseMeRx.
+In the customize section, simply change the infusion length and the dosing interval to be the 
+same value. For example, an infusion length of 24 hours and a dosing interval of 24 hours would 
+produce a recommendation suitable for continuous infusion.
+9/14/23, 3:12 PM Continuous Infusion and DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2316801-continuous-infusion-and-dosemerx 2/2doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 1:54 PM Customize a dose or tar get in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297584-customize-a-dose-or -target-in-dosemerx 1/3
+Search for articles...
+All CollectionsGet started with DoseMeRxCustomize a dose or target in DoseMeRx
+Customize a dose or target in DoseMeRx
+Change your desired target or dose using DoseMeRx's customize feature
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+One of the many popular features of DoseMeRx is to customize your dose or target to determine 
+the best dosing regimen for your patient. You can easily customize the dose, or the target in 
+seconds after calculating the next dose.
+Simply navigate to the panel below the dose recommendations to view the customize feature. 
+Enter your custom target or dose parameters and simulate the outcome.
+9/14/23, 1:54 PM Customize a dose or tar get in DoseMeRx | DoseMe Help Center
+==============
+Enter your custom target or dose parameters and simulate the outcome.
+9/14/23, 1:54 PM Customize a dose or tar get in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297584-customize-a-dose-or -target-in-dosemerx 2/3
+9/14/23, 1:54 PM Customize a dose or tar get in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297584-customize-a-dose-or -target-in-dosemerx 3/3doseme-rx.com
+Tip: If you're logged into DoseMeRx select Help from the top menu, where you can watch our 
+onboarding videos which quickly show you how to customise a dose or target.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 2:09 PM Customizing drug limits and constraints | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5204289-customizing-drug-limits-and-constraints 1/5
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedCustomizing drug limits and constraints
+Customizing drug limits and constraints
+Can I change or update drug limits set for my hospital?
+Written by Mike Ferrelli
+Updated in the last 15 minutes
+If you are an Administrative User within DoseMeRx, you are able to change the drug limits and 
+constraintsthat have been set at your hospital. 
+Once youve logged into DoseMeRx, click on the ADMIN tab in the top right corner of the 
+screen. You will automatically be brought to the Admin- Main page. Next, click the Drug Limits 
+tab on the left-hand side. You will see a list of available drug models at your hospital. Click the 
+Edit button on the left-hand side of the applicable drug.
+==============
+tab on the left-hand side. You will see a list of available drug models at your hospital. Click the 
+Edit button on the left-hand side of the applicable drug.
+Upon selecting Edit, you will be able to update the following limits and settings:  
+9/14/23, 2:09 PM Customizing drug limits and constraints | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5204289-customizing-drug-limits-and-constraints 2/59/14/23, 2:09 PM Customizing drug limits and constraints | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5204289-customizing-drug-limits-and-constraints 3/5Setting/Field Description
+Calculated Doses: Warnings DoseMeRx will produce a warning when 
+the recommended dose is above/below 
+indicated values
+Calculated Doses: Absolute LimitsDoseMeRx will not produce a 
+recommendation or allow a simulation 
+above/below indicated values
+Calculated Doses: Per Weight 
+WarningsDoseMeRx will produce a warning when 
+the recommendation is above/below
+==============
+recommendation or allow a simulation 
+above/below indicated values
+Calculated Doses: Per Weight 
+WarningsDoseMeRx will produce a warning when 
+the recommendation is above/below 
+indicated values per kilogram (as a 
+single dose)
+Recorded Doses The minimum/maximum value that 
+DoseMeRx will accept when being 
+recorded as a historical dose (previously 
+given to patient)
+Recorded Concentrations The minimum/maximum value that 
+DoseMeRx will accept when a blood 
+concentration (i.e. drug level) is being 
+recorded (historical)
+AUC Target (Over 24 hours) The default/minimum/maximum AUC 
+Target that DoseMeRx will use for 
+recommendations and simulations.
+Peak Target The default/minimum/maximum peak 
+target that DoseMeRx will accept for 
+recommendations and simulations
+Trough Target The default/minimum/maximum trough 
+target that DoseMeRx will accept for 
+recommendations and simulations
+Infusion Length The default/minimum/maximum infusion 
+length that DoseMeRx will use for
+==============
+target that DoseMeRx will accept for 
+recommendations and simulations
+Infusion Length The default/minimum/maximum infusion 
+length that DoseMeRx will use for 
+recommendations and simulations
+Dosing Interval The default/minimum/maximum dosing 
+interval that DoseMeRx will use for 9/14/23, 2:09 PM Customizing drug limits and constraints | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5204289-customizing-drug-limits-and-constraints 4/5recommendations and simulations
+Number of Doses The default/minimum/maximum number 
+of doses that DoseMeRx will use for 
+recommendations and simulations 
+(directly related to 'Days of Dosing' in 
+the below section - please ensure that 
+the default number of doses is above the 
+minimum days of dosing and below the 
+maximum days of dosing)
+Days of Dosing The minimum/maximum days of dosing 
+that DoseMeRx will accept for 
+recommendations and simulations 
+(directly related to 'Number of Doses' in 
+the above section - please ensure the
+==============
+Days of Dosing The minimum/maximum days of dosing 
+that DoseMeRx will accept for 
+recommendations and simulations 
+(directly related to 'Number of Doses' in 
+the above section - please ensure the 
+minimum number of doses is equal to 
+the minimum days of dosing)
+Infusion Rate Cap Maximum infusion rate that a drug can 
+be administered over. Recommendations 
+and simulations with values that exceed 
+this will have the infusion length 
+automatically increased
+Time until calculation not allowedThe number of hours without any 
+recorded doses or lab results before a 
+new course should be started within 
+DoseMeRx
+Once you have made the appropriate changes, ensure that you select the Save Changes button 
+at the top or bottom of the screen.
+Did this answer your question?
+9/14/23, 2:09 PM Customizing drug limits and constraints | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5204289-customizing-drug-limits-and-constraints 5/5doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 4:15 PM Does DoseMeRx account for overweight or obese patients? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2351717-does-dosemerx-account-for -overweight-or -obese-patients 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingDoes DoseMeRx account for overweight or obese patients?
+Does DoseMeRx account for overweight or
+obese patients?
+Overweight and obese patients in DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Yes. DoseMeRx has been used in adult patients ranging from 35kg to 340kg. DoseMeRx uses a 
+wide range of different ways of representing weight - a significant part of our model validation 
+process is ensuring that the patients weight is accurately represented for the drug. For 
+example, a 350kg patient does not have kidneys 7x as efficient than a 70kg patient. 
+When the model is implemented, we utilize the weight that was used in the original model
+==============
+example, a 350kg patient does not have kidneys 7x as efficient than a 70kg patient. 
+When the model is implemented, we utilize the weight that was used in the original model 
+design. There are a wide variety of weight measures that can be utilized in the models, including:
+- Total body weight
+- Ideal body weight
+- Lean body weight
+- Adjusted ideal body weight
+- Body surface area.
+DoseMeRx provides a significant benefit in dosing patients at different ends of the weight 
+spectrum - every patient is an individual, and weight is just one component that we consider.
+9/14/23, 4:15 PM Does DoseMeRx account for overweight or obese patients? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2351717-does-dosemerx-account-for -overweight-or -obese-patients 2/2doseme-rx.com
+For more information, please refer to the 'Drug Information' tab once logged into DoseMeRx,
+where this information is displayed for each model.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:04 PM Does DoseMeRx Support Amputees? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3360350-does-dosemerx-support-amputees 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingDoes DoseMeRx Support Amputees?
+Does DoseMeRx Support Amputees?
+Amputees have a different relationship between height, weight, and Vd to non-amputee patients.
+Learn how to use DoseMeRx in this cohort.
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+While DoseMeRx does not have amputee-specific models (and at the time of writing, we do not 
+believe that there exist any that would pass our validation process).
+There are two primary places in antibiotic pharmacokinetic models where amputation has an 
+effect: the volume of distribution is altered, and the calculation of creatinine clearance is also 
+altered.
+While some calculators adjust the patient's weight to indirectly alter Vd based on the type and
+==============
+altered.
+While some calculators adjust the patient's weight to indirectly alter Vd based on the type and 
+number of amputations, this doesn't address creatinine clearance. The limited literature 
+available suggests that eCrCL tends to be over-estimated in this cohort. You may want to 
+consider using a pre-amputation height (if available) along with the current patient weight. 
+For DoseMeRx, we recommend treating these patients like any that may be outside of the 
+patient cohort used to generate the model. Because these patients are not typically included in 
+a population model, it is recommended to calculate the first dose based on either the Guideline 
+Dose or a local protocol outside of DoseMeRx.  
+For more information on how to use this advanced feature, please contact DoseMe support 
+either via live chat or by any of our support channels.
+9/14/23, 4:04 PM Does DoseMeRx Support Amputees? | DoseMe Help Center
+==============
+either via live chat or by any of our support channels.
+9/14/23, 4:04 PM Does DoseMeRx Support Amputees? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3360350-does-dosemerx-support-amputees 2/2doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:13 PM Does DoseMeRx support vancomycin dosing in patients with uctuating renal function? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3360335-does-dosemerx-support-vancomycin-dosing-in-patients-with-uctuating-renal-function 1/2
+Search for articles...
+All CollectionsFAQs and Troubleshooting
+Does DoseMeRx support vancomycin dosing in patients with fluctuating renal function?
+Does DoseMeRx support vancomycin dosing in
+patients with fluctuating renal function?
+Learn how DoseMeRx can dose patients with fluctuating renal function when receiving renally-
+cleared drugs such as vancomycin.
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+DoseMeRx has a track record of successfully dosing patients with significantly varying renal 
+function over the course of several weeks. It handles fluctuating renal function by allowing 
+multiple serum creatinine entries. DoseMeRx will use the most recent entries to calculate any
+==============
+function over the course of several weeks. It handles fluctuating renal function by allowing 
+multiple serum creatinine entries. DoseMeRx will use the most recent entries to calculate any 
+future doses and (for most models) use historical data to calculate eGFR/eCRCL  using a 
+method such as Cockcroft-Gault (for adults) and Schwartz (for pediatrics) to determine the 
+relationship between vancomycin clearance and creatinine clearance. This allows drug clearance 
+to vary over time as eCRCL varies.
+In addition, to improve the model fit, DoseMeRx will linearly interpolate between adjacent serum 
+creatinine lab measurements.
+However, since serum creatinine is a later marker of renal function, anuria can occur prior to a 
+measurable rise in serum creatinine, This means that just like any other tool, scoring method, or 
+alerting method that uses serum creatinine, the clinician needs to evaluate this information in 
+the context of the overall patient's clinical status.
+==============
+alerting method that uses serum creatinine, the clinician needs to evaluate this information in 
+the context of the overall patient's clinical status.
+It's also important to note that serum creatinine is used differently in the various models in 
+DoseMeRx. Unless otherwise noted, for any model using Cockcroft-Gault, DoseMeRx uses a 
+9/14/23, 4:13 PM Does DoseMeRx support vancomycin dosing in patients with uctuating renal function? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3360335-does-dosemerx-support-vancomycin-dosing-in-patients-with-uctuating-renal-function 2/2doseme-rx.com
+minimum serum creatinine of 0.68 mg/dL (60 mol/L) and the lower of total body weight or ideal 
+body weight as described by Duffull et al. (Br J Clin Pharmacol 1997; 43: 125135) in order to 
+avoid over-predicting creatinine clearance in outlier patients, such as obese. These details are 
+available from the Drug Information section when you are logged into your DoseMeRx account.
+Related articles:
+==============
+available from the Drug Information section when you are logged into your DoseMeRx account.
+Related articles:
+Estimated Creatinine Clearance (eCrCl)
+Questions?
+If you have any questions about DoseMeRx and how we support patients with fluctuating renal 
+function, please contact DoseMeRx Support.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 2:20 PM DoseMe_Compliance - Access Inventory - All Documents
+https://dosemehealth.sharepoint.com/sites/compliance/Shared Documents/Forms/AllItems.aspx?id=%2Fsites%2Fcompliance%2FShared Documents%2F Access Inve  1/1Name Modified Modified By
+SuperAdmin Access Inventory.xlsxAbout an hour ago Joseph KetchersideDocumentsAccess Inventory
+==============
+
+
+****************************************************************
+9/14/23, 3:20 PM Drug levels obtained during infusion | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/6106231-drug-levels-obtained-during-infusion 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingDrug levels obtained during infusion
+Drug levels obtained during infusion
+How does DoseMeRx handle labs drawn during infusion
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Sometimes laboratory values may be recorded while the medication is infusing. When this 
+occurs, the first step is to confirm that the drug level was, in fact, obtained during the infusion. 
+If the drug level was not drawn during the infusion, updating the drug level to the correct time in 
+DoseMeRx will address the issue. However, if the level was confirmed to be drawn during 
+infusion, we suggest excluding the level as the impact on the model and the subsequent dosing 
+recommendations can be highly variable. The degree of impact varies depending on the half-life
+==============
+infusion, we suggest excluding the level as the impact on the model and the subsequent dosing 
+recommendations can be highly variable. The degree of impact varies depending on the half-life 
+of the drug and the point in the infusion that the level was obtained. In these situations, you may 
+want to consider obtaining a new drug level at a time other than when the drug is being infused. 
+Helpful FAQs
+For more information, check out these DoseMeRx Help documents.
+How does DoseMeRx handle "outlier" lab values
+Laboratory results not fitting a patient
+Adding doses and results 
+Excluding lab results in DoseMeRx
+9/14/23, 3:20 PM Drug levels obtained during infusion | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/6106231-drug-levels-obtained-during-infusion 2/2doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:03 PM Drug Model Limitations | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793726-drug-model-limitations 1/3
+Search for articles...
+All CollectionsFAQs and TroubleshootingDrug Model Limitations
+Drug Model Limitations
+I am trying to add a drug course and the choice is grayed out
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Each drug model in DoseMeRx has a set of patient limits based on age, weight, and height. You 
+may see the drug you wish to select greyed out if the patient does not fall into the model 
+parameters.
+To view these for each drug visit the 'Drug Information' tab when logged into DoseMeRx.
+Click on the drug name to view the patient limits.
+9/14/23, 4:03 PM Drug Model Limitations | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793726-drug-model-limitations 2/3
+Did this answer your question?
+9/14/23, 4:03 PM Drug Model Limitations | DoseMe Help Center
+==============
+https://help.doseme-rx.com/en/articles/3793726-drug-model-limitations 2/3
+Did this answer your question?
+9/14/23, 4:03 PM Drug Model Limitations | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793726-drug-model-limitations 3/3doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 1:47 PM Editing your patient information | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323854-editing-your -patient-information 1/4
+Search for articles...
+All CollectionsGet started with DoseMeRxEditing your patient information
+Editing your patient information
+How do I edit my patient's information if my patient is already active?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Editing your patients information can be as simple as a few clicks!  To get started with editing a 
+patient, simply select the patient you would like to edit to open the patient preview.  Then select 
+the pencil on the right-hand side of the patient preview to edit your patient information.
+9/14/23, 1:47 PM Editing your patient information | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323854-editing-your -patient-information 2/4
+You're also able to edit your patient information from the courses page.  To edit your patient
+==============
+https://help.doseme-rx.com/en/articles/4323854-editing-your -patient-information 2/4
+You're also able to edit your patient information from the courses page.  To edit your patient 
+from the courses page simply select the pencil icon above the courses list in the patient 
+information section of the page.9/14/23, 1:47 PM Editing your patient information | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323854-editing-your -patient-information 3/4
+Did this answer your question?
+9/14/23, 1:47 PM Editing your patient information | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323854-editing-your -patient-information 4/4doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 4:1 1 PM Estimated Creatinine Clearance (eCrCl) | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3522878-estimated-creatinine-clearance-ecrcl 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingEstimated Creatinine Clearance (eCrCl)
+Estimated Creatinine Clearance (eCrCl)
+How does DoseMeRx calculate estimated creatinine clearance?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+There are two key areas within DoseMeRx where eCrCl is calculated and used -         1) for 
+display on the Dosing Calculation page and 2) within the drug model that determines medication 
+dosing. The patient's actual laboratory-measured serum creatinine should be recorded. 
+Rounding or altering the value is discouraged. 
+On the Dosing Calculation page, the method for calculating the eCrCl is indicated in parenthesis 
+after the displayed value. Unless otherwise noted, for adults, eCrCl is calculated using
+==============
+On the Dosing Calculation page, the method for calculating the eCrCl is indicated in parenthesis 
+after the displayed value. Unless otherwise noted, for adults, eCrCl is calculated using 
+Cockcroft-Gault, using the lower of ideal body weight (IBW) or total body weight (TBW), and a 
+minimum serum creatinine of 0.68 mg/dL (60 mol/L) as described by Duffull et al. (Br J Clin 
+Pharmacol 1997; 43: 125135) . We do this to avoid estimating unphysiologically high CrCl which 
+could otherwise occur for outlier patients with low serum creatinine results. For pediatrics, we 
+utilize Schwartz unless otherwise noted.If there is no serum creatinine entered for the patient, 
+DoseMeRx will utilize an average population-based serum creatinine that is based on the 
+patient's age and sex.
+If enabled, the eCrCl will also be displayed in the pharmacokinetics section of the final dosing 
+recommendation report, allowing for convenient comparison. Both the calculation using IBW and 
+TBW will be displayed.
+==============
+recommendation report, allowing for convenient comparison. Both the calculation using IBW and 
+TBW will be displayed.
+When used as part of the drug model calculation, we follow the approach that is outlined in the 
+original study. However, if it is not available, the methodology described above is followed. 
+9/14/23, 4:1 1 PM Estimated Creatinine Clearance (eCrCl) | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3522878-estimated-creatinine-clearance-ecrcl 2/2doseme-rx.com
+Additional information for these exceptions can be found in the Drug Information section when 
+you are logged into your DoseMeRx account.
+Related Articles:
+Renal Impairment and Dialysis in DoseMeRx
+Minimum and Maximum Serum Creatinine Limits in DoseMeRx
+Questions?
+If you have any questions about DoseMeRx and how the platform calculates estimated 
+creatinine clearance, please contact DoseMeRx Support.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 3:1 1 PM Excluding Lab Results in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3789568-excluding-lab-results-in-dosemerx 1/3
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedExcluding Lab Results in DoseMeRx
+Excluding Lab Results in DoseMeRx
+How to exclude lab results for a patient in DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+You have the ability to exclude recorded laboratory results from being used to build the 
+individualized model of a patient's pharmacokinetics. This is useful when you wish to record all 
+concentrations in DoseMeRx for completeness and you can easily exclude any incomplete or 
+incorrect concentrations from affecting your dose calculations.
+Excluding a lab result
+To exclude a lab result, simply click 'edit' next to the lab result and deselect the "Include in 
+Calculations" tick box.
+9/14/23, 3:1 1 PM Excluding Lab Results in DoseMeRx | DoseMe Help Center
+==============
+To exclude a lab result, simply click 'edit' next to the lab result and deselect the "Include in 
+Calculations" tick box.
+9/14/23, 3:1 1 PM Excluding Lab Results in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3789568-excluding-lab-results-in-dosemerx 2/3
+The data row in the 'Lab Results' tab will have a strike through and be greyed out.
+The result will also appear in grey on the historical plot. Any excluded lab results will not be 
+used in dose calculations.9/14/23, 3:1 1 PM Excluding Lab Results in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3789568-excluding-lab-results-in-dosemerx 3/3doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:13 PM Expired Account in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297780-expired-account-in-dosemerx 1/1doseme-rx.com
+Search for articles...
+All CollectionsFAQs and TroubleshootingExpired Account in DoseMeRx
+Expired Account in DoseMeRx
+Uh-oh! My account has expired
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+There can be a number of reasons why your DoseMeRx account has expired.
+Get in touch with DoseMe support and we'll look into it straight away.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 1:47 PM Finding your patient | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323819-nding-your -patient 1/5
+Search for articles...
+All CollectionsGet started with DoseMeRxFinding your patient
+Finding your patient
+How do I search for a patient in DoseMeRx?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Once you log into DoseMeRx you will be brought to the Patients tab.  All of your patients will be 
+displayed on this tab of DoseMeRx.  Active patients will be displayed automatically, but you can 
+switch to the archived patient list by selecting 'Archived' on the patients tab.   Patients are 
+displayed in order of the most recently modified date.  
+9/14/23, 1:47 PM Finding your patient | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323819-nding-your -patient 2/5
+To search for a specific patient, simply select the search bar above the patient preview, and
+==============
+https://help.doseme-rx.com/en/articles/4323819-nding-your -patient 2/5
+To search for a specific patient, simply select the search bar above the patient preview, and 
+begin typing the name of the individual, the ID of the individual or the individuals date of birth. 
+This will search all active and archived patients in DoseMeRx.9/14/23, 1:47 PM Finding your patient | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323819-nding-your -patient 3/5
+You are also able to add filters to the patient list. This can be done by selecting Add Filter 
+above the active patients list. You are able to add a wide variety of filters to your patient list 
+including, drug, unit, clinician, and last modified.9/14/23, 1:47 PM Finding your patient | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323819-nding-your -patient 4/5
+Helpful tip: Any filter that is applied when searching for a patient will continue to be applied after 
+searching for a patient.
+Did this answer your question?
+==============
+Helpful tip: Any filter that is applied when searching for a patient will continue to be applied after 
+searching for a patient.
+Did this answer your question?
+9/14/23, 1:47 PM Finding your patient | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4323819-nding-your -patient 5/5doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 4:06 PM How are the vancomycin AUC values calculated in the historical dose outcomes table? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/38981 10-how-are-the-vancomycin-auc-values-calculated-in-the-historical-dose-outcomes-table 1/2
+Search for articles...
+All CollectionsFAQs and Troubleshooting
+How are the vancomycin AUC values calculated in the historical dose outcomes table?
+How are the vancomycin AUC values
+calculated in the historical dose outcomes
+table?
+Understanding how historical AUC calculations are performed
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+The historical per-dose outcome data table, located below the Historical Plot, can be a source of 
+valuable clinical information. For vancomycin models, there are seven labeled categories in this 
+table that provide detailed information related to vancomycin dosing and pharmacokinetic (PK) 
+parameters including AUC tau (T), AUC24, peak and trough.
+==============
+table that provide detailed information related to vancomycin dosing and pharmacokinetic (PK) 
+parameters including AUC tau (T), AUC24, peak and trough.
+You will notice that the PK related values displayed for the most recent dose are italicized. This 
+is because at the time that these values are being calculated, the date and time of the next dose 
+has not been recorded yet . Therefore, DoseMeRx will use the previous dosing interval (e.g. 9 
+hours in the example below) to estimate the expected PK parameters.  Once the date and time 
+of the next dose has been recorded, the table will update with this new information. Keep in 
+mind that these are estimates based on the individualization of the pharmacokinetic model,  
+therefore, there may be slight differences between the estimated value displayed on this table 
+and the actual measured value reported by the laboratory.
+These values may also vary slightly as compared to the AUC24 estimates that may be displayed
+==============
+and the actual measured value reported by the laboratory.
+These values may also vary slightly as compared to the AUC24 estimates that may be displayed 
+in other areas of the software (e.g. the Dose Report). In these other areas of DoseMeRx, the 
+time of the next dose is known.
+9/14/23, 4:06 PM How are the vancomycin AUC values calculated in the historical dose outcomes table? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/38981 10-how-are-the-vancomycin-auc-values-calculated-in-the-historical-dose-outcomes-table 2/2doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 2:10 PM How do I review the model t indicator in DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5746712-how-do-i-review-the-model-t-indicator -in-dosemerx 1/4
+Search for articles...
+All CollectionsDoseMeRx's Key Features Explained
+How do I review the model fit indicator in DoseMeRx?
+How do I review the model fit indicator in
+DoseMeRx?
+A model fit indicator to help guide model selection for adult vancomycin models (1-compartment,
+2-compartment, and enhanced obese).
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+DoseMeRx has a quick and easy feature to show you a visual representation of how the model is 
+fitting to your patient's data. This article covers what model fit is, how it is calculated and how to 
+interpret it.
+What is model fit?
+Model fit is a term used to describe how well the selected model fits the observed data. In 
+general, a better fit corresponds to a more accurate dosing recommendation.
+How is it calculated?
+==============
+Model fit is a term used to describe how well the selected model fits the observed data. In 
+general, a better fit corresponds to a more accurate dosing recommendation.
+How is it calculated?
+When a model is fitted, DoseMeRx works to provide an estimate of the patients specific 
+pharmacokinetics based on the model selected. Model fit distills the difference between the 
+model predicted vs. measured drug levels down to a single value. This value is used to inform 
+the model fit status indicator that is displayed.
+Where is the model fit displayed?
+9/14/23, 2:10 PM How do I review the model t indicator in DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5746712-how-do-i-review-the-model-t-indicator -in-dosemerx 2/4A visual model fit indicator bar will be available above the Historical Plot graph. When evaluated 
+together, this provides additional insight that can be used to determine the most optimal dose 
+regimen for your patient. 
+How do I review model fit?
+==============
+together, this provides additional insight that can be used to determine the most optimal dose 
+regimen for your patient. 
+How do I review model fit?
+Good fit: The icon above, when displayed, indicates the measured drug levels from the patient 
+are in agreement with the model and suggest a Good Fit. You can also see this in the Historical 
+Plot graph as indicated by the blue line being closer or even crossing through the recorded drug 
+level(s) on the pharmacokinetic graph. In general, a Good Fit suggests improved accuracy of 
+dosing predictions and a higher likelihood of obtaining the therapeutic target (e.g. AUC24).
+Not ideal; needs review: The icon above, when displayed, suggests that a closer evaluation of 
+the recommendations may be beneficial. Consider taking additional steps to improve model fit 
+as they may be helpful in increasing the accuracy of future predictions.
+As a reminder, all of the models in DoseMeRx have been scientifically validated for use in
+==============
+as they may be helpful in increasing the accuracy of future predictions.
+As a reminder, all of the models in DoseMeRx have been scientifically validated for use in 
+patients with demographics that are within the pre-defined patient limits (e.g. height, weight, 9/14/23, 2:10 PM How do I review the model t indicator in DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5746712-how-do-i-review-the-model-t-indicator -in-dosemerx 3/4doseme-rx.com
+age) regardless of model fit. 
+How can I improve model fit for my patient? 
+Four ways to improve model fit
+ . Always check that data has been entered correctly. Data entry issues 
+comprise about 50% of the cases of poor model fit.
+ . Consider deselecting older levels in patients who have a longer course of 
+therapy and have varying vancomycin pk throughout their stay.
+ . If possible, get another level. A random level is fine. If you know the patient is 
+getting other labs drawn, you could just add it to that order.
+==============
+ . If possible, get another level. A random level is fine. If you know the patient is 
+getting other labs drawn, you could just add it to that order.
+ . Consider switching to a different model.
+Model fit should always be reviewed in combination with the Historical Plot. As with any feature 
+in DoseMeRx, model fit is intended to be used as a guide only and should not supersede your 
+clinical judgment. 
+Related articles:
+How do I switch between vancomycin models without re-entering patient data?
+Laboratory result(s) not fitting the patient
+Why do dosing recommendations differ between models?
+Did this answer your question?
+9/14/23, 2:10 PM How do I review the model t indicator in DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5746712-how-do-i-review-the-model-t-indicator -in-dosemerx 4/4
+==============
+
+
+****************************************************************
+9/14/23, 3:13 PM How do we set up two-factor authentication for your DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/8001824-how-do-we-set-up-two-factor -authentication-for -your -dosemerx 1/4
+Search for articles...
+All CollectionsDoseMeRx's Key Features Explained
+How do we set up two-factor authentication for your DoseMeRx?
+How do we set up two-factor authentication for
+your DoseMeRx?
+Two-Factor Authentication in DoseMeRx
+Written by Mike Ferrelli
+Updated over a week ago
+DoseMe is capable of enabling two-factor authentication in your DoseMeRx environment. You 
+will need to add two-factor authentication to your agreement with DoseMe in order to have this 
+feature available in your DoseMeRx environment. 
+The DoseMe team will enable two-factor authentication in your DoseMeRx environment. Once 
+enabled, you will need to authenticate your DoseMeRx log-in each time with a code 
+authenticator app such as Google Authenticator, Twilio Authy, Microsoft Authenticator, etc.
+==============
+enabled, you will need to authenticate your DoseMeRx log-in each time with a code 
+authenticator app such as Google Authenticator, Twilio Authy, Microsoft Authenticator, etc. 
+First, you will need to log in to DoseMeRx with your email and password credentials associated 
+with your DoseMeRx account.  
+A new window will appear informing you to set up two-factor authentication, and you must 
+select "Set up 2FA for DoseMeRx". 
+9/14/23, 3:13 PM How do we set up two-factor authentication for your DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/8001824-how-do-we-set-up-two-factor -authentication-for -your -dosemerx 2/4
+You must download an authentication application to your mobile device to be used for two-
+factor authentication. We would suggest Twilio, Google Authenticator, or Microsoft 
+Authentication, but this can be any code authentication application. 
+After downloading your authentication application to your mobile device, you must link your
+==============
+Authentication, but this can be any code authentication application. 
+After downloading your authentication application to your mobile device, you must link your 
+authenticator app with DoseMeRx by following the on-screen prompt and scanning the provided 
+QR code when setting up the account. 9/14/23, 3:13 PM How do we set up two-factor authentication for your DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/8001824-how-do-we-set-up-two-factor -authentication-for -your -dosemerx 3/4
+After the account is linked to your authenticator, a 6-digit code will be generated on your mobile 
+device. The user will be prompted to add the 6-digit code, provided on your mobile device, to 
+DoseMeRx. 
+Finally, after you have entered the 6-digit code into the prompt, you will be redirected to your 
+DoseMeRx environment. 
+The two-factor authentication setup has been completed and you will not be required to set up
+==============
+DoseMeRx environment. 
+The two-factor authentication setup has been completed and you will not be required to set up 
+the authentication each time you log into DoseMeRx. You will only be prompted to enter the 6-
+digit code, provided by your authenticator app, after entering your login credentials to 
+DoseMeRx. 
+Please contact the DoseMe support team if you need any additional assistance. We are available 
+24/7 through our live chat, by phoneat +1 (832) 358-3308, or by email at 
+support@dosemehealth.com. 9/14/23, 3:13 PM How do we set up two-factor authentication for your DoseMeRx? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/8001824-how-do-we-set-up-two-factor -authentication-for -your -dosemerx 4/4doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:03 PM How does DoseMeRx "learn" over time? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5259229-how-does-dosemerx-learn-over -time 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingHow does DoseMeRx "learn" over time?
+How does DoseMeRx "learn" over time?
+The value of drug levels in individualizing a patient model
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+DoseMeRx uses a population pharmacokinetic model which incorporates the patient's 
+demographics (e.g. weight, height, sex) and any previous relevant laboratory values (e.g. serum 
+creatinine) together with Bayesian methods to estimate an individual patient's clearance, volume 
+of distribution, and other PK parameters.
+In the absence of a drug level, the population model will be used to calculate the dose. However, 
+a single laboratory result (e.g. drug level) is all that DoseMeRx needs to begin individualization
+==============
+In the absence of a drug level, the population model will be used to calculate the dose. However, 
+a single laboratory result (e.g. drug level) is all that DoseMeRx needs to begin individualization 
+of the pharmacokinetic model resulting in targeted recommendations.
+Due to the way that Bayesian dosing works, if your patient is similar to the cohort used to 
+develop the model, a single level will give a high-quality fit. However, for patients that are 
+different than the model cohort, obtaining an additional level at a different time during the 
+interval, will give another point for DoseMeRx to use in the Bayesian fitting. When fitting a model 
+to a patient, DoseMeRx will strive to fit all of the observed data to find the most likely set of 
+individualized pharmacokinetic values to minimize these sources of external influences to the 
+extent possible.
+DoseMeRx is able to learn over time and create a more customized, individualized model of your
+==============
+extent possible.
+DoseMeRx is able to learn over time and create a more customized, individualized model of your 
+patient as more information (e.g. updated lab values and drug levels) are received for the 
+patient. Each subsequent laboratory result recorded improves DoseMeRxs interpretation of any 
+outlying data and also minimizes the need to switch to a different model.
+9/14/23, 4:03 PM How does DoseMeRx "learn" over time? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5259229-how-does-dosemerx-learn-over -time 2/2doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:15 PM How important is the time I take a patient s blood test? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2351715-how-important-is-the-time-i-take-a-patient-s-blood-test 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingHow important is the time I take a patients blood test?
+How important is the time I take a patients
+blood test?
+Blood tests or assays within DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+While the time at which you take a blood test may affect accuracy to a certain extent, it is much 
+more important to record the time at which a blood test was taken accurately. DoseMeRx using 
+Bayesian Dosing methodology can predict the peak and trough of that medication even if the 
+blood test was not taken at the optimal time.
+We have found that for antibiotics such as tobramycin, DoseMeRx is shown to be more accurate 
+at estimating AUC than the conventional two-sample method while requiring only one blood
+==============
+We have found that for antibiotics such as tobramycin, DoseMeRx is shown to be more accurate 
+at estimating AUC than the conventional two-sample method while requiring only one blood 
+sample and allowing the collection of this sample at almost any patient-preferred time.
+Read more about this here!
+Did this answer your question?
+9/14/23, 4:15 PM How important is the time I take a patient s blood test? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2351715-how-important-is-the-time-i-take-a-patient-s-blood-test 2/2doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 3:21 PM Initial Dosing Using the Population Model | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5466747-initial-dosing-using-the-population-model 1/4
+Search for articles...
+All CollectionsFAQs and TroubleshootingInitial Dosing Using the Population Model
+Initial Dosing Using the Population Model
+How do I start an initial course of a drug for a new patient in DoseMeRx (web-based users)?
+Written by Mike Ferrelli
+Updated in the last 15 minutes
+Once youve logged into DoseMeRx, you will land on the patient dashboard screen. Users will 
+select Add patient and enter the requested information and a drug model for the course.
+Upon selecting Save Patient, you will be brought to the historical plot. If a serum creatinine value 
+is available, we encourage you to enter it on the Lab Results tab, but you can move forward with 
+no doses or lab results by selecting calculate dose. If you do not enter a serum creatinine, a
+==============
+is available, we encourage you to enter it on the Lab Results tab, but you can move forward with 
+no doses or lab results by selecting calculate dose. If you do not enter a serum creatinine, a 
+default serum creatinine of  69.5 umol/L (0.786 mg/dL) for females and 84 umol/L (0.95 mg/dL) 
+for males will be used in the model calculations.
+Having no historic doses or lab results, DoseMeRx will use the population model to provide a 
+dose recommendation for this patient. This approach utilizes all information that we currently 
+know about the patient (height, weight, age, sex, and serum creatinine if applicable) and runs 
+this information against the population model and DoseMeRx algorithm to produce the 
+Population Model-Based Dose.
+9/14/23, 3:21 PM Initial Dosing Using the Population Model | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5466747-initial-dosing-using-the-population-model 2/4
+==============
+9/14/23, 3:21 PM Initial Dosing Using the Population Model | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5466747-initial-dosing-using-the-population-model 2/4
+By default, multiple doses will be provided for this dose recommendation, but a single loading 
+dose is able to be simulated in the customize panel.
+To do this, use either the Target tab or Dose tab, set the number of doses to 1, and select 
+calculate. DoseMeRx will provide a loading dose and the associated predicted outcomes.9/14/23, 3:21 PM Initial Dosing Using the Population Model | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5466747-initial-dosing-using-the-population-model 3/4
+Hint:
+Drug model settings like the number of doses and days of dosing might have to be adjusted by 
+either your teams administrative users or DoseMeRx customer experience staff to enable this 
+functionally. Please contact us at any time to confirm you have this feature enabled.
+Helpful FAQs
+==============
+either your teams administrative users or DoseMeRx customer experience staff to enable this 
+functionally. Please contact us at any time to confirm you have this feature enabled.
+Helpful FAQs
+For more information, check out these DoseMeRx Help documents.
+Population vs Individualized Models
+How does DoseMeRx "learn" over time?
+Did this answer your question?
+9/14/23, 3:21 PM Initial Dosing Using the Population Model | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5466747-initial-dosing-using-the-population-model 4/4doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 4:14 PM Is DoseMeRx suitable for ICU patients? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2351716-is-dosemerx-suitable-for -icu-patients 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingIs DoseMeRx suitable for ICU patients?
+Is DoseMeRx suitable for ICU patients?
+Intensive Care Unit Patients and DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+In general yes, although it will depend on the specific patient. DoseMeRx is in wide use for 
+critically ill patients and in intensive care units around the world.
+It is important to note that these patients can have significantly higher inter-occasion variability - 
+in other words, they may respond differently tomorrow than today, if their clinical situation 
+changes significantly.
+DoseMeRx is a decision support tool that makes predictions of a patients future 
+pharmacokinetics based on the recent pharmacokinetic data. If there is a significant change, we
+==============
+changes significantly.
+DoseMeRx is a decision support tool that makes predictions of a patients future 
+pharmacokinetics based on the recent pharmacokinetic data. If there is a significant change, we 
+recommend only using the most recent data to dose-adjust your patient.
+If you need any assistance please contact DoseMeRx support
+Did this answer your question?
+9/14/23, 4:14 PM Is DoseMeRx suitable for ICU patients? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2351716-is-dosemerx-suitable-for -icu-patients 2/2doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 4:41 PM Laboratory result not tting patient | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2291846-laboratory-result-not-tting-patient 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingLaboratory result not fitting patient
+Laboratory result not fitting patient
+Why doesn't the "blue line" cross through the lab result?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+A single laboratory result (e.g. drug level) is all that DoseMeRx needs to generate an 
+individualized historical plot curve (represented by the blue line). In order to create this curve, 
+DoseMeRx's Bayesian dosing methodology evaluates each result, as indicated by the black "x" 
+on the graph, in terms of the "likelihood" of the observed level. 
+When a laboratory result is recorded for the patient, if the level observed is considered to be 
+highly likely, the blue line will be close or may even cross through the recorded level on the
+==============
+When a laboratory result is recorded for the patient, if the level observed is considered to be 
+highly likely, the blue line will be close or may even cross through the recorded level on the 
+graph. However, if the result is a far outlier in the range of probable results based on the 
+population drug model, DoseMeRx will assume that there has been an error with the result and 
+will weight it minimally when building the model for your individual patient. Essentially, the 
+further any laboratory result is from what DoseMeRx considers likely, the less impact that result 
+will have on the individual model.The graphic below illustrates this concept. 
+DoseMeRx is able to learn over time. Each subsequent laboratory result recorded increases 
+DoseMeRxs interpretation of any outlying data.In addition, the model fit indicator displayed can 
+also assist with the interpretation the information that is being displayed in the Historical Plot.
+==============
+DoseMeRxs interpretation of any outlying data.In addition, the model fit indicator displayed can 
+also assist with the interpretation the information that is being displayed in the Historical Plot. 
+9/14/23, 4:41 PM Laboratory result not tting patient | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2291846-laboratory-result-not-tting-patient 2/2doseme-rx.com
+Related articles:
+How do I interpret the model fit indicator in DoseMeRx?
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 1:55 PM Logging into DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297539-logging-into-dosemerx 1/2doseme-rx.com
+Search for articles...
+All CollectionsGet started with DoseMeRxLogging into DoseMeRx
+Logging into DoseMeRx
+How to set up and log into your DoseMeRx account for the first time
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+To log into DoseMeRx for the first time you will need to click on the link provided in your 
+welcome email. This will prompt you to set up a password for your DoseMeRx account. After you 
+have confirmed your password, you will be able to log in to DoseMeRx.
+Tip: If the link has expired, don't worry, you can reset it using our forgot password function.
+Did this answer your question?
+9/14/23, 1:55 PM Logging into DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297539-logging-into-dosemerx 2/2
+==============
+
+
+****************************************************************
+9/14/23, 3:13 PM MIC and DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297727-mic-and-dosemerx 1/2doseme-rx.com
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedMIC and DoseMeRx
+MIC and DoseMeRx
+How to incorporate the Minimum Inhibitory Concentration (MIC)
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+For relevant antibiotics, DoseMeRx supports MIC methodologies including:
+AUC MIC
+Peak:MIC
+Time above MIC
+To turn on MIC in your account, get in touch with DoseMeRx Support.
+Did this answer your question?
+9/14/23, 3:13 PM MIC and DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297727-mic-and-dosemerx 2/2
+==============
+
+
+****************************************************************
+9/14/23, 3:18 PM Population vs. Individualized Models | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5506389-population-vs-individualized-models 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingPopulation vs. Individualized Models
+Population vs. Individualized Models
+What is the difference?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Within DoseMeRx, there are two types of model-based dosing recommendations  a 
+Population-Model Based Dose and the Default Individualized Target dose (i.e., the Bayesian 
+Individualized Dose). Both dosing recommendations are informed by the pharmacokinetic 
+model that you have selected.
+The Population-Model Based Dose, is the recommendation that is displayed in the absence of 
+a drug level. In this case, the dosing regimen that is recommended is adjusted based on the 
+patient's demographics (e.g. height, weight, sex, and age) and renal function, but assumes that
+==============
+a drug level. In this case, the dosing regimen that is recommended is adjusted based on the 
+patient's demographics (e.g. height, weight, sex, and age) and renal function, but assumes that 
+your patients pharmacokinetics are similar to the population model. If your patient's 
+pharmacokinetics are not similar to the patient population used to develop the model, it may 
+result in doses that are too high, or too low initially. In these cases, the guideline dose may be 
+more appropriate to use until drug levels can be obtained.
+However, once a drug level is obtained, the model is "fitted" using Bayesian science to produce 
+an individualized dose recommendation. In DoseMeRx, this is referred to as the Default 
+Individualized Target (Individualized Dose). This new individual model is then used to provide 
+a patient-specific dosing recommendation to reach the desired therapeutic target.
+Helpful FAQs
+For more information, check out these DoseMeRx Help documents.
+==============
+a patient-specific dosing recommendation to reach the desired therapeutic target.
+Helpful FAQs
+For more information, check out these DoseMeRx Help documents.
+Initial dosing using the Population model
+9/14/23, 3:18 PM Population vs. Individualized Models | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/5506389-population-vs-individualized-models 2/2doseme-rx.com
+Initial dosing using the Population model
+How does DoseMeRx "learn" over time?
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 3:12 PM Renal Impairment and Dialysis in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297716-renal-impairment-and-dialysis-in-dosemerx 1/2
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedRenal Impairment and Dialysis in DoseMeRx
+Renal Impairment and Dialysis in DoseMeRx
+Can I use DoseMeRx for patients with renal dysfunction, including AKI, and those receiving
+different types of dialysis (e.g. CRRT or IHD)?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+The pharmacokinetic models in DoseMeRx take into account (for each individual patient) the 
+relationship between serum creatinine and/or creatinine clearance and the drug's rate of 
+clearance (e.g. vancomycin).  DoseMeRx allows multiple serum creatinines to be recorded at 
+various time points throughout the interval. Between these timepoints, DoseMeRx interpolates 
+the serum creatinine level allowing for a patients clearance to be adjusted over time. If no serum
+==============
+various time points throughout the interval. Between these timepoints, DoseMeRx interpolates 
+the serum creatinine level allowing for a patients clearance to be adjusted over time. If no serum 
+creatinine level is available, DoseMeRx uses a published model of mean serum creatinine for 
+age, sex, weight, and height as part of the calculations. 
+DoseMeRx will also take into account renal function when calculating the Guideline and Label 
+doses as well, where applicable.
+Fluctuating renal function/Acute Kidney Injury (AKI)
+DoseMeRx can be utilized in patients with fluctuating renal function or AKI. Of course, serum 
+creatinine is a later marker of renal function, which means that just like any other tool, scoring 
+method, or alerting method that uses serum creatinine, the clinician needs to keep in mind the 
+whole patient; anuria can occur prior to a measurable rise in serum creatinine.
+DoseMeRx does have a minimum and maximum serum creatinine that can be entered, however,
+==============
+whole patient; anuria can occur prior to a measurable rise in serum creatinine.
+DoseMeRx does have a minimum and maximum serum creatinine that can be entered, however, 
+these limits are set per facility and can be adjusted based on your preferences.
+9/14/23, 3:12 PM Renal Impairment and Dialysis in DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297716-renal-impairment-and-dialysis-in-dosemerx 2/2doseme-rx.com
+Strategies that may be considered to optimize the use of DoseMeRx in patients with renal 
+insufficiency (not receiving dialysis) include:
+ . Deselecting older levels, especially those that are less reflective of the patient's current 
+pharmacokinetics
+ . Obtaining drug levels more frequently.  
+ . Utilizing a different therapeutic dosing target 
+CRRT and Peritoneal Dialysis
+DoseMeRx has not been formally validated for continuous renal replacement therapy (CRRT) or 
+peritoneal dialysis and we cannot recommend its use in this cohort.
+==============
+CRRT and Peritoneal Dialysis
+DoseMeRx has not been formally validated for continuous renal replacement therapy (CRRT) or 
+peritoneal dialysis and we cannot recommend its use in this cohort.
+Intermittent Hemodialysis (IHD)
+DoseMeRx supports vancomycin dosing in hemodialysis patients. Read article 
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:41 PM Resetting Your DoseMeRx Password | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297690-resetting-your -dosemerx-password 1/3
+Search for articles...
+All CollectionsFAQs and TroubleshootingResetting Your DoseMeRx Password
+Resetting Your DoseMeRx Password
+Forgot password, resetting your password in DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Forgot Password
+If you don't know your password head to the login page and click the 'Forgot Password' link. 
+This will send email or SMS instructions to reset your password.
+9/14/23, 4:41 PM Resetting Your DoseMeRx Password | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297690-resetting-your -dosemerx-password 2/3
+Resetting Password inside DoseMeRx
+If you know your password and would like to change this, once logged into DoseMeRx, click on 
+your name in the top right hand corner of the screen. Here you will be able to set your new
+==============
+If you know your password and would like to change this, once logged into DoseMeRx, click on 
+your name in the top right hand corner of the screen. Here you will be able to set your new 
+password.9/14/23, 4:41 PM Resetting Your DoseMeRx Password | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2297690-resetting-your -dosemerx-password 3/3doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 3:10 PM Reviewing alternative doses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3892139-reviewing-alternative-doses 1/4
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedReviewing alternative doses
+Reviewing alternative doses
+Access the feature in DoseMeRx with alternative lower and higher doses to the Individualized or
+Population recommendations.
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+DoseMeRx has a helpful feature that will show you a dose rounding size (e.g. 250mg) higher and 
+lower than the Default Individualized Target recommendation along with the predicted 
+outcomes. 
+You can use this feature for any of our vancomycin models, once you have added your patient, 
+doses and lab results into DoseMeRx and are ready to calculate the next dose,
+To see this feature on the dose recommendation page, simply click on the preview icon. 
+9/14/23, 3:10 PM Reviewing alternative doses | DoseMe Help Center
+==============
+To see this feature on the dose recommendation page, simply click on the preview icon. 
+9/14/23, 3:10 PM Reviewing alternative doses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3892139-reviewing-alternative-doses 2/4
+Here you will see the alternate dose amounts (one size higher and one size lower) over the same 
+dosing interval and number of days.
+Simulating one of these alternate doses is easy, scroll down to the Customize section, input the 
+new dose amount and simply click Calculate.9/14/23, 3:10 PM Reviewing alternative doses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3892139-reviewing-alternative-doses 3/4
+Did this answer your question?
+9/14/23, 3:10 PM Reviewing alternative doses | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3892139-reviewing-alternative-doses 4/4doseme-rx.com
+==============
+
+
+****************************************************************
+9/14/23, 4:13 PM Securely sharing patient information | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3787355-securely-sharing-patient-information 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingSecurely sharing patient information
+Securely sharing patient information
+I need help with a patient, but I don't want to share PHI
+Written by Mike Ferrelli
+Updated over a week ago
+So, you've run into a challenge with your patient, oh-no, don't worry the DoseMe support team
+is always here to help!
+There are multiple ways for the DoseMe support team to assist you with your situation. In order 
+for us to operate efficiently and safely, we ask you to please never send any patient personal 
+health information (PHI) through an unprotected channel this includes email and instant chat.
+In order for our DoseMe support team to help you, we will need to know the specific patient you
+==============
+health information (PHI) through an unprotected channel this includes email and instant chat.
+In order for our DoseMe support team to help you, we will need to know the specific patient you 
+are referring to. Instead of revealing patient PHI directly in an email or through our live chat 
+inside DoseMeRx, all you need to do is describe your question and include the patient-specific 
+URL web link. This web link allows the DoseMe support team to jump straight into the patient 
+within DoseMeRx.
+9/14/23, 4:13 PM Securely sharing patient information | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3787355-securely-sharing-patient-information 2/2doseme-rx.com
+We want to ensure that your patient's PHI is always secure. The DoseMe support team is 
+available 24/7 to help you with any of your questions or inquires.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:08 PM Vancomycin dosing in adults: complex, critically-ill (ICU patients) | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793688-vancomycin-dosing-in-adults-complex-critically-ill-icu-patients 1/2
+Search for articles...
+All CollectionsFAQs and Troubleshooting
+Vancomycin dosing in adults: complex, critically-ill (ICU patients)
+Vancomycin dosing in adults: complex,
+critically-ill (ICU patients)
+Two-compartment vancomycin model in DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+The two-compartment vancomycin adult model implemented in DoseMeRx is derived from a 
+retrospective study with a cohort of 1,812 patients. This model is particularly useful for AUC-
+based dosing as it models both the distribution and elimination phases of vancomycin.
+Vancomycin dosing in critically-ill / ICU patients using our complex model
+As this model fits a more complex pharmacokinetic curve, in order to get the best individual fit,
+==============
+Vancomycin dosing in critically-ill / ICU patients using our complex model
+As this model fits a more complex pharmacokinetic curve, in order to get the best individual fit, 
+two random lab results (not necessarily on the same dose) are most effective at individualizing 
+the two phases for the patient using this model. The use of this model is highly recommended in 
+complex patients already having multiple levels taken, such as those in ICU.
+Related Articles
+The articles below relate to the other vancomcyin adult models available in DoseMeRx:
+Standard vancomycin (one compartment)
+Intermittent hemodialysis (two compartment)
+9/14/23, 4:08 PM Vancomycin dosing in adults: complex, critically-ill (ICU patients) | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793688-vancomycin-dosing-in-adults-complex-critically-ill-icu-patients 2/2doseme-rx.com
+To try all the vancomycin models available in DoseMeRx, schedule a time to discuss your free 
+trial today!
+==============
+To try all the vancomycin models available in DoseMeRx, schedule a time to discuss your free 
+trial today!
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:06 PM Vancomycin dosing in hemodialysis patients | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793628-vancomycin-dosing-in-hemodialysis-patients 1/3
+Search for articles...
+All CollectionsFAQs and TroubleshootingVancomycin dosing in hemodialysis patients
+Vancomycin dosing in hemodialysis patients
+Dosing vancomycin in patients on hemodialysis with DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+At DoseMeRx, we've implemented a range of vancomycin models to help you optimize therapy 
+for a variety of patient cohorts.
+An overview of the hemodialysis (HD) model
+The adult HD model in DoseMeRx is derived from the Goti et retrospective study which included 
+336 patients on high-flux, intermittent HD. Study researchers found that clearance in patients 
+undergoing HD was 35% lower than clearance in non-dialysis patients, and the volume of 
+distribution was approximately halved in dialysis patients when compared to nondialysis patients.
+==============
+undergoing HD was 35% lower than clearance in non-dialysis patients, and the volume of 
+distribution was approximately halved in dialysis patients when compared to nondialysis patients.
+When using the model, entering dialysis times is not required because this model uses a 
+smoothed average of vancomycin clearance across the "on" and "off" dialysis periods. 
+Patients may be dosed using trough or AUC24 depending on your institutional preference. 
+How to incorporate the model into your workflow 
+This can best be demonstrated using a sample patient. (Note: Although this example references 
+AUC24, the workflow is similar if dosing to a specific pre-dialysis level [i.e. trough).
+Lets say we have a patient who receives a loading dose of vancomycin on a Monday prior to an 
+HD session (on the same day) and then receives a second dose of vancomycin on a Wednesday 
+(post HD). Prior to HD on Friday, a pre-dialysis level is obtained and this is used to calculate the
+==============
+HD session (on the same day) and then receives a second dose of vancomycin on a Wednesday 
+(post HD). Prior to HD on Friday, a pre-dialysis level is obtained and this is used to calculate the 
+9/14/23, 4:06 PM Vancomycin dosing in hemodialysis patients | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793628-vancomycin-dosing-in-hemodialysis-patients 2/3patient's third dose that will be given post HD at 1800 with a goal of achieving a target AUC24 of 
+450mg.h/L.
+The individualized dosing calculation that will be displayed in this example will reflect the 
+predicted pk/pd parameters that will be achieved based on your institutional defaults. For 
+example, if the institutional defaults are set to 1 dose (with the default interval set at 48 hours), 
+the predicted "trough" that is displayed will represent the expected concentration at the end of 
+the time frame specified and the AUC that is displayed represents the estimated AUC
+==============
+the predicted "trough" that is displayed will represent the expected concentration at the end of 
+the time frame specified and the AUC that is displayed represents the estimated AUC 
+extrapolated to 24 hours. As a reminder, the customized section can be used to calculate doses 
+across longer dosing intervals if needed (e.g. 72 hours or over a weekend).
+An easy way to visualize this is to hover over the Default Individualized Dose Profile which will 
+show you the predicted vancomycin level at any point in time during therapy (Figure 1).  The 
+corresponding values for each dose are also displayed in the table on the dosing screen. 
+Additional tips for this model
+ . Ensure that your institutional defaults are set to best reflect your hospital's protocol for both 
+the number of doses and intervals9/14/23, 4:06 PM Vancomycin dosing in hemodialysis patients | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793628-vancomycin-dosing-in-hemodialysis-patients 3/3doseme-rx.com
+==============
+https://help.doseme-rx.com/en/articles/3793628-vancomycin-dosing-in-hemodialysis-patients 3/3doseme-rx.com
+ . In some cases, a pre-HD level will yield a "Withhold" recommendation. In this case, a post 
+HD level may be needed (ideally obtained at least 2 hours post HD per guidelines). 
+ . To reduce the number of additional labs, another option would be to move from pre-HD 
+levels to post HD levels. 
+ . Ensure that any doses and levels that have been given prior to admission are documented. If 
+there are no doses documented, DoseMeRx will assume that the patient is starting with a 
+blood level of zero which can impact the calculations. 
+Related Articles
+Renal Impairment and Dialysis in DoseMeRx
+To try all the vancomycin models available in DoseMeRx, schedule a time to discuss your trial.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:07 PM Vancomycin dosing in standard adult patients using DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793704-vancomycin-dosing-in-standard-adult-patients-using-dosemerx 1/3
+Search for articles...
+All CollectionsFAQs and Troubleshooting
+Vancomycin dosing in standard adult patients using DoseMeRx
+Vancomycin dosing in standard adult patients
+using DoseMeRx
+One-compartment vancomycin model in DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+The one-compartment vancomycin model implemented in DoseMeRx is derived from a 
+retrospective study on a cohort of 215 patients. It has been further validated in multiple 
+publications and used clinically in over 10,000 patients with a wide range of conditions. This 
+model replicates localized protocols and dosing solutions currently used to assist clinicians with 
+trough dosing, with the added benefit of Bayesian dosing combining individual data with the
+==============
+model replicates localized protocols and dosing solutions currently used to assist clinicians with 
+trough dosing, with the added benefit of Bayesian dosing combining individual data with the 
+population model prior when calculating an individualized fit.
+Why is this model suitable for my general ward patients on vancomycin?
+As there are less free parameters to fit with a single-compartment model, an individualized fit is 
+more likely to be achieved from a single trough level. DoseMeRx also has known accuracy for 
+trough targets in clinical practice which means we know how accurate the predicted drug 
+concentration will be in relation to the actual drug concentration. You can read more about the 
+predictive accuracy of DoseMeRx in predicting future serum vancomycin levels in our blog 
+Accurate Prediction of Vancomycin Levels to Optimize Care.
+The relationship between the likelihood of an acute kidney injury and the reported AUC of this
+==============
+Accurate Prediction of Vancomycin Levels to Optimize Care.
+The relationship between the likelihood of an acute kidney injury and the reported AUC of this 
+model has also been established and published by Chavada et al. (2017).
+9/14/23, 4:07 PM Vancomycin dosing in standard adult patients using DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793704-vancomycin-dosing-in-standard-adult-patients-using-dosemerx 2/3doseme-rx.com
+Related Articles
+The articles below relate to the other vancomycin adult models available in DoseMeRx:
+Intermittent hemodialysis (two compartment)
+Complex / critically-ill (two compartment)
+To try all the vancomycin models available in DoseMeRx, schedule a time to discuss your free 
+trial today!
+Did this answer your question?
+9/14/23, 4:07 PM Vancomycin dosing in standard adult patients using DoseMeRx | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3793704-vancomycin-dosing-in-standard-adult-patients-using-dosemerx 3/3
+==============
+
+
+****************************************************************
+9/14/23, 4:04 PM Vancomycin One Compartment vs Two Compartment Models | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3922281-vancomycin-one-compartment-vs-two-compartment-models 1/3
+Search for articles...
+All CollectionsFAQs and Troubleshooting
+Vancomycin One Compartment vs Two Compartment Models
+Vancomycin One Compartment vs Two
+Compartment Models
+What are the differences between these models for adult patients?
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+What are the differences between these models for adult patients?
+Although vancomycin is typically characterized as a 2 or even a 3-compartment model, there 
+are numerous pharmacokinetic (PK) studies that describe a 1-compartment model that are 
+commonly used in Bayesian dosing. Within DoseMeRx, we have two standard vancomycin 
+models that are applicable for use in a wide range of adults who are not currently receiving 
+dialysis.
+==============
+commonly used in Bayesian dosing. Within DoseMeRx, we have two standard vancomycin 
+models that are applicable for use in a wide range of adults who are not currently receiving 
+dialysis.
+Of course, the decision on which model to select when you have access to both is based on 
+your own clinical judgment. However, understanding the differences will help you determine 
+which model may be more suitable for your patient.
+One (1)-Compartment Vancomycin Model
+Background: The one-compartment vancomycin model implemented in DoseMeRx is derived 
+from a retrospective study conducted in 215 patients (Buelga et al. AAC 2005). It has been 
+further validated in multiple publications and used clinically in over 10,000 patients with a wide 
+range of conditions. Total body weight and creatinine clearance are the covariates in this model. 
+9/14/23, 4:04 PM Vancomycin One Compartment vs Two Compartment Models | DoseMe Help Center
+==============
+range of conditions. Total body weight and creatinine clearance are the covariates in this model. 
+9/14/23, 4:04 PM Vancomycin One Compartment vs Two Compartment Models | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3922281-vancomycin-one-compartment-vs-two-compartment-models 2/3Creatinine clearance is calculated using ideal body weight. In cases where serum creatinine is 
+less than 0.68mg/dL (60 mol/L), the value is rounded up to the 0.68mg/dL (60 mol/L) 
+minimum threshold.  The 1 compartment model is validated for use for patients weighing 
+between 40 and 200kg and height between 150 and 220cm.
+With a single compartment model, there are less free parameters to fit. Therefore, an 
+individualized fit is more likely to be achieved from a single trough level. It will model a 
+smoothed average of the 2 compartments. A recent paper found that a 1 compartment model 
+may be sufficient to guide vancomycin dosing in adult patients with stable renal function
+==============
+smoothed average of the 2 compartments. A recent paper found that a 1 compartment model 
+may be sufficient to guide vancomycin dosing in adult patients with stable renal function 
+(Shingde RV, et al. Ther Drug Monitor 2019).
+Summary: The 1 compartment model may be suitable for patients who are less complex 
+medically and have stable renal function.
+Two (2)-Compartment Vancomycin Model
+Background: The two-compartment vancomycin adult model implemented in DoseMeRx is 
+derived from a retrospective study with a cohort of 1,812 patients (Goti et al. Ther Drug Monitor 
+2018) . This model is particularly useful for AUC-based dosing as it models both the distribution 
+and elimination phases of vancomycin. Total body weight and creatinine clearance are the 
+covariates in this model (for non-hemodialysis patients). Creatinine clearance is calculated 
+based on Cockroft-Gault using ideal body weight. For patients over 65, it rounds the minimum
+==============
+covariates in this model (for non-hemodialysis patients). Creatinine clearance is calculated 
+based on Cockroft-Gault using ideal body weight. For patients over 65, it rounds the minimum 
+serum creatinine value used up to 1 mg/dL (88.4mol/L). Creatinine clearance is "capped" at a 
+maximum of 150mL/min for all patients.  This model is validated for use for patients weighing 
+between 40 and 200kg and height between 150 and 220cm. A 2019 review of pharmacometric 
+models for Bayesian forecasting found that this model had a high predictive performance 
+(Broeker et al. Clin Microbiol Infect 2019).
+As this model fits a more complex pharmacokinetic curve, in order to get the best individual fit, 
+two lab results, such as a post-infusion peak and a trough, are most effective at individualizing 
+the two phases for the patient using this model. There is flexibility in the timing of the levels that 
+can be obtained (e.g. they don't always have to be during the same dosing interval). Random
+==============
+the two phases for the patient using this model. There is flexibility in the timing of the levels that 
+can be obtained (e.g. they don't always have to be during the same dosing interval). Random 
+levels can also be utilized in model fitting as well. 
+Summary: The use of this model is highly recommended in complex patients who may have 
+altered clearance or volume of distribution, such as those in the ICU. However, due to the way 9/14/23, 4:04 PM Vancomycin One Compartment vs Two Compartment Models | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/3922281-vancomycin-one-compartment-vs-two-compartment-models 3/3doseme-rx.com
+that Bayesian dosing works, if, your patient is similar to the cohort of the two compartment 
+model, a single level will also give a high quality fit.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 2:12 PM Viewing Patient PK Parameters | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4101430-viewing-patient-pk-parameters 1/2
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedViewing Patient PK Parameters
+Viewing Patient PK Parameters
+How do I view my patient's pharmacokinetic parameters?
+Written by Mike Ferrelli
+Updated over a week ago
+After entering in your historical doses and lab results, some individuals want to view the 
+patient's pharmacokinetic parameters like terminal half-life, clearance, and volume of 
+distribution.  DoseMeRx has the capability to view all of your patient's estimated 
+pharmacokinetic parameters!
+To view your patient's estimated pharmacokinetic parameters, select the 'PK Parameters' tab.  
+This will display all of your patient's pharmacokinetic parameters including, the volume of 
+distribution, the estimated clearance, theelimination rate, and the terminal half-life.
+==============
+This will display all of your patient's pharmacokinetic parameters including, the volume of 
+distribution, the estimated clearance, theelimination rate, and the terminal half-life. 
+Tip:  When you create your patient's dose report, the patient's individual pharmacokinetic 
+parameters will be displayed on the dose report along with the population pharmacokinetic 
+9/14/23, 2:12 PM Viewing Patient PK Parameters | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4101430-viewing-patient-pk-parameters 2/2doseme-rx.com
+parameters. 
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 2:1 1 PM Warfarin Course Specic Fields | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4856745-warfarin-course-specic-elds 1/2
+Search for articles...
+All CollectionsDoseMeRx's Key Features ExplainedWarfarin Course Specific Fields
+Warfarin Course Specific Fields
+Optimizing the Warfarin Model in DoseMeRx
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+The Course-Specific Data fields within DoseMeRx provide key historical information for the 
+warfarin model to utilize when making dosing recommendations.  Below is a description of the 
+fields that should be updated for Adults (A) and Pediatrics (P).
+Past daily dose (A/P) - If a patient has been receiving warfarin prior to the use of DoseMeRx, 
+enter their average past daily dose in mg. If only the most recent dose is known (e.g. from the 
+day before) this should be entered as opposed to leaving the default of zero.  If zero is entered,
+==============
+enter their average past daily dose in mg. If only the most recent dose is known (e.g. from the 
+day before) this should be entered as opposed to leaving the default of zero.  If zero is entered, 
+this implies the patient is warfarin naive and this will be reflected in the dosing recommendation. 
+The current range allowed is between 0 and 12mg. 
+CYP2C9 Genotype (A/P) - Optional field. Enter this information if known. If you do not enter a 
+value, the most prevalent population genotype is assumed.  For both adults and pediatrics, it is 
+*1/*1. 
+Past Steady State INR (A) - Input your stable patient's average INR if known. Must be between 
+0 and 20. Enter 0 if not known. 
+VKORC1 Haplotype (A/P) - Optional field. Enter this information if known. Similar to the 
+CYP2C9 Genotype, if you do not enter a value, the most prevalent population genotype is 
+assumed. For both adults and pediatrics, it is G/G. 
+9/14/23, 2:1 1 PM Warfarin Course Specic Fields | DoseMe Help Center
+==============
+assumed. For both adults and pediatrics, it is G/G. 
+9/14/23, 2:1 1 PM Warfarin Course Specic Fields | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/4856745-warfarin-course-specic-elds 2/2doseme-rx.com
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 4:15 PM What if I don't have my patient's height? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/2284742-what-if-i-don-t-have-my-patient-s-height 1/1doseme-rx.com
+Search for articles...
+All CollectionsFAQs and TroubleshootingWhat if I don't have my patient's height?
+What if I don't have my patient's height?
+Patient height
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+Height is an optional field within DoseMeRx. If the drug model requires the patient's height and 
+one has not been provided, DoseMeRx will take an average for their age and sex.
+Tip: We recommend always recording the height for your patient if readily available.
+Did this answer your question?
+==============
+
+
+****************************************************************
+9/14/23, 3:21 PM What is the role of days/doses? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/6089547-what-is-the-role-of-days-doses 1/2
+Search for articles...
+All CollectionsFAQs and TroubleshootingWhat is the role of days/doses?
+What is the role of days/doses?
+The role that duration of therapy plays in dosing recommendations
+Written by Sharmeen Roy, PharmD, BCPS
+Updated over a week ago
+One of the key components in a dosing recommendation from DoseMeRx is duration. It may be 
+represented in days or number of doses depending on your institutional settings. Below is an 
+example. 
+This time frame should not be interpreted as a recommended duration of therapy to treat the 
+patient. Rather, it is intended to represent the calculated pharmacokinetic and 
+pharmacodynamic targets that will be achieved at the end of the duration that is specified. The 
+duration also informs DoseMeRx on how many doses in the future will be displayed in the 
+Predicted Dose Outcomes table.
+==============
+duration also informs DoseMeRx on how many doses in the future will be displayed in the 
+Predicted Dose Outcomes table. 
+Keep in mind that although DoseMeRx will provide a dosing recommendation that will help the 
+patient reach the target therapeutic range specified, in some cases the target value will be 
+9/14/23, 3:21 PM What is the role of days/doses? | DoseMe Help Center
+https://help.doseme-rx.com/en/articles/6089547-what-is-the-role-of-days-doses 2/2doseme-rx.com
+reached well before the end of that time range. 
+Helpful FAQs
+For more information, check out these DoseMeRx Help documents.
+Customizing drug limits and constraints
+Vancomycin default drug limits 
+How does DoseMeRx calculate AUC
+Did this answer your question?
+==============
+
+

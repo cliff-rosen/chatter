@@ -1,0 +1,82 @@
+Data Processing Steps
+
+TO DO:
+- add logging to capture links missing content, etc.
+- step 2a: look for and remove irrelevant chunks
+- check for empty or small pages ie from SPAs
+
+- PREPARE -
+
+1. Review site using inspect and establish which tag, tag id or class to spider
+
+2. Create domain record with spider_notes with that info
+
+3. Update the get_page_contents() to retrieve proper target
+
+4. Update domain name and domain_id in 3 processing scripts
+
+
+- RUN -
+
+1. Step 1: spider side and populate document table
+ Verify get_page_contents retrieval logic
+ Set single to true
+ Set domain to "https://domain.com", with no / at end
+ Run script and verify:
+  console shows content found in correct section (i.e. id=main)
+  content written to page.txt is correct
+  spider_log has no errors
+ Change single to False and run Step 1 fully
+ Check logfile
+ Check db document table sorted by doc_uri
+   find duplicate doc_text
+  SELECT *
+  FROM document
+  WHERE domain_id = 31
+  ORDER BY doc_uri
+==============
+2. Step 2: populate document_chunk from document records
+set chunk_maker
+set g_domain_id
+run script
+check logfile
+check db document_chunks table
+  search for long chunks
+    SELECT length(chunk_text), dc.doc_chunk_id, dc.chunk_text, d.doc_uri
+    FROM document_chunk dc
+    JOIN document d ON dc.doc_id = d.doc_id
+    WHERE domain_id = 25
+    ORDER BY LENGTH(chunk_text) desc
+    LIMIT 100
+  search for redundant and useless chunks
+    SELECT dc.*
+    FROM document_chunk dc
+    JOIN document d ON dc.doc_id = d.doc_id
+    WHERE domain_id = 28
+    ORDER BY chunk_text
+
+3. Step 3: update Pinecone index with chunks
+set domain_id
+run script
+check logfile
+verify:
+ select count(*) from document_chunk where domain_id = 22
+ select count(*) from document_chunk
+ compare with index count in Pinecone console
+
+4. Create user
+
+- TEST -
+
+1. Login as user and test
+- domain defaults to correct value
+- "what does this company do" ; check chunks and response
+==============
+Other tests:
+check for chunks that are very long
+SELECT domain_id, LENGTH(chunk_text), doc_chunk_id
+FROM document_chunk dc
+JOIN document d ON dc.doc_id = d.doc_id
+WHERE LENGTH(chunk_text) > 2000
+ORDER BY domain_id
+==============
