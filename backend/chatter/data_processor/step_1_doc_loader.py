@@ -47,7 +47,7 @@ def write_text_to_db(uri, text, conn, domain_id):
     return    
 
 def run():
-    filedir = 'data_processor/sources/'
+    filedir = 'chatter/data_processor/sources2/'
     domain_id = 1
 
     print('Starting job')

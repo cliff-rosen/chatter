@@ -25,17 +25,33 @@ openai.api_key = OPENAI_API_KEY
 '''
 chunks dict: 
     {
-        "ID":  {
+        ID:  {
             "id": ID as int,
             "score": score as float,
-            "text": text,
             "metadata": {
                 "doc_chunk_id": 44743.0,
                 "doc_id": 20657.0,
                 "domain_id": 27.0                
-            }
-            "uri": uri
+            },
+            "uri": uri,
+            "text": text,
+            "used": isUsed
         }
+    }
+
+    {
+        "27": {
+            "id": 27,
+            "score": 0.737494111,
+            "metadata": {
+                "doc_chunk_id": 27.0,
+                "doc_id": 15.0,
+                "domain_id": 1.0
+            },
+            "uri": "Changes in Drug Level Laboratory Results _ DoseMe Help Center.pdf",
+            "text": "different, DoseMeRx will tend to prefer the one most like the population model (as this is more \ncommon in the population). Therefore, it may recommend a different dose than what would be \ncustomary for a patient if only the most recent result was considered.\nHere are two approaches to consider when this is encountered:\nIf the accuracy of the outlier drug level is questionable:\n\u0000. Consider obtaining another level if possible to validate the accuracy of the most recent \nlevel.\n\u0000. If you cannot obtain a level, exclude the last level and DoseMeRx will calculate the dose \nbased on the prior existing levels.\nIf the most recent drug level value is considered to be correct:\n9/14/23, 4:09 PM Changes in Drug Level Laboratory Results | DoseMe Help Center\nhttps://help.doseme-rx.com/en/articles/3353676-changes-in-drug-level-laboratory-results 2/2doseme-rx.com\n\u0000. Exclude earlier drug levels (if the last result is considered correct and you think a change \nhas taken place).",
+            "used": true
+        }    
     }
 '''
 
@@ -57,7 +73,13 @@ def get_chunks_from_embedding(domain_id, query_embedding, top_k=TOP_K):
            filter={'domain_id': domain_id}).matches
     print('  query retrieved %s results' % (len(matches)))
     if len(matches) > 0:
-        res = {matches[i].id : {"id" : int(matches[i].id), "score" : matches[i].score, "metadata": matches[i].metadata} for i in range(len(matches))}
+        res = {
+                matches[i].id : {
+                                "id" : int(matches[i].id),
+                                "score" : matches[i].score, 
+                                "metadata": matches[i].metadata
+                                } for i in range(len(matches))
+            }
     else:
         res = {}
     return res

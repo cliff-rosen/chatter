@@ -35,6 +35,7 @@ export default function Diagnostics({
             <TableHead>
               <TableRow>
                 <TableCell align="left">Score</TableCell>
+                <TableCell align="left">Used</TableCell>
                 <TableCell align="left">ID</TableCell>
                 <TableCell align="left">Text</TableCell>
               </TableRow>
@@ -45,6 +46,7 @@ export default function Diagnostics({
                   <TableCell style={{ verticalAlign: "top" }} align="left">
                     {chunk.score.toFixed(3)}
                   </TableCell>
+                  <TableCell style={{ verticalAlign: "top" }} align="left">{chunk.used ? 'YES': ''}</TableCell>
                   <TableCell style={{ verticalAlign: "top" }} align="left">
                     <Link to={chunk.uri} target="_blank">
                       {chunk.id}

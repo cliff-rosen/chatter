@@ -121,6 +121,19 @@ def get_all_docs_from_domain(conn, domain_id):
     return res
 
 
+def get_docs_from_ids(conn, ids):
+    id_str = ",".join([str(id) for id in ids])
+    sql_str =   """
+                SELECT doc_id, domain_id, doc_uri, doc_title, doc_text FROM document WHERE doc_id in (%s)
+                """ % (id_str,)
+    cur = conn.cursor()
+    cur.execute(sql_str)
+    rows = cur.fetchall()
+    res = [(row['doc_id'], row['domain_id'], row['doc_uri'],
+            row['doc_title'], row['doc_text']) for row in rows]
+    return res
+
+
 def insert_document_chunk(conn, doc_id, chunk_text, chunk_embedding):
     json_data = json.dumps(chunk_embedding)
     cur = conn.cursor()

@@ -36,6 +36,9 @@ def get_openai_embedding(text):
 def get_all_docs_from_domain(conn, domain_id):
     return db.get_all_docs_from_domain(conn, domain_id)
 
+def get_docs_from_ids(conn, ids):
+    return db.get_docs_from_ids(conn, ids)
+
 def get_chunks_from_text(text, maker_type):
     if maker_type == "MAKER_2":
         return get_chunks_from_text_maker_2(text)
@@ -92,6 +95,8 @@ def get_chunks_from_text_maker_2(text):
 #chunk_maker = "CHAR"
 chunk_maker = "MAKER_1"
 domain_id = 1
+#doc_ids = None
+doc_ids = [53, 54, 55, 56, 57]
 
 def run():
     # init
@@ -99,9 +104,15 @@ def run():
 
     # one to one creation of chunks with embeddings
     # FIX ME: should be upsertChunk() and not insertChunk()
-    print("Retrieve documents for domain", domain_id)
-    rows = get_all_docs_from_domain(conn, domain_id)
+    if not doc_ids:
+        print("Retrieve documents for domain", domain_id)
+        rows = get_all_docs_from_domain(conn, domain_id)
+    else:
+        print("Retrieving documents: ", doc_ids)
+        rows = get_docs_from_ids(conn, doc_ids)
+
     print("Retrieved: ", len(rows))
+
     for doc_id, _domain_id, uri, doc_title, doc_text in rows:
         print("****************************")
         chunks = get_chunks_from_text(doc_text, chunk_maker)

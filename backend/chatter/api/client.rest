@@ -1,6 +1,11 @@
 #http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/auth/token
 #https://api.trippersalmanac.com/hello
 
+GET http://app-dm-01-dev.us-east-1.elasticbeanstalk.com/hello
+accept: application/json
+
+###
+
 GET http://127.0.0.1:5000/hello
 accept: application/json
 
