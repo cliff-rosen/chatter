@@ -35,12 +35,12 @@ def read_text_from_pdf(filepath):
     doc_parts = []
     for page in reader.pages:
         text = page.extract_text()
-        text = text.encode(encoding='ASCII',errors='ignore').decode()
+        #text = text.encode(encoding='ASCII',errors='ignore').decode()
         doc_parts.append(text)
     page_text = "".join(doc_parts)
     return page_text
 
-def write_text_to_db(uri, text, conn, domain_id):
+def insert_document(uri, text, conn, domain_id):
     print("-> saving: ", uri)
     if not db.insert_document(conn, domain_id, uri, "", text, text):
         logger.info("DB ERROR: " + uri)
@@ -58,7 +58,18 @@ def run():
         print(file)
         print('------------')
         doc_text = read_text_from_pdf(filedir + file)
-        write_text_to_db(file, doc_text, conn, domain_id)
+        insert_document(file, doc_text, conn, domain_id)
     db.close_connection(conn)
 
     print('Complete')
+
+
+def go1():
+    file = 'chatter/data_processor/sources/Vancomycin dosing in hemodialysis patients _ DoseMe Help Center.pdf'
+    reader = PdfReader(file)
+    doc_parts = []
+    text = reader.pages[2].extract_text()
+    with open('after.txt', 'w', encoding='utf-8') as new_file:
+        new_file.write(text)
+    for i in range(len(text)):
+        print(i, text[i], ord(text[i]))

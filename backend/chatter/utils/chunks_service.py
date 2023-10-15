@@ -70,7 +70,7 @@ def get_chunks_from_embedding(domain_id, query_embedding, top_k=TOP_K):
         include_values=True,
         include_metadata=True,
         vector=query_embedding,
-           filter={'domain_id': domain_id}).matches
+        filter={'domain_id': domain_id}).matches
     print('  query retrieved %s results' % (len(matches)))
     if len(matches) > 0:
         res = {

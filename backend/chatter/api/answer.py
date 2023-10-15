@@ -21,7 +21,7 @@ COMPLETION_MODEL = 'gpt-4'
 COMPLETION_MODEL_TIKTOKEN = 'text-davinci-003'
 MAX_TOKEN_COUNT = 8000
 TOP_K = 40
-MAX_TOKENS = 200
+MAX_TOKENS = 400
 
 
 def num_tokens(*args):
@@ -199,6 +199,10 @@ def get_answer(
                 user_id,
                 deep_search
             ):
+    
+    #temporarily force temp to 0
+    temperature = 0.0
+
     print('get_answer -------------------------------->')
     use_context = False
     chunks = {}
