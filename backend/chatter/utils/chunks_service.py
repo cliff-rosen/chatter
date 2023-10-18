@@ -63,7 +63,7 @@ def ge(text):
 
 # retrieve TOP_K embedding matches to query embedding
 # return as dict {id: {"id": id, "score": score, "metadata": metadata}}
-def get_chunks_from_embedding(domain_id, query_embedding, top_k=TOP_K):
+def _get_chunks_from_embedding(domain_id, query_embedding, top_k=TOP_K):
     print("querying index")
     matches = index.query(
         top_k=top_k,
@@ -88,7 +88,7 @@ def get_chunks_from_embedding(domain_id, query_embedding, top_k=TOP_K):
 # mutate chunks by adding {"uri": uri, "text", text} to each value dict
 # chunks is dict where
 #   key is chunk_id, and value is obj with score, text
-def set_chunk_text_from_ids(chunks):
+def _set_chunk_text_from_ids(chunks):
     ids = list(chunks.keys())
     rows = db.get_document_chunks_from_ids(ids)
     for row in rows:
@@ -107,12 +107,12 @@ def get_chunks_from_query(domain_id, user_message, top_k=TOP_K):
     query_embedding = ge(user_message)
 
     print("getting chunks ids")
-    chunks = get_chunks_from_embedding(domain_id, query_embedding, top_k)
+    chunks = _get_chunks_from_embedding(domain_id, query_embedding, top_k)
     if not chunks:
         raise Exception('No chunks found - check index')
 
     print("getting chunk text from ids")
-    set_chunk_text_from_ids(chunks)
+    _set_chunk_text_from_ids(chunks)
 
     return chunks
 

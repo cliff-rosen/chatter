@@ -1,0 +1,44 @@
+Data Processor
+
+Steps:
+
+1. Load document from sources to document table
+2. Break documents in document table into chunks and store chunks in document_chunk table
+3. For each chunk in document_chunk table, embed the chunk and add it to the Pinecone index
+
+General operations:
+
+1. Add new document
+- add contents to document table
+- add chunks to document_chunk table
+- add chunks to Pinecone index
+
+2. Delete document
+- delete chunks from Pinecone index
+- delete chunks from document_chunk
+- delete document from document
+
+3. Edit document
+- delete chunks from Pinecone index
+- delete chunks from document_chunk
+- edit contents of document table
+- add chunks to document_chunk table
+- add chunks to Pinecone index
+
+Utility functions:
+
+DB
+add_document
+update_document
+delete_document
+
+Index
+add_chunk
+add_all_chunks_for_document
+delete_chunk
+delete_all_chunks_for_document
+
+Transaction
+add_document: add doc, chunks, index entries
+del_document: del doc, chunks, index entries
+update_document: update doc, replace chunks, replace index entries
