@@ -3,8 +3,17 @@ Data Processor
 Steps:
 
 1. Load document from sources to document table
+db.insert_document
+
 2. Break documents in document table into chunks and store chunks in document_chunk table
+db.get_documents
+openai.embed_chunk
+db.insert_document_chunk
+
 3. For each chunk in document_chunk table, embed the chunk and add it to the Pinecone index
+db.get_document_chunks
+pinecone.upsert_index
+
 
 General operations:
 

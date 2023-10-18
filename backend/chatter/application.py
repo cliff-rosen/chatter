@@ -2,18 +2,15 @@ import time
 from flask import Flask, request
 from flask_restful import Resource, Api, reqparse, abort
 from flask_cors import CORS
-from api import login, document, domain, prompt, answer, conversation, token
+from api import login, document, domain, prompt, answer, token
 from api.errors import InputError
 from utils.utils import decode_token
-import logging
-from werkzeug.datastructures import ImmutableMultiDict as md
+from utils import logging
+
 
 MAX_TOKENS_DEFAULT = 200
 TEMPERATURE_DEFAULT = .4
 
-LOG_LEVEL = logging.INFO
-logging.basicConfig(format='%(asctime)s  %(levelname)s - %(message)s',
-                    level=LOG_LEVEL, filename='app.log', filemode='w')
 logger = logging.getLogger()
 
 application = Flask(__name__)
@@ -47,57 +44,6 @@ def hello():
     print(request.json)
     return 'Hello!'
 """
-
-
-class Conversation(Resource):
-    def post(self):
-        logger.debug('Conversation called')
-
-        if not authenticate():
-            logger.warning('Conversation - Authentication failure')
-            abort(401)
-            # return {"status": "INVALID_TOKEN"}
-
-        try:
-            data = None
-            data = request.get_json()
-            prompt_header = data['promptHeader']
-            initial_message = data['initialMessage']
-            user_role_name = data['userRoleName']
-            bot_role_name = data['botRoleName']
-            conversation_history = data['conversationHistory']
-            user_message = data['userMessage']
-            max_tokens = data.get('max_tokens', MAX_TOKENS_DEFAULT)
-            temperature = data.get('temperature', TEMPERATURE_DEFAULT)
-            domain_id = data.get('domain_id', 0)
-            model_id = data.get('model_id', 1)
-        except Exception as e:
-            data_str = str(data) if data else 'NO_DATA_PARSED'
-            logger.warning('Conversation - Error parsing body: ' + data_str)
-            abort(400)
-
-        try:
-            res = conversation.get_response(
-                domain_id,
-                prompt_header,
-                initial_message,
-                user_role_name,
-                bot_role_name,
-                conversation_history,
-                user_message,
-                max_tokens,
-                temperature,
-                model_id
-            )
-        except InputError as e:
-            logger.warning('InputError in Conversation: %s', e)
-            abort(400, message=str(e))
-        except Exception as e:
-            logger.error('Uncaught exception in Conversation.post: %s', e)
-            abort(500)
-
-        return res
-
 
 class Token(Resource):
     def post(self):
@@ -203,7 +149,6 @@ class Hello(Resource):
 
 api = Api(application)
 api.add_resource(Token, '/auth/token')
-api.add_resource(Conversation, '/conversation')
 api.add_resource(Login, '/login')
 api.add_resource(Domain, '/domain', '/domain/<int:domain_id>')
 api.add_resource(Prompt, '/prompt')

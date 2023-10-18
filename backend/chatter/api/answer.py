@@ -1,12 +1,12 @@
-import openai
-from openai.embeddings_utils import get_embedding
 from db import db
 import local_secrets as secrets
 from utils.utils import make_new_conversation_id, num_tokens_from_string
+from utils.openai_wrappers import generate
+
 import conf
 import utils.chunks_service as chunk
 from api.errors import InputError
-import logging
+from utils import logging
 
 """
 TO DO:
@@ -15,9 +15,6 @@ set COMPLETION_MODEL_TIKTOKEN for gpt-4
 """
 logger = logging.getLogger()
 
-#COMPLETION_MODEL = 'gpt-3.5-turbo'
-COMPLETION_MODEL = 'gpt-4'
-#COMPLETION_MODEL = 'gpt-4-32k'
 COMPLETION_MODEL_TIKTOKEN = 'text-davinci-003'
 MAX_TOKEN_COUNT = 8000
 TOP_K = 40
@@ -123,22 +120,7 @@ def create_prompt_messages(
 
 def query_model(messages, temperature):
 
-    response =''
-
-    try:
-        completion = openai.ChatCompletion.create(
-            model=COMPLETION_MODEL,
-            messages=messages,
-            max_tokens=MAX_TOKENS,
-            temperature=temperature
-            )
-        response = completion.choices[0].message.content
-    except Exception as e:
-        print('query_model error: ', str(e))
-        logger.warning('get_answer.query_model error:' + str(e))
-        response = "We're sorry, the server was too busy to handle this response.  Please try again."
-
-    return response
+    return generate(messages, temperature)
 
 def update_conversation_tables(
                         domain_id,
@@ -244,7 +226,7 @@ def get_answer(
         conversation_history,
         query,
     )
-    #logger.debug('Prompt:\n' + str(prompt_messages))
+    logger.info('Prompt:\n' + str(query))
     if not messages:
         return {"status": "BAD_REQUEST"}
     print("querying model")

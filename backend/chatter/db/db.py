@@ -1,6 +1,6 @@
 import pymysql.cursors
 import json
-import logging
+from utils import logging
 import local_secrets as secrets
 
 DB_SECRETS = secrets.DB_SECRETS

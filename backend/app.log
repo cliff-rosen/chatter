@@ -1,5 +1,1 @@
-2023-10-18 09:53:26,942  INFO - Initializing application...
-2023-10-18 09:53:26,953  WARNING -  * Debugger is active!
-2023-10-18 09:53:26,955  INFO -  * Debugger PIN: 715-914-433
-2023-10-18 09:53:32,397  INFO - 127.0.0.1 - - [18/Oct/2023 09:53:32] "OPTIONS /answer HTTP/1.1" 200 -
-2023-10-18 09:53:37,982  INFO - 127.0.0.1 - - [18/Oct/2023 09:53:37] "POST /answer HTTP/1.1" 200 -
+2023-10-18 17:16:55,300  ERROR - 1a

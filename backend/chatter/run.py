@@ -3,7 +3,6 @@ from db import db
 
 print('starting')
 
-
 #step1.run()
 #step1.go1()
 
