@@ -1,7 +1,8 @@
 from data_processor import step_1_doc_loader as step1, step_2_chunk as step2, step_3_upsert_index as step3
-from db import local_db as db
+from db import db
 
 print('starting')
+
 
 #step1.run()
 #step1.go1()

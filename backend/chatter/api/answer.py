@@ -1,6 +1,6 @@
 import openai
 from openai.embeddings_utils import get_embedding
-from db import local_db as db
+from db import db
 import local_secrets as secrets
 from utils.utils import make_new_conversation_id, num_tokens_from_string
 import conf

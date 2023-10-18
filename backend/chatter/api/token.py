@@ -1,4 +1,4 @@
-from db import local_db as db
+from db import db
 from utils.utils import check_password, make_jwt, decode_token
 
 

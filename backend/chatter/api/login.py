@@ -1,4 +1,4 @@
-from db import local_db as db
+from db import db
 
 def login(username, password):
     res = db.validate_user(username, password)
