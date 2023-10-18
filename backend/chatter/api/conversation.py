@@ -2,7 +2,7 @@ import pinecone
 import openai
 import logging
 import traceback
-from db import local_db as dbs
+from db import db
 import local_secrets as secrets
 from utils.utils import make_new_conversation_id, num_tokens_from_string
 import utils.chunks_service as chunk

@@ -6,7 +6,7 @@ import os
 import sys
 #import sys
 #sys.path.append('.\..')
-from db import local_db as db
+from db import db
 import local_secrets as secrets
 
 """

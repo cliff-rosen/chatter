@@ -3,7 +3,7 @@ import re
 import os
 #import sys
 #sys.path.append('.\..')
-from db import local_db as db
+from db import db
 from PyPDF2 import PdfReader
 import logging
 

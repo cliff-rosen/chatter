@@ -1,7 +1,7 @@
 import pinecone
 import openai
 from openai.embeddings_utils import get_embedding
-from db import local_db as db
+from db import db
 from utils.utils import num_tokens_from_string
 import local_secrets as secrets
 import conf

@@ -1,3 +1,3 @@
-from db import local_db as db
+from db import db
 
 print('start')
