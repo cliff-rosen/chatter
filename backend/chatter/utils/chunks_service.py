@@ -1,26 +1,13 @@
-import pinecone
-import openai
-from openai.embeddings_utils import get_embedding
 from db import db
 from utils.utils import num_tokens_from_string
-import local_secrets as secrets
-import conf
+from utils.openai_wrappers import get_embedding
+from utils.pinecone_wrappers import get_matching_chunks
 
-
-PINECONE_API_KEY = secrets.PINECONE_API_KEY
-OPENAI_API_KEY = secrets.OPENAI_API_KEY
 EMBEDDING_MODEL = "text-embedding-ada-002"
 COMPLETION_MODEL = 'text-davinci-003'
-INDEX_NAME = "index-1"
 TEMPERATURE = 0.0
-TOP_K = 40
 MAX_CHUNKS_TOKEN_COUNT = 2500
 
-
-print("chunk_service initing AI and vector db")
-pinecone.init(api_key=PINECONE_API_KEY, environment="us-east1-gcp")
-index = pinecone.Index(INDEX_NAME)
-openai.api_key = OPENAI_API_KEY
 
 '''
 chunks dict: 
@@ -55,35 +42,6 @@ chunks dict:
     }
 '''
 
-def ge(text):
-    return get_embedding(
-        text,
-        engine=EMBEDDING_MODEL
-    )
-
-# retrieve TOP_K embedding matches to query embedding
-# return as dict {id: {"id": id, "score": score, "metadata": metadata}}
-def _get_chunks_from_embedding(domain_id, query_embedding, top_k=TOP_K):
-    print("querying index")
-    matches = index.query(
-        top_k=top_k,
-        include_values=True,
-        include_metadata=True,
-        vector=query_embedding,
-        filter={'domain_id': domain_id}).matches
-    print('  query retrieved %s results' % (len(matches)))
-    if len(matches) > 0:
-        res = {
-                matches[i].id : {
-                                "id" : int(matches[i].id),
-                                "score" : matches[i].score, 
-                                "metadata": matches[i].metadata
-                                } for i in range(len(matches))
-            }
-    else:
-        res = {}
-    return res
-
 
 # mutate chunks by adding {"uri": uri, "text", text} to each value dict
 # chunks is dict where
@@ -100,14 +58,14 @@ def _set_chunk_text_from_ids(chunks):
         chunks[str(doc_chunk_id)]["text"] = chunk_text
 
 
-def get_chunks_from_query(domain_id, user_message, top_k=TOP_K):
+def get_chunks_from_query(domain_id, user_message):
     chunks = {}
 
     print("getting query embedding")
-    query_embedding = ge(user_message)
+    query_embedding = get_embedding(user_message)
 
     print("getting chunks ids")
-    chunks = _get_chunks_from_embedding(domain_id, query_embedding, top_k)
+    chunks = get_matching_chunks(domain_id, query_embedding)
     if not chunks:
         raise Exception('No chunks found - check index')
 

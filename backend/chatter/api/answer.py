@@ -119,7 +119,6 @@ def create_prompt_messages(
 
 
 def query_model(messages, temperature):
-
     return generate(messages, temperature)
 
 def update_conversation_tables(

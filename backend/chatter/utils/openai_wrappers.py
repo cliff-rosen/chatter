@@ -1,15 +1,20 @@
+import local_secrets as secrets
+from utils import logging
 import openai
-from openai.embeddings_utils import get_embedding
-import logging
+from openai.embeddings_utils import get_embedding as openai_get_embedding
 
-logger = logging.getLogger()
 
+OPENAI_API_KEY = secrets.OPENAI_API_KEY
 #COMPLETION_MODEL = 'gpt-3.5-turbo'
 COMPLETION_MODEL = 'gpt-4'
 #COMPLETION_MODEL = 'gpt-4-32k'
+EMBEDDING_MODEL = "text-embedding-ada-002"
 MAX_TOKENS = 400
 
-logger.error('openai_wrapper loaded')
+logger = logging.getLogger()
+logger.info('openai_wrapper loaded')
+
+openai.api_key = OPENAI_API_KEY
 
 def generate(messages, temperature):
 
@@ -29,4 +34,10 @@ def generate(messages, temperature):
         response = "We're sorry, the server was too busy to handle this response.  Please try again."
 
     return response
+
+def get_embedding(text):
+    return openai_get_embedding(
+        text,
+        engine=EMBEDDING_MODEL
+    )
 
