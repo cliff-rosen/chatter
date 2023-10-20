@@ -9,6 +9,34 @@ from api.errors import InputError
 from utils import logging
 
 """
+prompt structure
+
+ text:
+    initial instruction
+    context
+    history
+    query
+
+ messages:
+    system: initial instruction
+
+get_answer()
+ conversation_history = db.get_conversation_history(conversation_id)
+ chunks = chunk.get_chunks_from_query(domain_id, query)
+ prompt_context = create_prompt_context(query, conversation_history, chunks, ...)
+  create_conversation_history_text(conversation_history)
+  num_tokens()
+  chunk.get_context_for_prompt()
+ messages = create_prompt_messages()
+ query_model(messages, temperature)
+ update_conversation_tables()
+  create_prompt_text
+   create_conversation_history_text(conversation_history)
+
+create_prompt_context
+
+create_prompt_messages()
+
 TO DO:
 set COMPLETION_MODEL_TIKTOKEN for gpt-4
 
@@ -17,8 +45,7 @@ logger = logging.getLogger()
 
 COMPLETION_MODEL_TIKTOKEN = 'text-davinci-003'
 MAX_TOKEN_COUNT = 8000
-TOP_K = 40
-MAX_TOKENS = 400
+MAX_RESPONSE_TOKENS = 400
 
 
 def num_tokens(*args):
@@ -47,6 +74,7 @@ def create_conversation_history_text(conversation_history):
 
 def create_prompt_text(
                         initial_prompt,
+                        prompt_context,
                         initial_message,
                         conversation_history,
                         query
@@ -93,6 +121,7 @@ def create_prompt_context(
 
 def create_prompt_messages(
                             initial_prompt,
+                            prompt_context,
                             initial_message,
                             conversation_history,
                             query
@@ -100,6 +129,9 @@ def create_prompt_messages(
     messages = []
 
     # add system message
+    system_message = initial_prompt
+    if prompt_context:
+        system_message = system_message + '\n\n' + prompt_context
     messages.append({"role": "system", "content": initial_prompt})
 
     # add initial assistant message
@@ -125,6 +157,7 @@ def update_conversation_tables(
                         domain_id,
                         query,
                         initial_prompt,
+                        prompt_context,
                         initial_message,
                         query_temp,
                         conversation_id,
@@ -180,12 +213,22 @@ def get_answer(
                 user_id,
                 deep_search
             ):
-    
+    """
+    Generate an answer from the LLM based on the following items:
+
+        initial prompt: supplied as initial_prompt
+        context: retrieved from kb based on supplied query
+        initial assistant message: retrieved from db based on domain
+        conversation history: retrieved from conversation_id
+        user query: supplied as query
+    """    
+
     #temporarily force temp to 0
     temperature = 0.0
 
     print('get_answer -------------------------------->')
     use_context = False
+    prompt_context = ''
     chunks = {}
     initial_message = conf.DEFAULT_INITIAL_MESSAGE
     conversation_history = []
@@ -213,14 +256,13 @@ def get_answer(
             conversation_history,
             query,
             chunks,
-            MAX_TOKENS
+            MAX_RESPONSE_TOKENS
         )
-    if prompt_context:
-        initial_prompt += '\n\n' + prompt_context
 
     print("creating prompt messages")
     messages = create_prompt_messages(
         initial_prompt,
+        prompt_context,
         initial_message,
         conversation_history,
         query,
@@ -236,6 +278,7 @@ def get_answer(
                             domain_id,
                             query, 
                             initial_prompt,
+                            prompt_context,
                             initial_message,
                             temperature,
                             conversation_id,

@@ -3,11 +3,9 @@ from utils.utils import num_tokens_from_string
 from utils.openai_wrappers import get_embedding
 from utils.pinecone_wrappers import get_matching_chunks
 
-EMBEDDING_MODEL = "text-embedding-ada-002"
 COMPLETION_MODEL = 'text-davinci-003'
 TEMPERATURE = 0.0
 MAX_CHUNKS_TOKEN_COUNT = 2500
-
 
 '''
 chunks dict: 
