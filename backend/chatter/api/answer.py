@@ -27,12 +27,13 @@ TO DO:
 set COMPLETION_MODEL_TIKTOKEN for gpt-4
 
 """
+
 logger = logging.getLogger()
 
 COMPLETION_MODEL_TIKTOKEN = 'text-davinci-003'
 MAX_TOKEN_COUNT = 8000
+MAX_CHUNKS_TOKEN_COUNT = 2500
 MAX_RESPONSE_TOKENS = 400
-
 
 def get_answer(
                 conversation_id,
@@ -59,7 +60,7 @@ def get_answer(
     print('get_answer -------------------------------->')
     use_context = False
     prompt_context = ''
-    chunks = {}
+    context_chunks = {}
     initial_message = conf.DEFAULT_INITIAL_MESSAGE
     conversation_history = []
 
@@ -77,7 +78,7 @@ def get_answer(
 
     print("getting context chunks")
     if use_context:
-        chunks = chunk.get_chunks_from_query(domain_id, query)
+        context_chunks = chunk.get_chunks_from_query(domain_id, query)
 
     print('creating context from chunks')
     prompt_context = create_prompt_context(
@@ -85,7 +86,7 @@ def get_answer(
             initial_message,
             conversation_history,
             query,
-            chunks,
+            context_chunks,
             MAX_RESPONSE_TOKENS
         )
 
@@ -114,7 +115,7 @@ def get_answer(
                             conversation_id,
                             conversation_history,
                             response,
-                            chunks,
+                            context_chunks,
                             user_id
                         )
 
@@ -122,8 +123,8 @@ def get_answer(
     return {
             "conversation_id": conversation_id,
             "answer": response,
-            "chunks": chunks,
-            "chunks_used_count": len(list(chunks.keys())) 
+            "chunks": context_chunks,
+            "chunks_used_count": len(list(context_chunks.keys())) 
         }
 
 
@@ -169,9 +170,33 @@ def create_prompt_context(
     prompt_token_count = num_tokens(initial_prompt, conversation_history_text, initial_message, user_message)
     print('tokens used by pre-context prompt: %s' % (prompt_token_count))
     max_context_token_count = max_token_count - prompt_token_count - max_tokens
-    context_for_prompt = chunk.get_context_for_prompt(chunks, max_context_token_count)
+    context_for_prompt = process_chunks_and_get_as_text(chunks, max_context_token_count)
 
     return context_for_prompt
+
+
+def process_chunks_and_get_as_text(chunks, max_chunks_token_count = MAX_CHUNKS_TOKEN_COUNT):
+    print('process_chunks_and_get_as_text using max token count of', max_chunks_token_count)
+    context = ""
+    chunks_token_count = 0
+    chunks_used_count = 0
+
+    for id, chunk in sorted(chunks.items(), key=lambda item: item[1]["score"], reverse=True):
+        tokens_in_chunk = num_tokens_from_string(chunk['text'], COMPLETION_MODEL_TIKTOKEN)
+        if chunks_token_count + tokens_in_chunk > max_chunks_token_count:
+            print(' chunk', id, 'too long to fit.  moving on.')
+            chunks[id]['used'] = False
+            continue
+        context = context + chunk['text'] + '\n\n'
+        chunks[id]['used'] = True
+        chunks_used_count += 1
+        chunks_token_count += tokens_in_chunk
+    print('chunks provided: %s, chunks used: %s, tokens used: %s' % (len(chunks), chunks_used_count, int(chunks_token_count)))
+
+    if context:
+        return '<START OF CONTEXT>\n' + context.strip() + '\n<END OF CONTEXT>'
+    else:
+        return ''
 
 
 def create_prompt_text(
@@ -215,7 +240,6 @@ def create_prompt_messages(
     system_message = initial_prompt
     if prompt_context:
         system_message = system_message + '\n\n' + prompt_context
-        print('yes')
     messages.append({"role": "system", "content": system_message})
 
     # add initial assistant message

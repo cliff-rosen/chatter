@@ -2,7 +2,7 @@ import time
 from flask import Flask, request
 from flask_restful import Resource, Api, reqparse, abort
 from flask_cors import CORS
-from api import login, document, domain, prompt, answer, token
+from api import login, document, domain, prompt, answer, token, hello
 from api.errors import InputError
 from utils.utils import decode_token
 from utils import logging
@@ -143,8 +143,7 @@ class Document(Resource):
 
 class Hello(Resource):
     def get(self):
-        print(request.get_data())
-        return "hello"
+        return hello.get_hello()
 
 
 api = Api(application)

@@ -1,11 +1,13 @@
 from db import db
 from utils.utils import num_tokens_from_string
+from utils.logging import logging
 from utils.openai_wrappers import get_embedding
 from utils.pinecone_wrappers import get_matching_chunks
 
 COMPLETION_MODEL = 'text-davinci-003'
 TEMPERATURE = 0.0
-MAX_CHUNKS_TOKEN_COUNT = 2500
+
+logger = logging.getLogger()
 
 '''
 chunks dict: 
@@ -40,6 +42,23 @@ chunks dict:
     }
 '''
 
+def get_chunks_from_query(domain_id, user_message):
+    chunks = {}
+
+    print("getting query embedding")
+    query_embedding = get_embedding(user_message)
+
+    print("getting chunks ids")
+    chunks = get_matching_chunks(domain_id, query_embedding)
+    if not chunks:
+        raise Exception('No chunks found - check index')
+
+    print("getting chunk text from ids")
+    _set_chunk_text_from_ids(chunks)
+
+    logger.info(chunks)
+    return chunks
+
 
 # mutate chunks by adding {"uri": uri, "text", text} to each value dict
 # chunks is dict where
@@ -56,42 +75,3 @@ def _set_chunk_text_from_ids(chunks):
         chunks[str(doc_chunk_id)]["text"] = chunk_text
 
 
-def get_chunks_from_query(domain_id, user_message):
-    chunks = {}
-
-    print("getting query embedding")
-    query_embedding = get_embedding(user_message)
-
-    print("getting chunks ids")
-    chunks = get_matching_chunks(domain_id, query_embedding)
-    if not chunks:
-        raise Exception('No chunks found - check index')
-
-    print("getting chunk text from ids")
-    _set_chunk_text_from_ids(chunks)
-
-    return chunks
-
-
-def get_context_for_prompt(chunks, max_chunks_token_count = MAX_CHUNKS_TOKEN_COUNT):
-    print('get_context_for_prompt using max token count of', max_chunks_token_count)
-    context = ""
-    chunks_token_count = 0
-    chunks_used_count = 0
-
-    for id, chunk in sorted(chunks.items(), key=lambda item: item[1]["score"], reverse=True):
-        tokens_in_chunk = num_tokens_from_string(chunk['text'], COMPLETION_MODEL)
-        if chunks_token_count + tokens_in_chunk > max_chunks_token_count:
-            print(' chunk', id, 'too long to fit.  moving on.')
-            chunks[id]['used'] = False
-            continue
-        context = context + chunk['text'] + '\n\n'
-        chunks[id]['used'] = True
-        chunks_used_count += 1
-        chunks_token_count += tokens_in_chunk
-    print('chunks provided: %s, chunks used: %s, tokens used: %s' % (len(chunks), chunks_used_count, int(chunks_token_count)))
-
-    if context:
-        return '<START OF CONTEXT>\n' + context.strip() + '\n<END OF CONTEXT>'
-    else:
-        return ''

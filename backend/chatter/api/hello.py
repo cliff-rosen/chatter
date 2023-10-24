@@ -1,4 +1,7 @@
-#import mariadb
+from utils import logging
+import os
+logger = logging.getLogger()
+
 
 def get_hello():
-    return "hello, world"
+    return "Hello. cwd = " + os.getcwd()
