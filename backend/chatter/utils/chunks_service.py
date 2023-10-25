@@ -56,7 +56,7 @@ def get_chunks_from_query(domain_id, user_message):
     print("getting chunk text from ids")
     _set_chunk_text_from_ids(chunks)
 
-    logger.info(chunks)
+    #logger.info(chunks)
     return chunks
 
 

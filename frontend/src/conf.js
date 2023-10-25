@@ -1,7 +1,8 @@
 const prod = {
   url: {
     //API_URL: "https://api-staging.trippersalmanac.com",
-    API_URL: "http://app-dm-01-dev.us-east-1.elasticbeanstalk.com",
+    //API_URL: "http://app-dm-02.eba-kv6ia4sm.us-east-1.elasticbeanstalk.com/"
+    API_URL: "https://dosemerx-api.ironcliff.ai"
   },
 };
 
