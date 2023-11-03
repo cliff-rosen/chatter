@@ -31,11 +31,15 @@ doc = {
     "domain_id": 99
 }
 
+'''
 file = 'data_processor/sources3/Vancomycin dosing in hemodialysis patients _ DoseMe Help Center.pdf'
 text = utils.read_text_from_pdf(file)
 res = kb.add_document(1, 'uri', 'title', text, text)
+'''
 
-#res = db.delete_document(60)
+#doc_ids = [61, 62, 63, 64, 65]
+#res = kb.delete_documents(doc_ids)
+res = kb.delete_documents([67])
 
 #res = vdb.upsert_index(**doc)
 #res = vdb.index.delete([], filter = {'doc_chunk_id': 'c456'})\

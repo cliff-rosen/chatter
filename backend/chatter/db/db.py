@@ -115,6 +115,8 @@ def delete_document(doc_id):
     try:
         conn = get_connection()
         with conn.cursor() as cursor:
+            sql = f"DELETE FROM document_chunk WHERE doc_id = %s"
+            res = cursor.execute(sql, (doc_id,))
             sql = f"DELETE FROM document WHERE doc_id = %s"
             res = cursor.execute(sql, (doc_id,))
             conn.commit()

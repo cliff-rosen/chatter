@@ -1,8 +1,8 @@
 from db import db
 from utils.utils import num_tokens_from_string
 from utils.logging import logging
-from utils.openai_wrappers import get_embedding
-from utils.pinecone_wrappers import get_matching_chunks, upsert_index
+import utils.openai_wrappers as model
+import utils.pinecone_wrappers as vdb
 from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
 
 COMPLETION_MODEL = 'text-davinci-003'
@@ -52,7 +52,7 @@ chunks dict:
 '''
 
 def _embed_and_add_document_chunk(doc_id, chunk_text):
-    emb = get_embedding(chunk_text)
+    emb = model.get_embedding(chunk_text)
     doc_chunk_id = db.insert_document_chunk(doc_id, chunk_text, emb)
     return (emb, doc_chunk_id)
 
@@ -102,18 +102,27 @@ def add_document(domain_id, uri, title, text, blob):
     chunks = _make_chunks_from_text(text)
     for chunk in chunks:
         (emb, doc_chunk_id) = _embed_and_add_document_chunk(doc_id, chunk)
-        upsert_index(doc_id, doc_chunk_id, emb, domain_id)
+        vdb.upsert_index(doc_id, doc_chunk_id, emb, domain_id)
         print('added chunk ', doc_chunk_id)
     return doc_id
+
+def delete_document(doc_id):
+    vdb.delete(doc_id, {})
+    db.delete_document(doc_id)
+
+def delete_documents(doc_ids):
+    for doc_id in doc_ids:
+        vdb.delete_all_for_doc_id(doc_id)
+        db.delete_document(doc_id)
 
 def get_chunks_from_query(domain_id, user_message):
     chunks = {}
 
     print("getting query embedding")
-    query_embedding = get_embedding(user_message)
+    query_embedding = model.get_embedding(user_message)
 
     print("getting chunks ids")
-    chunks = get_matching_chunks(domain_id, query_embedding)
+    chunks = vdb.get_matching_chunks(domain_id, query_embedding)
     if not chunks:
         raise Exception('No chunks found - check index')
 

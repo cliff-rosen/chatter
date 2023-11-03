@@ -19,8 +19,10 @@ def upsert_index(doc_id, doc_chunk_id, vector, domain_id):
     upsert_response = index.upsert(vectors=[(id_str, vector, metadata)])
     print("  response: ", upsert_response)
 
-def delete(id, filter):
-    res = index.delete(id=id, filter=filter)
+def delete_all_for_doc_id(doc_id):
+    filter = {"doc_id": doc_id}
+    print(filter)
+    res = index.delete(filter=filter)
     return res
 
 # retrieve TOP_K embedding matches to query embedding
