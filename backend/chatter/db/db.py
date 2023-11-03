@@ -92,24 +92,36 @@ def validate_user(user_name, password):
 
 ##### DOCUMENT PIPELINE #####
 
-def insert_document(conn,
-                    domain_id,
+def insert_document(domain_id,
                     doc_uri,
                     doc_title,
                     doc_text,
                     doc_blob):
     try:
-        cur = conn.cursor()
-        cur.execute("INSERT INTO document (domain_id, doc_uri, doc_title, doc_text, doc_blob) VALUES (%s, %s, %s, %s, %s)",
-                    (domain_id, doc_uri, doc_title, doc_text, doc_blob))
-        conn.commit()
+        conn = get_connection()
+        with conn.cursor() as cursor:
+            res = cursor.execute("INSERT INTO document (domain_id, doc_uri, doc_title, doc_text, doc_blob) VALUES (%s, %s, %s, %s, %s)",
+                        (domain_id, doc_uri, doc_title, doc_text, doc_blob))
+            conn.commit()
+            doc_id = cursor.lastrowid
     except Exception as e:
         print("***************************")
         print(doc_uri)
         print("DB error in insert_document:\n", str(e))
-        return False
-    return True
+        raise
+    return doc_id
 
+def delete_document(doc_id):
+    try:
+        conn = get_connection()
+        with conn.cursor() as cursor:
+            sql = f"DELETE FROM document WHERE doc_id = %s"
+            res = cursor.execute(sql, (doc_id,))
+            conn.commit()
+    except pymysql.Error as e:
+        print(f"Error deleting row: {e}")
+        raise
+    return res
 
 def get_all_docs_from_domain(conn, domain_id):
     cur = conn.cursor()
@@ -134,13 +146,14 @@ def get_docs_from_ids(conn, ids):
     return res
 
 
-def insert_document_chunk(conn, doc_id, chunk_text, chunk_embedding):
+def insert_document_chunk(doc_id, chunk_text, chunk_embedding):
     json_data = json.dumps(chunk_embedding)
+    conn = get_connection()
     cur = conn.cursor()
     cur.execute("INSERT INTO document_chunk (doc_id, chunk_text, chunk_embedding) VALUES (%s, %s, %s)",
                 (doc_id, chunk_text, json_data))
     conn.commit()
-
+    return cur.lastrowid
 
 def update_document_chunk_embedding(conn, doc_chunk_id, embedding):
     json_data = json.dumps(embedding)

@@ -5,7 +5,25 @@ import datetime
 import bcrypt
 import tiktoken
 import local_secrets
+from PyPDF2 import PdfReader
 
+def read_text_from_pdf(filepath):
+    print(filepath)
+    page_text = ''
+
+    try:
+        reader = PdfReader(filepath)
+    except Exception as e:
+        print("error reading document", e)
+        return
+
+    doc_parts = []
+    for page in reader.pages:
+        text = page.extract_text()
+        #text = text.encode(encoding='ASCII',errors='ignore').decode()
+        doc_parts.append(text)
+    page_text = "".join(doc_parts)
+    return page_text
 
 def make_new_conversation_id():
     alphabet = string.ascii_letters + string.digits  

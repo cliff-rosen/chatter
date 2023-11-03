@@ -1,14 +1,10 @@
-from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
-import re
-import os
-#import sys
-#sys.path.append('.\..')
 from db import db
-from PyPDF2 import PdfReader
+from utils.kb_service import add_document
 import logging
+from PyPDF2 import PdfReader
+import os
 
 logger = logging.getLogger()
-doc_parts = []
 
 def write_to_file(text):
     directory = 'outputs'
@@ -40,35 +36,27 @@ def read_text_from_pdf(filepath):
     page_text = "".join(doc_parts)
     return page_text
 
-def insert_document(uri, text, conn, domain_id):
-    print("-> saving: ", uri)
-    if not db.insert_document(conn, domain_id, uri, "", text, text):
-        logger.info("DB ERROR: " + uri)
-    return    
-
 def run():
-    filedir = 'chatter/data_processor/sources2/'
+    filedir = 'data_processor/sources3/'
     domain_id = 1
 
     print('Starting job')
 
     files = os.listdir(filedir)
-    conn = db.get_connection()
     for file in files:
-        print(file)
         print('------------')
+        print(f"processing file: {file}")
         doc_text = read_text_from_pdf(filedir + file)
-        insert_document(file, doc_text, conn, domain_id)
-    db.close_connection(conn)
+        if add_document(domain_id, file, file, doc_text, doc_text):
+            print("SUCCESS")
+        else:
+            print("FALIED TO ADD")
 
     print('Complete')
-
 
 def go1():
     file = 'chatter/data_processor/sources/Vancomycin dosing in hemodialysis patients _ DoseMe Help Center.pdf'
     reader = PdfReader(file)
-    doc_parts = []
-    text = reader.pages[2].extract_text()
     with open('after.txt', 'w', encoding='utf-8') as new_file:
         new_file.write(text)
     for i in range(len(text)):

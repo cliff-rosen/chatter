@@ -1,6 +1,7 @@
 import local_secrets as secrets
 from utils import logging
 import pinecone
+import json
 
 PINECONE_API_KEY = secrets.PINECONE_API_KEY
 INDEX_NAME = "index-1"
@@ -11,6 +12,16 @@ logger.info('pinecone_wrapper loaded')
 
 pinecone.init(api_key=PINECONE_API_KEY, environment="us-east1-gcp")
 index = pinecone.Index(INDEX_NAME)
+
+def upsert_index(doc_id, doc_chunk_id, vector, domain_id):
+    id_str = str(doc_chunk_id)
+    metadata = {'domain_id': domain_id, "doc_id": doc_id, "doc_chunk_id": doc_chunk_id}
+    upsert_response = index.upsert(vectors=[(id_str, vector, metadata)])
+    print("  response: ", upsert_response)
+
+def delete(id, filter):
+    res = index.delete(id=id, filter=filter)
+    return res
 
 # retrieve TOP_K embedding matches to query embedding
 # return as dict {id: {"id": id, "score": score, "metadata": metadata}}

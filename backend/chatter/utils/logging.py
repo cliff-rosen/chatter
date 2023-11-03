@@ -1,6 +1,6 @@
 import logging
 
-LOG_FILENAME = 'app2.log'
+LOG_FILENAME = 'logs/app2.log'
 LOG_LEVEL = logging.INFO
 
 logging.basicConfig(format='%(asctime)s  %(levelname)s - %(message)s',

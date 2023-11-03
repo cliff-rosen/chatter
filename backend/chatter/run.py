@@ -1,5 +1,9 @@
 from data_processor import step_1_doc_loader as step1, step_2_chunk as step2, step_3_upsert_index as step3
+from utils import kb_service as kb
 from db import db
+from utils import pinecone_wrappers as vdb
+from utils import utils
+import local_secrets as secrets
 
 print('starting')
 
@@ -12,26 +16,31 @@ print('starting')
 
 #step3.run()
 
+import random
+num_floats = 1536
+vector_str = ""
+for _ in range(num_floats):
+    new_float = random.random()
+    vector_str += str(new_float) + ", "
+vector_str = '[' + vector_str[:-2] + ']'
+#vector_str = '[1.0, 2.0]'
+doc = {
+    "doc_id": 'd123',
+    "doc_chunk_id": "c456",
+    "vector_str": vector_str,
+    "domain_id": 99
+}
+
+file = 'data_processor/sources3/Vancomycin dosing in hemodialysis patients _ DoseMe Help Center.pdf'
+text = utils.read_text_from_pdf(file)
+res = kb.add_document(1, 'uri', 'title', text, text)
+
+#res = db.delete_document(60)
+
+#res = vdb.upsert_index(**doc)
+#res = vdb.index.delete([], filter = {'doc_chunk_id': 'c456'})\
+
+print('res', res)
+
+
 print('done')
-
-import fitz
-file = 'chatter/data_processor/sources2/Data States Guide.pdf'
-from pypdf import PdfReader
-
-'''
-with fitz.open(file) as doc:  # open document
-    #text = chr(12).join([page.get_text() for page in doc])
-    text = doc[0].get_text()
-print(text)
-'''
-
-reader = PdfReader(file)
-print(reader.pages[0].extract_text())
-
-'''
-res = db.get_document_chunks_from_ids(['105'])
-chunk = res[0]['chunk_text']
-for i in range(len(chunk)):
-    print(i, chunk[i], ord(chunk[i]))
-'''
-

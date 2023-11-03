@@ -4,7 +4,7 @@ from utils.utils import make_new_conversation_id, num_tokens_from_string
 from utils.openai_wrappers import generate
 
 import conf
-import utils.chunks_service as chunk
+import utils.kb_service as kb
 from api.errors import InputError
 from utils import logging
 
@@ -78,7 +78,7 @@ def get_answer(
 
     print("getting context chunks")
     if use_context:
-        context_chunks = chunk.get_chunks_from_query(domain_id, query)
+        context_chunks = kb.get_chunks_from_query(domain_id, query)
 
     print('creating context from chunks')
     prompt_context = create_prompt_context(
