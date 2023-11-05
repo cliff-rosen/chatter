@@ -8,6 +8,10 @@ accept: application/json
 
 GET http://127.0.0.1:5000/hello
 accept: application/json
+###
+
+GET http://127.0.0.1:5000/conversations?domain_id=1&start_date=2023-10-01&end_date=2023-11-01
+accept: application/json
 
 ###
 

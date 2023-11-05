@@ -296,24 +296,23 @@ def insert_conversation(
 def get_conversation(conversation_id):
     rows = None
     try:
-        conn = get_connection()
-        cur = conn.cursor()
-        cur.execute("""
-            SELECT 
-                conversation_id,
-                user_id,
-                domain_id,
-                conversation_text
-            FROM conversation
-            WHERE conversation_id = %s
-            """,
-                    (conversation_id, ))
-        rows = cur.fetchall()
+        with get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("""
+                SELECT 
+                    conversation_id,
+                    user_id,
+                    domain_id,
+                    conversation_text
+                FROM conversation
+                WHERE conversation_id = %s
+                """,
+                        (conversation_id, ))
+            rows = cur.fetchall()
     except Exception as e:
         print("***************************")
         print("DB error in get_conversation")
         print(e)
-    close_connection(conn)
     return rows
 
 
@@ -358,6 +357,32 @@ def update_conversation(conversation_id, conversation_text):
         print("DB error in update_conversation")
         print(e)
     close_connection(conn)
+
+def get_conversations_by_time(domain_id, start_time, end_time):
+    rows = None
+    try:
+        with get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("""
+                SELECT 
+                    conversation_id,
+                    user_id,
+                    domain_id,
+                    conversation_text,
+                    date_time_started
+                FROM conversation
+                WHERE domain_id = %s
+                        and date_time_started >= %s
+                        and date_time_started <= %s
+                """,
+                        (domain_id, start_time, end_time, ))
+            rows = cur.fetchall()
+    except Exception as e:
+        print("***************************")
+        print("DB error in get_conversation")
+        print(e)
+    return rows
+
 
 
 ##### MISC #####
@@ -445,10 +470,3 @@ def test_validate_user(user_name, password):
 
 ##### ARCHIVE #####
 
-
-def getDocumentsFromIds(conn, ids):
-    format_strings = ','.join(['%s'] * len(ids))
-    cur = conn.cursor()
-    cur.execute("SELECT doc_id, doc_title FROM document WHERE doc_id in (%s)" %
-                format_strings, tuple(ids))
-    return cur

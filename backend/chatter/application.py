@@ -2,7 +2,7 @@ import time
 from flask import Flask, request
 from flask_restful import Resource, Api, reqparse, abort
 from flask_cors import CORS
-from api import login, document, domain, prompt, answer, token, hello
+from api import login, document, domain, prompt, answer, token, conversations, hello
 from api.errors import InputError
 from utils.utils import decode_token
 from utils import logging
@@ -112,6 +112,14 @@ class Answer(Resource):
             conversation_id, domain_id, query, prompt_template, temp, user_id, deep_search)
         return res
 
+class Conversations(Resource):
+    def get(self):
+        # retrieve inputs
+        domain_id = request.args.get('domain_id')
+        start_date = request.args.get('start_date')
+        end_date = request.args.get('end_date')
+        return conversations.get_conversations_by_time(domain_id, start_date, end_date)
+
 
 class Document(Resource):
     def post(self):
@@ -152,8 +160,10 @@ api.add_resource(Login, '/login')
 api.add_resource(Domain, '/domain', '/domain/<int:domain_id>')
 api.add_resource(Prompt, '/prompt')
 api.add_resource(Answer, '/answer')
+api.add_resource(Conversations, '/conversations')
 api.add_resource(Hello, '/hello')
 api.add_resource(Document, '/document')
 
 if __name__ == '__main__':
     application.run(debug=True)
+
