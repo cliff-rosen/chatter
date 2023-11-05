@@ -63,7 +63,18 @@ const Navbar = ({ sessionManager }) => {
               }}
               to="/kb"
             >
-              KB
+              kb
+            </Link>{" "}
+            |{" "}
+            <Link
+              style={{
+                textDecoration: "none",
+                color: location.pathname === "/history" ? "#1976d2" : "gray",
+                fontWeight: location.pathname === "/history" ? "bold" : "normal",
+              }}
+              to="/history"
+            >
+              history
             </Link>{" "}
             |{" "}
             <Link

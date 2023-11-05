@@ -46,5 +46,4 @@ res = kb.delete_documents([67])
 
 print('res', res)
 
-
 print('done')

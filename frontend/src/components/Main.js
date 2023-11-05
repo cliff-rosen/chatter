@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { fetchGet, fetchPost } from "../utils/APIUtils";
 import Prompt from "./Prompt";
-import History from "./History";
+import ChatSessionHistory from "./ChatSessionHistory";
 import Diagnostics from "./Diagnostics";
 import Thinking from "./Thinking";
 import Box from "@mui/material/Box";
@@ -13,6 +13,8 @@ import InputLabel from "@mui/material/InputLabel";
 import Slider from "@mui/material/Slider";
 import { Link } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
+
+const NEW_CONVERSATION_ID = "NEW";
 
 export default function Main({ sessionManager }) {
 
@@ -26,13 +28,11 @@ export default function Main({ sessionManager }) {
   const [temp, setTemp] = useState(0.4);
   const [chunks, setChunks] = useState([]);
   const [chunksUsedCount, setChunksUsedCount] = useState(0);
-  const [showThinking, setShowThinking] = useState(false);
   const [chatHistory, setChatHistory] = useState([]);
   const [conversationID, setConversationID] = useState("NEW");
   const [initialMessage, setInitialMessage] = useState("");
   const [deepSearch, setDeepSearch] = useState(false);
-  const [x, setX] = useState(0);
-  const NEW_CONVERSATION_ID = "NEW";
+  const [showThinking, setShowThinking] = useState(false);
 
   console.log("Main --> userID", sessionManager.user.userID, domainID);
 
@@ -51,18 +51,18 @@ export default function Main({ sessionManager }) {
     console.log("setActiveDomain -> setting domain to", iDomainID);
     resetConversation();
 
-    const data = await fetchGet(`domain/${iDomainID}`);
-    setPromptCustom(data.initial_prompt_template);
+    const domainData = await fetchGet(`domain/${iDomainID}`);
+    setPromptCustom(domainData.initial_prompt_template);
     let newHistory = [];
-    if (data.initial_conversation_message) {
-      setInitialMessage("AI: " + data.initial_conversation_message);
-      newHistory.push("AI: " + data.initial_conversation_message);
+    if (domainData.initial_conversation_message) {
+      setInitialMessage("AI: " + domainData.initial_conversation_message);
+      newHistory.push("AI: " + domainData.initial_conversation_message);
     } else {
       setInitialMessage("");
     }
 
     setChatHistory(newHistory);
-    setPrompt(data.initial_prompt_template || promptDefault);
+    setPrompt(domainData.initial_prompt_template || promptDefault);
   }
 
   /////////////////////////////// EFFECTS ///////////////////////////////
@@ -133,15 +133,15 @@ export default function Main({ sessionManager }) {
     };
 
     try {
-      const data = await fetchPost("answer", queryObj);
-      setChatHistory((h) => [...h, "AI: " + data.answer]);
-      setConversationID(data.conversation_id);
+      const response = await fetchPost("answer", queryObj);
+      setChatHistory((h) => [...h, "AI: " + response.answer]);
+      setConversationID(response.conversation_id);
       setShowThinking(false);
-      const rows: GridRowsProp[] = Object.values(data.chunks).sort(
+      const responseChunks = Object.values(response.chunks).sort(
         (a, b) => b.score - a.score
       );
-      setChunks(rows);
-      setChunksUsedCount(data.chunks_used_count);
+      setChunks(responseChunks);
+      setChunksUsedCount(response.chunks_used_count);
     } catch (e) {
       setChatHistory((h) => [
         ...h,
@@ -225,7 +225,7 @@ export default function Main({ sessionManager }) {
           </div>
         </div>
 
-        <History chatHistory={chatHistory} />
+        <ChatSessionHistory chatHistory={chatHistory} />
 
         <Thinking show={showThinking} />
 
