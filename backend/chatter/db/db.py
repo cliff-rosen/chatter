@@ -299,7 +299,7 @@ def get_conversation(conversation_id):
         with get_connection() as conn:
             cur = conn.cursor()
             cur.execute("""
-                SELECT 
+                SELECT
                     conversation_id,
                     user_id,
                     domain_id,

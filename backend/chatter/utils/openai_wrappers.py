@@ -1,7 +1,7 @@
 import local_secrets as secrets
 from utils import logging
 import openai
-from openai.embeddings_utils import get_embedding as openai_get_embedding
+#from openai.embeddings_utils import get_embedding as openai_get_embedding
 
 
 OPENAI_API_KEY = secrets.OPENAI_API_KEY
@@ -14,14 +14,15 @@ MAX_TOKENS = 400
 logger = logging.getLogger()
 logger.info('openai_wrapper loaded')
 
-openai.api_key = OPENAI_API_KEY
+#openai.api_key = OPENAI_API_KEY
+client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 def generate(messages, temperature):
 
     response =''
 
     try:
-        completion = openai.ChatCompletion.create(
+        completion = client.chat.completions.create(
             model=COMPLETION_MODEL,
             messages=messages,
             max_tokens=MAX_TOKENS,
@@ -36,8 +37,17 @@ def generate(messages, temperature):
     return response
 
 def get_embedding(text):
+    res = client.embeddings.create(
+                    model=EMBEDDING_MODEL,
+                    input=text,
+                    encoding_format="float"
+                )
+    return res.data[0].embedding
+    return res['data'][0]['embedding']
+
+    '''
     return openai_get_embedding(
         text,
         engine=EMBEDDING_MODEL
     )
-
+    '''
