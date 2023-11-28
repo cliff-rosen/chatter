@@ -6,8 +6,13 @@ from utils import utils
 import local_secrets as secrets
 
 
-emb = model.get_embedding('abc')
-print(emb)
+#emb = model.get_embedding('abc')
+#print(emb)
+messages=[
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "Hello!"}
+  ]
+print(model.generate(messages,0.0))
 
 '''
 print('starting')

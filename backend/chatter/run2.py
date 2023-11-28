@@ -6,28 +6,22 @@ import json
 import datetime
 
 import streamlit as st
-import pandas as pd
-import numpy as np
-import time
 
+# Initialize session state to persist history across app reruns 
+if 'history' not in st.session_state:
+    st.session_state['history'] = []
 
-click_tracker = [False, False, False]
+history = st.session_state['history'] 
 
-data = [
-  {'name': 'John', 'age': 30},
-  {'name': 'Mary', 'age': 25},
-  {'name': 'Peter', 'age': 20}
-]
+st.title("Chat App")
 
-selected_row = None 
+message = st.chat_input("Enter your message: ")
 
-col1, col2 = st.columns(2)
+if message:
+    history.append(message) 
 
-with col1:
-  for index, row in enumerate(data):
-    click_tracker[index] = st.button(row['name'])
+for cm in history:
+    message = st.chat_message("user")
+    message.write(cm)
 
-with col2:
-    for index, row in enumerate(data):
-       if click_tracker[index]:
-        st.write(index)
+print(history)

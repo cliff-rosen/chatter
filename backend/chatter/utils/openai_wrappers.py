@@ -43,11 +43,4 @@ def get_embedding(text):
                     encoding_format="float"
                 )
     return res.data[0].embedding
-    return res['data'][0]['embedding']
-
-    '''
-    return openai_get_embedding(
-        text,
-        engine=EMBEDDING_MODEL
-    )
-    '''
+    

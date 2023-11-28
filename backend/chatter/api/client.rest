@@ -1,7 +1,7 @@
 #http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/auth/token
 #https://api.trippersalmanac.com/hello
 
-GET http://app-dm-01-dev.us-east-1.elasticbeanstalk.com/hello
+GET https://dosemerx-api.ironcliff.ai/hello
 accept: application/json
 
 ###
