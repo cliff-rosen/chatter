@@ -374,6 +374,7 @@ def get_conversations_by_time(domain_id, start_time, end_time):
                 WHERE domain_id = %s
                         and date_time_started >= %s
                         and date_time_started <= %s
+                ORDER BY date_time_started
                 """,
                         (domain_id, start_time, end_time, ))
             rows = cur.fetchall()
