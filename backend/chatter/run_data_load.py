@@ -1,4 +1,8 @@
-#from data_processor import step_1_doc_loader as step1, step_2_chunk as step2, step_3_upsert_index as step3
+from data_processor import (
+    step_1_doc_loader as step1,
+    step_2_chunk as step2,
+    step_3_upsert_index as step3,
+)
 from utils import kb_service as kb
 from db import db
 from utils import pinecone_wrappers as vdb, openai_wrappers as model
@@ -6,15 +10,15 @@ from utils import utils
 import local_secrets as secrets
 
 
-#emb = model.get_embedding('abc')
-#print(emb)
-messages=[
+# emb = model.get_embedding('abc')
+# print(emb)
+messages = [
     {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": "Hello!"}
-  ]
-print(model.generate(messages,0.0))
+    {"role": "user", "content": "Hello!"},
+]
+print(model.generate(messages, 0.0))
 
-'''
+"""
 print('starting')
 messages=[
     {"role": "system", "content": "You are a helpful assistant."},
@@ -25,16 +29,19 @@ messages=[
 res = model.get_embedding('hello')
 print(res)
 print('done')
-'''
 
-'''
-#step1.run()
-#step1.go1()
-#step2.test_chunker()
-#step2.test_chunker_single_doc()
-#step2.run()
-#step3.run()
+"""
 
+# step1.run()
+# step2.run()
+# step3.run()
+
+# step1.go1()
+# step2.test_chunker()
+# step2.test_chunker_single_doc()
+
+
+"""
 import random
 num_floats = 1536
 vector_str = ""
@@ -60,9 +67,9 @@ res = kb.add_document(1, 'uri', 'title', text, text)
 #res = kb.delete_documents([67])
 #res = vdb.upsert_index(**doc)
 #res = vdb.index.delete([], filter = {'doc_chunk_id': 'c456'})\
-'''
 
-'''
+##############################################
+
 logger = logging.getLogger()
 
 domain_id = 1
@@ -81,4 +88,4 @@ for rec in res:
 CreateEmbeddingResponse(
     data=[Embedding(embedding=[-0.025058426, -0.01938856, ... -0.006119225], index=0, object='embedding')], model='text-embedding-ada-002-v2', object='list', usage=Usage(prompt_tokens=1, total_tokens=1))
 
-'''
+"""
