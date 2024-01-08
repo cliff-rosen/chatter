@@ -111,6 +111,7 @@ def insert_document(domain_id,
         raise
     return doc_id
 
+
 def delete_document(doc_id):
     try:
         conn = get_connection()
@@ -124,6 +125,7 @@ def delete_document(doc_id):
         print(f"Error deleting row: {e}")
         raise
     return res
+
 
 def get_all_docs_from_domain(conn, domain_id):
     cur = conn.cursor()

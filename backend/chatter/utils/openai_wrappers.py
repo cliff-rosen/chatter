@@ -17,6 +17,7 @@ logger.info('openai_wrapper loaded')
 #openai.api_key = OPENAI_API_KEY
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
+
 def generate(messages, temperature):
 
     response =''
@@ -35,6 +36,7 @@ def generate(messages, temperature):
         response = "We're sorry, the server was too busy to handle this response.  Please try again."
 
     return response
+
 
 def get_embedding(text):
     res = client.embeddings.create(

@@ -35,6 +35,7 @@ MAX_TOKEN_COUNT = 8000
 MAX_CHUNKS_TOKEN_COUNT = 2500
 MAX_RESPONSE_TOKENS = 400
 
+
 def get_answer(
                 conversation_id,
                 domain_id,
@@ -101,6 +102,7 @@ def get_answer(
     logger.info('Prompt:\n' + str(query))
     if not messages:
         return {"status": "BAD_REQUEST"}
+    
     print("querying model")
     response = query_model(messages, temperature)
 
@@ -261,6 +263,7 @@ def create_prompt_messages(
 
 def query_model(messages, temperature):
     return generate(messages, temperature)
+
 
 def update_conversation_tables(
                         domain_id,

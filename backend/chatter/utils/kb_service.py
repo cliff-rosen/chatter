@@ -51,10 +51,12 @@ chunks dict:
     }
 '''
 
+
 def _embed_and_add_document_chunk(doc_id, chunk_text):
     emb = model.get_embedding(chunk_text)
     doc_chunk_id = db.insert_document_chunk(doc_id, chunk_text, emb)
     return (emb, doc_chunk_id)
+
 
 def _make_chunks_from_text(text):
     chunks_splitter = RecursiveCharacterTextSplitter(
@@ -106,14 +108,17 @@ def add_document(domain_id, uri, title, text, blob):
         print('added chunk ', doc_chunk_id)
     return doc_id
 
+
 def delete_document(doc_id):
     vdb.delete(doc_id, {})
     db.delete_document(doc_id)
+
 
 def delete_documents(doc_ids):
     for doc_id in doc_ids:
         vdb.delete_all_for_doc_id(doc_id)
         db.delete_document(doc_id)
+
 
 def get_chunks_from_query(domain_id, user_message):
     chunks = {}
