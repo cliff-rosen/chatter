@@ -1,11 +1,16 @@
+"""
 from data_processor import (
     step_1_doc_loader as step1,
     step_2_chunk as step2,
     step_3_upsert_index as step3,
 )
 from utils import kb_service as kb
+"""
+
 from db import db
-from utils import pinecone_wrappers as vdb, openai_wrappers as model
+
+# from utils import pinecone_wrappers as vdb, openai_wrappers as model
+from utils import openai_wrappers as model
 from utils import utils
 import local_secrets as secrets
 
@@ -14,9 +19,14 @@ import local_secrets as secrets
 # print(emb)
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": "Hello!"},
+    {"role": "user", "content": "Tell me a story"},
 ]
-print(model.generate(messages, 0.0))
+print("calling")
+stream = model.generate(messages, 0.0, True)
+print("back")
+for chunk in stream:
+    print(chunk.choices[0].delta.content, end="", flush=True)
+
 
 """
 print('starting')

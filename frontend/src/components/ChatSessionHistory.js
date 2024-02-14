@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import Divider from "@mui/material/Divider";
+import ReactMarkdown from 'react-markdown';
 
 export default function ChatSessionHistory({ chatHistory }) {
   const containerRef = useRef(null);
@@ -18,7 +19,9 @@ export default function ChatSessionHistory({ chatHistory }) {
       {chatHistory.map((e, i) => (
         <div key={i}>
           <Divider style={{ paddingTop: 10, paddingBottom: 10 }} />
-          <div style={{ paddingTop: 10 }}>{e}</div>
+          <div style={{ paddingTop: 10 }}>
+            <ReactMarkdown>{e}</ReactMarkdown>
+          </div>
         </div>
       ))}
       <Divider style={{ paddingTop: 10, paddingBottom: 10 }} />

@@ -1,38 +1,40 @@
 import local_secrets as secrets
 from utils import logging
 import openai
-#from openai.embeddings_utils import get_embedding as openai_get_embedding
+
+# from openai.embeddings_utils import get_embedding as openai_get_embedding
 
 
 OPENAI_API_KEY = secrets.OPENAI_API_KEY
-#COMPLETION_MODEL = 'gpt-3.5-turbo'
-COMPLETION_MODEL = 'gpt-4'
-#COMPLETION_MODEL = 'gpt-4-32k'
+# COMPLETION_MODEL = 'gpt-3.5-turbo'
+COMPLETION_MODEL = "gpt-4"
+# COMPLETION_MODEL = 'gpt-4-32k'
 EMBEDDING_MODEL = "text-embedding-ada-002"
 MAX_TOKENS = 400
 
 logger = logging.getLogger()
-logger.info('openai_wrapper loaded')
+logger.info("openai_wrapper loaded")
 
-#openai.api_key = OPENAI_API_KEY
+# openai.api_key = OPENAI_API_KEY
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 
-def generate(messages, temperature):
-
-    response =''
+def generate(messages, temperature, stream=False):
+    response = ""
 
     try:
         completion = client.chat.completions.create(
             model=COMPLETION_MODEL,
             messages=messages,
             max_tokens=MAX_TOKENS,
-            temperature=temperature
-            )
-        response = completion.choices[0].message.content
+            temperature=temperature,
+            stream=stream,
+        )
+        # response = completion.choices[0].message.content
+        response = completion
     except Exception as e:
-        print('query_model error: ', str(e))
-        logger.warning('get_answer.query_model error:' + str(e))
+        print("query_model error: ", str(e))
+        logger.warning("get_answer.query_model error:" + str(e))
         response = "We're sorry, the server was too busy to handle this response.  Please try again."
 
     return response
@@ -40,9 +42,6 @@ def generate(messages, temperature):
 
 def get_embedding(text):
     res = client.embeddings.create(
-                    model=EMBEDDING_MODEL,
-                    input=text,
-                    encoding_format="float"
-                )
+        model=EMBEDDING_MODEL, input=text, encoding_format="float"
+    )
     return res.data[0].embedding
-    

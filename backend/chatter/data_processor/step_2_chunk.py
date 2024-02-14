@@ -1,11 +1,16 @@
 import openai
-from openai.embeddings_utils import get_embedding, cosine_similarity
-from langchain.text_splitter import CharacterTextSplitter, RecursiveCharacterTextSplitter
+
+# from openai.embeddings_utils import get_embedding, cosine_similarity
+from langchain.text_splitter import (
+    CharacterTextSplitter,
+    RecursiveCharacterTextSplitter,
+)
 import re
 import os
 import sys
-#import sys
-#sys.path.append('.\..')
+
+# import sys
+# sys.path.append('.\..')
 from db import db
 import local_secrets as secrets
 
@@ -26,42 +31,44 @@ MAX_CHUNK_LENGTH = 1500
 OPENAI_API_KEY = secrets.OPENAI_API_KEY
 openai.api_key = OPENAI_API_KEY
 
+
 def get_openai_embedding(text):
     embedding_model = "text-embedding-ada-002"
-    return get_embedding(
-        text,
-        engine="text-embedding-ada-002"
-    )
+    return get_embedding(text, engine="text-embedding-ada-002")
+
 
 def get_all_docs_from_domain(conn, domain_id):
     return db.get_all_docs_from_domain(conn, domain_id)
 
+
 def get_docs_from_ids(conn, ids):
     return db.get_docs_from_ids(conn, ids)
+
 
 def get_chunks_from_text(text, maker_type):
     if maker_type == "MAKER_2":
         return get_chunks_from_text_maker_2(text)
 
     if maker_type == "CHAR":
-        print('chunking with CharacterTextSplitter')
-        chunks_splitter = CharacterTextSplitter(        
-            #separator = "\n\n",
-            separator = "\n",
-            chunk_size = 1000,
-            chunk_overlap  = 200,
-            length_function = len,
+        print("chunking with CharacterTextSplitter")
+        chunks_splitter = CharacterTextSplitter(
+            # separator = "\n\n",
+            separator="\n",
+            chunk_size=1000,
+            chunk_overlap=200,
+            length_function=len,
         )
     else:
-        print('chunking with RecursiveCharacterTextSplitter')
-        #text = re.sub('\s+', ' ', text)
+        print("chunking with RecursiveCharacterTextSplitter")
+        # text = re.sub('\s+', ' ', text)
         chunks_splitter = RecursiveCharacterTextSplitter(
-            chunk_size = 1000,
-            chunk_overlap  = 0,
-            length_function = len,
+            chunk_size=1000,
+            chunk_overlap=0,
+            length_function=len,
         )
     chunks = chunks_splitter.split_text(text)
     return chunks
+
 
 # create fragments, which are chunks delimited by \n\n
 # chunks are fragments concatenated until a fragment is min 20 words
@@ -71,18 +78,20 @@ def get_chunks_from_text_maker_2(text):
     fragments = []
 
     # clean input
-    text = text.encode(encoding='ASCII',errors='ignore').decode()
+    text = text.encode(encoding="ASCII", errors="ignore").decode()
     text.strip()
-    #text = re.sub('\s{3,}', '\n\n', text)    
+    # text = re.sub('\s{3,}', '\n\n', text)
 
     # build array of fragments by nn
-    fragments = text.split('\n\n')
+    fragments = text.split("\n\n")
 
     # add array elements until reaching an element with at least 20 words
     cur_chunk = ""
     for i, fragment in enumerate(fragments):
-        cur_chunk = cur_chunk + '\n' + fragment
-        if len(cur_chunk) > 1 and (len(fragment.split()) >= 20 or i + 1 == len(fragments)):
+        cur_chunk = cur_chunk + "\n" + fragment
+        if len(cur_chunk) > 1 and (
+            len(fragment.split()) >= 20 or i + 1 == len(fragments)
+        ):
             cur_chunk = cur_chunk.strip()
             if len(cur_chunk) > MIN_CHUNK_LENGTH:
                 chunks.append(cur_chunk)
@@ -90,13 +99,15 @@ def get_chunks_from_text_maker_2(text):
 
     return chunks
 
+
 # runtime settings
-#chunk_maker = "MAKER_2"
-#chunk_maker = "CHAR"
+# chunk_maker = "MAKER_2"
+# chunk_maker = "CHAR"
 chunk_maker = "MAKER_1"
 domain_id = 1
-#doc_ids = None
+# doc_ids = None
 doc_ids = [53, 54, 55, 56, 57]
+
 
 def run():
     # init
@@ -126,11 +137,13 @@ def run():
     # cleanup
     db.close_connection(conn)
 
+
 def write_to_file(text):
-    directory = 'chatter\data_processor\outputs'
-    dest = 'chunks.txt'
-    with open(os.path.join(directory, dest), 'a') as new_file:
+    directory = "chatter\data_processor\outputs"
+    dest = "chunks.txt"
+    with open(os.path.join(directory, dest), "a") as new_file:
         new_file.write(text)
+
 
 def test_chunker():
     print("TEST: Retrieve documents for domain", domain_id)
@@ -142,16 +155,20 @@ def test_chunker():
         print("********************************")
         print(uri)
         chunks = get_chunks_from_text(SAMPLE_DOC, chunk_maker)
-        write_to_file('****************************************************************\n')
+        write_to_file(
+            "****************************************************************\n"
+        )
         for chunk in chunks:
-            write_to_file(chunk + '\n==============\n')
-        write_to_file('\n\n')
+            write_to_file(chunk + "\n==============\n")
+        write_to_file("\n\n")
+
 
 def test_chunker_single_doc():
     chunks = get_chunks_from_text(SAMPLE_DOC, chunk_maker)
     for chunk in chunks:
-        write_to_file(chunk + '\n==============\n')
-    
+        write_to_file(chunk + "\n==============\n")
+
+
 SAMPLE_DOC = """
 Data Processing Steps
 
@@ -239,4 +256,4 @@ ORDER BY domain_id
 """
 
 #####################################################
-#clean_chunk = re.sub('\s+', ' ', chunk)
+# clean_chunk = re.sub('\s+', ' ', chunk)
