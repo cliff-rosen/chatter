@@ -1,6 +1,7 @@
 import local_secrets as secrets
 from utils import logging
 import openai
+import json
 
 # from openai.embeddings_utils import get_embedding as openai_get_embedding
 
@@ -31,13 +32,22 @@ def generate(messages, temperature, stream=False):
             stream=stream,
         )
         # response = completion.choices[0].message.content
-        response = completion
+        # response = completion
+        for chunk in completion:
+            message = chunk.choices[0].delta.content
+            print(message, end="", flush=True)
+            # yield json.dumps(message) + "\n"
+            yield message
+
     except Exception as e:
         print("query_model error: ", str(e))
         logger.warning("get_answer.query_model error:" + str(e))
         response = "We're sorry, the server was too busy to handle this response.  Please try again."
 
-    return response
+    finally:
+        print("finally")
+
+    # return "hello"  # response
 
 
 def get_embedding(text):

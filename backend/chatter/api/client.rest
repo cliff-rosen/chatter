@@ -82,7 +82,7 @@ accept: application/json
 
 ###
 
-GET http://127.0.0.1:5000/domain/30
+GET http://127.0.0.1:5000/domain/1
 accept: application/json
 
 ###
@@ -93,12 +93,12 @@ accept: application/json
 
 {
     "conversation_id": "NEW",
-    "use_new_model": false,
     "domain_id": 1,
     "user_id": 1,
     "query": "how can i used large language models for my business",
     "prompt_template": "Answer the question as honestly as you can.",
-    "temp": 0.4
+    "temp": 0.4,
+    "deep_search": false
 }
 
 ############################
