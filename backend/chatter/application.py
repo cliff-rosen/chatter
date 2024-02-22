@@ -156,37 +156,17 @@ def res():
     for message in hello.get_hello():
         if not message:
             message = ""
-        message = message.encode("unicode_escape").decode("ascii")
         print(message, end="", flush=True)
-        # data = json.dumps(f'{{"status": "ok", "content": "{message}"}}')
-        data = f'{{"status": "ok", "content": "{message}"}}'
+        data = json.dumps({"status": "ok", "content": message})
         yield "data: " + data + "\n\n"
-    message = "x"
-    data = f'{{"status": "done", "content": "{message}"}}'
+    data = json.dumps({"status": "done", "content": ""})
     yield "data: " + data + "\n\n"
     print("yielded", data)
-
-
-def res1():
-    for chunk in [
-        'data: {"status": "ok", "content": "1"}\n\n',
-        'data: {"status": "ok", "content": "2"}\n\n',
-        'data: {"status": "ok", "content": "3"}\n\n',
-    ]:
-        # print("about to yield", chunk)
-        yield chunk
-        print("yielded", chunk)
-    chunk = 'data: {"status": "done", "content": ""}\n\n'
-    yield chunk
-    print("yielded", chunk)
 
 
 class Hello(Resource):
     def get(self):
         return Response(res(), mimetype="text/event-stream")
-        # return hello.get_hello()
-        # return Response(hello.get_hello(), mimetype="text/event-stream")
-        # return Response(res1(), mimetype="text/event-stream")
 
 
 api = Api(application)

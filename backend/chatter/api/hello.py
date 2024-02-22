@@ -4,7 +4,7 @@ import os
 logger = logging.getLogger()
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
-    {"role": "user", "content": "List 3 fruit"},
+    {"role": "user", "content": "Tell me a story"},
 ]
 
 
