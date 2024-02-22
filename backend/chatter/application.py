@@ -152,9 +152,46 @@ class Document(Resource):
         return {"status": "ok"}
 
 
+def res():
+    for chunk in hello.get_hello():
+        message = chunk.choices[0].delta.content
+        if not message:
+            message = ""
+        print(message, end="", flush=True)
+        # yield json.dumps(message) + "\n"
+        yield message
+
+
+def res1():
+    for chunk in [
+        'data: {"status": "ok", "content": "1"}\n\n',
+        'data: {"status": "ok", "content": "2"}\n\n',
+        'data: {"status": "ok", "content": "3"}\n\n',
+    ]:
+        # print("about to yield", chunk)
+        yield chunk
+        print("yielded", chunk)
+    chunk = 'data: {"status": "done", "content": ""}\n\n'
+    yield chunk
+    print("yielded", chunk)
+
+
+def res2():
+    for chunk in [
+        "event: data\ndata: 1\n\n",
+        "event: data\ndata: 2\n\n",
+        "event: data\ndata: 3\n\n",
+    ]:
+        yield chunk
+        print("yielded", chunk)
+
+
 class Hello(Resource):
     def get(self):
-        return Response(hello.get_hello(), mimetype="text/event-stream")
+        return Response(res1(), mimetype="text/event-stream")
+        # return hello.get_hello()
+        # return Response(hello.get_hello(), mimetype="text/event-stream")
+        # return Response(res1(), mimetype="text/event-stream")
 
 
 api = Api(application)

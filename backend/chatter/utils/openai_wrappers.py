@@ -20,8 +20,7 @@ logger.info("openai_wrapper loaded")
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
 
-def generate(messages, temperature, stream=False):
-    response = ""
+def generate(messages, temperature):
 
     try:
         completion = client.chat.completions.create(
@@ -29,15 +28,9 @@ def generate(messages, temperature, stream=False):
             messages=messages,
             max_tokens=MAX_TOKENS,
             temperature=temperature,
-            stream=stream,
+            stream=False,
         )
-        # response = completion.choices[0].message.content
-        # response = completion
-        for chunk in completion:
-            message = chunk.choices[0].delta.content
-            print(message, end="", flush=True)
-            # yield json.dumps(message) + "\n"
-            yield message
+        response = completion.choices[0].message.content
 
     except Exception as e:
         print("query_model error: ", str(e))
@@ -47,7 +40,35 @@ def generate(messages, temperature, stream=False):
     finally:
         print("finally")
 
-    # return "hello"  # response
+    return response
+
+
+def agenerate(messages, temperature):
+
+    try:
+        completion = client.chat.completions.create(
+            model=COMPLETION_MODEL,
+            messages=messages,
+            max_tokens=MAX_TOKENS,
+            temperature=temperature,
+            stream=True,
+        )
+        # response = completion.choices[0].message.content
+        for chunk in completion:
+            message = chunk.choices[0].delta.content
+            if message is None:
+                message = ""
+            print(message, end="", flush=True)
+            # yield json.dumps(message) + "\n"
+            yield f"data: {message}\n\n"
+
+    except Exception as e:
+        print("query_model error: ", str(e))
+        logger.warning("get_answer.query_model error:" + str(e))
+        response = "We're sorry, the server was too busy to handle this response.  Please try again."
+
+    finally:
+        print("finally")
 
 
 def get_embedding(text):
