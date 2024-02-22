@@ -53,14 +53,13 @@ def agenerate(messages, temperature):
             temperature=temperature,
             stream=True,
         )
-        # response = completion.choices[0].message.content
+
         for chunk in completion:
             message = chunk.choices[0].delta.content
             if message is None:
                 message = ""
-            print(message, end="", flush=True)
-            # yield json.dumps(message) + "\n"
-            yield f"data: {message}\n\n"
+            # print(message, end="", flush=True)
+            yield message
 
     except Exception as e:
         print("query_model error: ", str(e))

@@ -6,7 +6,7 @@ from api import login, document, domain, prompt, answer, token, conversations, h
 from api.errors import InputError
 from utils.utils import decode_token
 from utils import logging
-
+import json
 
 MAX_TOKENS_DEFAULT = 200
 TEMPERATURE_DEFAULT = 0.4
@@ -153,13 +153,18 @@ class Document(Resource):
 
 
 def res():
-    for chunk in hello.get_hello():
-        message = chunk.choices[0].delta.content
+    for message in hello.get_hello():
         if not message:
             message = ""
+        message = message.encode("unicode_escape").decode("ascii")
         print(message, end="", flush=True)
-        # yield json.dumps(message) + "\n"
-        yield message
+        # data = json.dumps(f'{{"status": "ok", "content": "{message}"}}')
+        data = f'{{"status": "ok", "content": "{message}"}}'
+        yield "data: " + data + "\n\n"
+    message = "x"
+    data = f'{{"status": "done", "content": "{message}"}}'
+    yield "data: " + data + "\n\n"
+    print("yielded", data)
 
 
 def res1():
@@ -176,19 +181,9 @@ def res1():
     print("yielded", chunk)
 
 
-def res2():
-    for chunk in [
-        "event: data\ndata: 1\n\n",
-        "event: data\ndata: 2\n\n",
-        "event: data\ndata: 3\n\n",
-    ]:
-        yield chunk
-        print("yielded", chunk)
-
-
 class Hello(Resource):
     def get(self):
-        return Response(res1(), mimetype="text/event-stream")
+        return Response(res(), mimetype="text/event-stream")
         # return hello.get_hello()
         # return Response(hello.get_hello(), mimetype="text/event-stream")
         # return Response(res1(), mimetype="text/event-stream")
