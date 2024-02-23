@@ -7,6 +7,21 @@ accept: application/json
 ###
 GET http://127.0.0.1:5000/hello
 accept: application/json
+
+###
+POST http://127.0.0.1:5000/answer
+content-type: application/json
+accept: application/json
+
+{
+    "conversation_id": "NEW",
+    "domain_id": 1,
+    "user_id": 1,
+    "query": "how are you?",
+    "prompt_template": "Answer the question as honestly as you can.",
+    "temp": 0.4,
+    "deep_search": false
+}
 ###
 
 GET http://127.0.0.1:5000/conversations?domain_id=1&start_date=2023-10-25&end_date=2023-12-31
@@ -83,22 +98,6 @@ accept: application/json
 
 GET http://127.0.0.1:5000/domain/1
 accept: application/json
-
-###
-#POST http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/answer
-POST http://127.0.0.1:5000/answer
-content-type: application/json
-accept: application/json
-
-{
-    "conversation_id": "NEW",
-    "domain_id": 1,
-    "user_id": 1,
-    "query": "how can i used large language models for my business",
-    "prompt_template": "Answer the question as honestly as you can.",
-    "temp": 0.4,
-    "deep_search": false
-}
 
 ############################
 

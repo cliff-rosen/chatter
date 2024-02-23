@@ -109,16 +109,18 @@ class Answer(Resource):
         print("temp", temp)
 
         # execute call to get_answer()
-        res = answer.get_answer(
-            conversation_id,
-            domain_id,
-            query,
-            prompt_template,
-            temp,
-            user_id,
-            deep_search,
+        return Response(
+            answer.get_answer(
+                conversation_id,
+                domain_id,
+                query,
+                prompt_template,
+                temp,
+                user_id,
+                deep_search,
+            ),
+            mimetype="text/event-stream",
         )
-        return res
 
 
 class Conversations(Resource):
@@ -152,20 +154,19 @@ class Document(Resource):
         return {"status": "ok"}
 
 
-def res():
-    for message in hello.get_hello():
-        if not message:
-            message = ""
-        print(message, end="", flush=True)
-        data = json.dumps({"status": "ok", "content": message})
-        yield "data: " + data + "\n\n"
-    data = json.dumps({"status": "done", "content": ""})
-    yield "data: " + data + "\n\n"
-    print("yielded", data)
-
-
 class Hello(Resource):
     def get(self):
+        def res():
+            for message in hello.get_hello():
+                if not message:
+                    message = ""
+                print(message, end="", flush=True)
+                data = json.dumps({"status": "ok", "content": message})
+                yield "data: " + data + "\n\n"
+            message = "data: " + json.dumps({"status": "done", "content": ""}) + "\n\n"
+            yield message
+            print("yielded", message)
+
         return Response(res(), mimetype="text/event-stream")
 
 

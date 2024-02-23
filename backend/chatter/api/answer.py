@@ -1,12 +1,12 @@
 from db import db
 import local_secrets as secrets
 from utils.utils import make_new_conversation_id, num_tokens_from_string
-from utils.openai_wrappers import generate
-
+from utils.openai_wrappers import agenerate
 import conf
 import utils.kb_service as kb
 from api.errors import InputError
 from utils import logging
+import json
 
 """
 prompt structure
@@ -58,6 +58,7 @@ def get_answer(
     context_chunks = {}
     initial_message = conf.DEFAULT_INITIAL_MESSAGE
     conversation_history = []
+    response_text = ""
 
     print("getting domain settings")
     res = db.get_domain(domain_id)
@@ -102,6 +103,18 @@ def get_answer(
     print("querying model")
     response = query_model(messages, temperature)
 
+    print("returning stream")
+    for message in response:
+        if not message:
+            message = ""
+        print(message, end="", flush=True)
+        data = json.dumps({"status": "ok", "content": message})
+        yield "data: " + data + "\n\n"
+        response_text = response_text + message
+    message = "data: " + json.dumps({"status": "done", "content": ""}) + "\n\n"
+    yield message
+    print("yielded", message)
+
     print("updating conversation tables")
     conversation_id = update_conversation_tables(
         domain_id,
@@ -112,7 +125,7 @@ def get_answer(
         temperature,
         conversation_id,
         conversation_history,
-        response,
+        response_text,
         context_chunks,
         user_id,
     )
@@ -281,7 +294,7 @@ def create_prompt_messages(
 
 
 def query_model(messages, temperature):
-    return generate(messages, temperature, True)
+    return agenerate(messages, temperature)
 
 
 def update_conversation_tables(
