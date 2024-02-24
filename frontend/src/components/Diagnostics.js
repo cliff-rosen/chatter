@@ -42,11 +42,11 @@ export default function Diagnostics({
             </TableHead>
             <TableBody>
               {chunks.map((chunk) => (
-                <TableRow key={chunk.ID}>
+                <TableRow key={chunk.id}>
                   <TableCell style={{ verticalAlign: "top" }} align="left">
                     {chunk.score.toFixed(3)}
                   </TableCell>
-                  <TableCell style={{ verticalAlign: "top" }} align="left">{chunk.used ? 'YES': ''}</TableCell>
+                  <TableCell style={{ verticalAlign: "top" }} align="left">{chunk.used ? 'YES' : ''}</TableCell>
                   <TableCell style={{ verticalAlign: "top" }} align="left">
                     <Link to={chunk.uri} target="_blank">
                       {chunk.id}

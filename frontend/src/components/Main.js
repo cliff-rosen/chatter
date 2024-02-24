@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { fetchGet, fetchPost } from "../utils/APIUtils";
 import Prompt from "./Prompt";
 import ChatSessionHistory from "./ChatSessionHistory";
+import { config } from "../conf";
 import Diagnostics from "./Diagnostics";
 import Thinking from "./Thinking";
 import Box from "@mui/material/Box";
@@ -15,6 +16,7 @@ import { Link } from "react-router-dom";
 import Checkbox from "@mui/material/Checkbox";
 
 const NEW_CONVERSATION_ID = "NEW";
+const BASE_API_URL = config.url.API_URL;
 
 export default function Main({ sessionManager }) {
 
@@ -64,6 +66,20 @@ export default function Main({ sessionManager }) {
     setChatHistory(newHistory);
     setPrompt(domainData.initial_prompt_template || promptDefault);
   }
+
+  function getMessages(chunk) {
+    chunk = chunk.trim()
+    const events = chunk.split('\n\n')
+    const messages = []
+    for (var i = 0; i < events.length; i++) {
+      const data = events[i].slice(6)
+      const messageObj = JSON.parse(data)
+      console.log(messageObj)
+      messages.push(messageObj)
+    }
+    return messages
+  }
+
 
   /////////////////////////////// EFFECTS ///////////////////////////////
   // Main useEffect
@@ -116,11 +132,13 @@ export default function Main({ sessionManager }) {
   const formSubmit = async (e) => {
     e.preventDefault();
 
+    var finalResponse;
+    var answer = "AI: "
     setQuery("");
     setShowThinking(true);
     setChunks([]);
     setChunksUsedCount(0);
-    setChatHistory((h) => [...h, "User: " + query]);
+    setChatHistory((h) => [...h, "User: " + query, answer]);
 
     const queryObj = {
       domain_id: domainID,
@@ -133,16 +151,62 @@ export default function Main({ sessionManager }) {
     };
 
     try {
-      const response = await fetchPost("answer", queryObj);
-      setChatHistory((h) => [...h, "AI: " + response.answer]);
-      setConversationID(response.conversation_id);
+      const response = await fetch(BASE_API_URL + "/answer", {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(queryObj),
+      });
+      if (!response.ok) {
+        const message = `An error has occurred: ${response.status}`;
+        console.log('ERROR', message)
+      } else {
+        console.log("Response", response)
+      }
+
+      const reader = response.body.getReader();
+      try {
+        while (true) {
+          console.log("start read loop")
+          const { value, done } = await reader.read();
+          console.log("back from reader.read", done)
+          if (done) break;
+          const chunk = new TextDecoder().decode(value);
+          console.log("Received chunk: ", chunk);
+          const messages = getMessages(chunk)
+          console.log("Messages", messages)
+          messages.forEach(message => {
+            if (message.status == 'done') {
+              console.log('messages done')
+              return
+            }
+            else if (message.status == 'response') {
+              finalResponse = message
+              console.log('Response', finalResponse)
+            }
+            else {
+              answer += message.content;
+              setChatHistory(h => [...h.slice(0, h.length - 1), answer])
+            }
+          })
+        }
+      } catch (error) {
+        console.error("Stream reading failed: ", error);
+      } finally {
+        console.log('finally')
+        reader.releaseLock();
+      }
+
+      setConversationID(finalResponse.conversation_id);
       setShowThinking(false);
-      const responseChunks = Object.values(response.chunks).sort(
+      const responseChunks = Object.values(finalResponse.chunks).sort(
         (a, b) => b.score - a.score
       );
       setChunks(responseChunks);
-      setChunksUsedCount(response.chunks_used_count);
+      setChunksUsedCount(finalResponse.chunks_used_count);
     } catch (e) {
+      console.log('Submit error', e)
       setChatHistory((h) => [
         ...h,
         "Sorry, an error occured.  Please try again.",

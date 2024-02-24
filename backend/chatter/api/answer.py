@@ -111,9 +111,6 @@ def get_answer(
         data = json.dumps({"status": "ok", "content": message})
         yield "data: " + data + "\n\n"
         response_text = response_text + message
-    message = "data: " + json.dumps({"status": "done", "content": ""}) + "\n\n"
-    yield message
-    print("yielded", message)
 
     print("updating conversation tables")
     conversation_id = update_conversation_tables(
@@ -131,12 +128,15 @@ def get_answer(
     )
 
     print("get_answer completed")
-    return {
+    retval = {
+        "status": "response",
         "conversation_id": conversation_id,
-        "answer": response,
+        "answer": response_text,
         "chunks": context_chunks,
         "chunks_used_count": len(list(context_chunks.keys())),
     }
+    yield "data: " + json.dumps(retval) + "\n\n"
+    yield "data: " + json.dumps({"status": "done", "content": ""}) + "\n\n"
 
 
 def num_tokens(*args):
