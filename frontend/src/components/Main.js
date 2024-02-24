@@ -5,6 +5,8 @@ import ChatSessionHistory from "./ChatSessionHistory";
 import { config } from "../conf";
 import Diagnostics from "./Diagnostics";
 import Thinking from "./Thinking";
+import QueryInput from "./QueryInput";
+
 import Box from "@mui/material/Box";
 import { TextField, Button } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
@@ -23,7 +25,7 @@ export default function Main({ sessionManager }) {
   /////////////////////////////// STATE ///////////////////////////////
   const [domainList, setDomainList] = useState([]);
   const [domainID, setDomainID] = useState("");
-  const [query, setQuery] = useState("");
+  //const [query, setQuery] = useState("");
   const [prompt, setPrompt] = useState("TBD");
   const [promptDefault, setPromptDefault] = useState("TBD");
   const [promptCustom, setPromptCustom] = useState("");
@@ -42,7 +44,7 @@ export default function Main({ sessionManager }) {
     setConversationID(NEW_CONVERSATION_ID);
     if (initialMessage) setChatHistory([initialMessage]);
     else setChatHistory([]);
-    setQuery("");
+    //setQuery("");
     setShowThinking(false);
     setChunks([]);
     setChunksUsedCount(0);
@@ -115,7 +117,7 @@ export default function Main({ sessionManager }) {
 
     if (!sessionManager.user.userID) {
       setDomainID("");
-      setQuery("");
+      //setQuery("");
       setPrompt("");
       setShowThinking(false);
       setChunks([]);
@@ -129,20 +131,17 @@ export default function Main({ sessionManager }) {
   }, [sessionManager.user.userID]);
 
   /////////////////////////////// FORM FUNCTIONS ///////////////////////////////
-  const formSubmit = async (e) => {
-    e.preventDefault();
-
+  const formSubmit = async (iQuery) => {
     var finalResponse;
     var answer = "**AI:** "
-    setQuery("");
     setShowThinking(true);
     setChunks([]);
     setChunksUsedCount(0);
-    setChatHistory((h) => [...h, "**User:** " + query, answer]);
+    setChatHistory((h) => [...h, "**User:** " + iQuery, answer]);
 
     const queryObj = {
       domain_id: domainID,
-      query,
+      query: iQuery,
       prompt_template: prompt,
       temp,
       user_id: sessionManager.user.userID,
@@ -292,33 +291,10 @@ export default function Main({ sessionManager }) {
         <ChatSessionHistory chatHistory={chatHistory} />
 
         <Thinking show={false && showThinking} />
-
-        <div style={{ display: "flex" }}>
-          <div style={{ flexGrow: 1, paddingRight: 10 }}>
-            <TextField
-              margin="normal"
-              fullWidth
-              id="querytitle"
-              type="text"
-              label=""
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              variant="outlined"
-              required
-            />
-          </div>
-          <div style={{}}>
-            <Button
-              type="submit"
-              variant="contained"
-              color="primary"
-              style={{ marginTop: 20 }}
-            >
-              send
-            </Button>
-          </div>
-        </div>
       </FormControl>
+
+      <QueryInput formSubmit={formSubmit} />
+
       <br />
       <br />
       <Diagnostics

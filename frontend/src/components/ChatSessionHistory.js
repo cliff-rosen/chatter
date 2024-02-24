@@ -21,15 +21,15 @@ export default function ChatSessionHistory({ chatHistory }) {
         console.log('e', e)
         return (
           <div key={i}>
-            <Divider style={{ paddingTop: 10, paddingBottom: 10 }} />
-            <div style={{ paddingTop: 10 }}>
+            <Divider style={{ paddingTop: 5, paddingBottom: 5 }} />
+            <div style={{ paddingTop: 5 }}>
               <ReactMarkdown>{e}</ReactMarkdown>
             </div>
           </div>
         )
       }
       )}
-      <Divider style={{ paddingTop: 10, paddingBottom: 10 }} />
+      <Divider style={{ paddingTop: 5, paddingBottom: 5 }} />
     </div>
   );
 }
