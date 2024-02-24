@@ -18,6 +18,7 @@ export default function Diagnostics({
   chunks,
   chunksUsedcount,
 }) {
+  console.log('Diagnostics')
   return (
     <Accordion>
       <AccordionSummary

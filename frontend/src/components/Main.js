@@ -133,12 +133,12 @@ export default function Main({ sessionManager }) {
     e.preventDefault();
 
     var finalResponse;
-    var answer = "AI: "
+    var answer = "**AI:** "
     setQuery("");
     setShowThinking(true);
     setChunks([]);
     setChunksUsedCount(0);
-    setChatHistory((h) => [...h, "User: " + query, answer]);
+    setChatHistory((h) => [...h, "**User:** " + query, answer]);
 
     const queryObj = {
       domain_id: domainID,
@@ -173,9 +173,9 @@ export default function Main({ sessionManager }) {
           console.log("back from reader.read", done)
           if (done) break;
           const chunk = new TextDecoder().decode(value);
-          console.log("Received chunk: ", chunk);
+          //console.log("Received chunk: ", chunk);
           const messages = getMessages(chunk)
-          console.log("Messages", messages)
+          //console.log("Messages", messages)
           messages.forEach(message => {
             if (message.status == 'done') {
               console.log('messages done')
@@ -291,7 +291,7 @@ export default function Main({ sessionManager }) {
 
         <ChatSessionHistory chatHistory={chatHistory} />
 
-        <Thinking show={showThinking} />
+        <Thinking show={false && showThinking} />
 
         <div style={{ display: "flex" }}>
           <div style={{ flexGrow: 1, paddingRight: 10 }}>
