@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import Divider from "@mui/material/Divider";
 import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 export default function ChatSessionHistory({ chatHistory }) {
   const containerRef = useRef(null);
@@ -23,7 +24,7 @@ export default function ChatSessionHistory({ chatHistory }) {
           <div key={i}>
             <Divider style={{ paddingTop: 5, paddingBottom: 5 }} />
             <div style={{ paddingTop: 5 }}>
-              <ReactMarkdown>{e}</ReactMarkdown>
+              <ReactMarkdown remarkPlugins={[remarkGfm]}>{e}</ReactMarkdown>
             </div>
           </div>
         )

@@ -7,6 +7,7 @@ import utils.kb_service as kb
 from api.errors import InputError
 from utils import logging
 import json
+import urllib.parse
 
 """
 prompt structure
@@ -211,7 +212,10 @@ def process_chunks_and_get_as_text(
             print(" chunk", id, "too long to fit.  moving on.")
             chunks[id]["used"] = False
             continue
-        chunk_meta_data = f"chunk_id: {str(id)}, filename: {chunk['uri']}"
+        url = f"{conf.KB_BASE_URL}/{urllib.parse.quote(chunk['uri'])}"
+        chunk_meta_data = (
+            f"chunk_id: {str(id)}\n\nfilename: {chunk['uri']}\n\nurl: {url}\n\n"
+        )
         context = (
             context
             + "<CHUNK>"

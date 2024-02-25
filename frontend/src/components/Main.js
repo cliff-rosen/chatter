@@ -69,19 +69,6 @@ export default function Main({ sessionManager }) {
     setPrompt(domainData.initial_prompt_template || promptDefault);
   }
 
-  function getMessages(chunk) {
-    chunk = chunk.trim()
-    const events = chunk.split('\n\n')
-    const messages = []
-    for (var i = 0; i < events.length; i++) {
-      const data = events[i].slice(6)
-      const messageObj = JSON.parse(data)
-      console.log(messageObj)
-      messages.push(messageObj)
-    }
-    return messages
-  }
-
 
   /////////////////////////////// EFFECTS ///////////////////////////////
   // Main useEffect
@@ -133,11 +120,24 @@ export default function Main({ sessionManager }) {
   /////////////////////////////// FORM FUNCTIONS ///////////////////////////////
   const formSubmit = async (iQuery) => {
     var finalResponse;
-    var answer = "**AI:** "
+    var answer = "#### AI\n"
     setShowThinking(true);
     setChunks([]);
     setChunksUsedCount(0);
-    setChatHistory((h) => [...h, "**User:** " + iQuery, answer]);
+    setChatHistory((h) => [...h, "#### User\n" + iQuery, answer]);
+
+    function getMessages(chunk) {
+      chunk = chunk.trim()
+      const events = chunk.split('\n\n')
+      const messages = []
+      for (var i = 0; i < events.length; i++) {
+        const data = events[i].slice(6)
+        const messageObj = JSON.parse(data)
+        console.log(messageObj)
+        messages.push(messageObj)
+      }
+      return messages
+    }
 
     const queryObj = {
       domain_id: domainID,
