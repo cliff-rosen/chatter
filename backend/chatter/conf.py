@@ -1,4 +1,4 @@
-KB_BASE_URL = "http://kb-doseme.s3-website-us-east-1.amazonaws.com"
+KB_BASE_URL = "http://kb.ironcliff.ai"
 
 DEFAULT_INITIAL_PROMPT = """
 You are a professional working as a customer service representative for a company.
