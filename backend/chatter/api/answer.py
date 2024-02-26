@@ -33,7 +33,7 @@ logger = logging.getLogger()
 
 COMPLETION_MODEL_TIKTOKEN = "text-davinci-003"
 MAX_TOKEN_COUNT = 8000
-MAX_RESPONSE_TOKENS = 700
+MAX_RESPONSE_TOKENS = 1000
 
 
 def get_answer(

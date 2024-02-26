@@ -11,7 +11,7 @@ OPENAI_API_KEY = secrets.OPENAI_API_KEY
 # COMPLETION_MODEL = "gpt-4"
 COMPLETION_MODEL = "gpt-4-0125-preview"
 EMBEDDING_MODEL = "text-embedding-ada-002"
-MAX_TOKENS = 400
+MAX_TOKENS = 1000
 
 logger = logging.getLogger()
 logger.info("openai_wrapper loaded")
