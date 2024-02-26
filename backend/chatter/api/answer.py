@@ -33,8 +33,7 @@ logger = logging.getLogger()
 
 COMPLETION_MODEL_TIKTOKEN = "text-davinci-003"
 MAX_TOKEN_COUNT = 8000
-MAX_CHUNKS_TOKEN_COUNT = 2500
-MAX_RESPONSE_TOKENS = 400
+MAX_RESPONSE_TOKENS = 500
 
 
 def get_answer(
@@ -80,14 +79,19 @@ def get_answer(
         context_chunks = kb.get_chunks_from_query(domain_id, query)
 
     print("creating context from chunks")
+    pre_context_token_count = num_tokens(initial_prompt, initial_message, query)
     prompt_context = create_prompt_context(
-        initial_prompt,
-        initial_message,
+        pre_context_token_count,
         conversation_history,
-        query,
         context_chunks,
         MAX_RESPONSE_TOKENS,
     )
+
+    """
+    create_prompt_context
+        create_conversation_history_text
+        process_chunks_and_get_as_text
+    """
 
     print("creating prompt messages")
     messages = create_prompt_messages(
@@ -167,33 +171,26 @@ def create_conversation_history_text(conversation_history):
 
 
 def create_prompt_context(
-    initial_prompt,
-    initial_message,
+    pre_context_token_count,
     conversation_history,
-    user_message,
     chunks,
-    max_tokens,
+    max_response_tokens,
 ):
     context_for_prompt = ""
-    max_token_count = MAX_TOKEN_COUNT
-
     if not chunks:
         return ""
 
     conversation_history_text = create_conversation_history_text(conversation_history)
-    prompt_token_count = num_tokens(
-        initial_prompt, conversation_history_text, initial_message, user_message
-    )
-    print("tokens used by pre-context prompt: %s" % (prompt_token_count))
-    max_context_token_count = max_token_count - prompt_token_count - max_tokens - 400
+    conv_hist_token_count = num_tokens(conversation_history_text)
+    prompt_token_count = pre_context_token_count + conv_hist_token_count
+    max_context_token_count = MAX_TOKEN_COUNT - prompt_token_count - max_response_tokens
+
     context_for_prompt = process_chunks_and_get_as_text(chunks, max_context_token_count)
 
     return context_for_prompt
 
 
-def process_chunks_and_get_as_text(
-    chunks, max_chunks_token_count=MAX_CHUNKS_TOKEN_COUNT
-):
+def process_chunks_and_get_as_text(chunks, max_chunks_token_count):
     print(
         "process_chunks_and_get_as_text using max token count of",
         max_chunks_token_count,
@@ -205,28 +202,23 @@ def process_chunks_and_get_as_text(
     for id, chunk in sorted(
         chunks.items(), key=lambda item: item[1]["score"], reverse=True
     ):
-        tokens_in_chunk = num_tokens_from_string(
-            chunk["text"], COMPLETION_MODEL_TIKTOKEN
-        )
-        if chunks_token_count + tokens_in_chunk > max_chunks_token_count:
-            print(" chunk", id, "too long to fit.  moving on.")
-            chunks[id]["used"] = False
-            continue
+        chunk_text = ""
         url = f"{conf.KB_BASE_URL}/{urllib.parse.quote(chunk['uri'])}"
         chunk_meta_data = (
             f"chunk_id: {str(id)}\n\nfilename: {chunk['uri']}\n\nurl: {url}\n\n"
         )
-        context = (
-            context
-            + "<CHUNK>"
-            + chunk_meta_data
-            + "\n"
-            + chunk["text"]
-            + "</CHUNK>\n\n"
-        )
+        chunk_text = "<CHUNK>" + chunk_meta_data + chunk["text"] + "</CHUNK>"
+        tokens_in_chunk = num_tokens_from_string(chunk_text, COMPLETION_MODEL_TIKTOKEN)
+        if chunks_token_count + tokens_in_chunk > max_chunks_token_count:
+            print(" chunk", id, "too long to fit.  moving on.")
+            chunks[id]["used"] = False
+            continue
+
+        context = context + chunk_text + "\n\n"
         chunks[id]["used"] = True
         chunks_used_count += 1
         chunks_token_count += tokens_in_chunk
+
     print(
         "chunks provided: %s, chunks used: %s, tokens used: %s"
         % (len(chunks), chunks_used_count, int(chunks_token_count))
