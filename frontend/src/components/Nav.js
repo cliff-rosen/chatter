@@ -24,7 +24,7 @@ const Navbar = ({ sessionManager }) => {
     >
       <Typography variant="h6">
         <Link to="/" style={{ textDecoration: "none" }}>
-          Chatter
+          DoseMeRx Support
         </Link>
       </Typography>
       <div style={{ minWidth: 20 }}></div>

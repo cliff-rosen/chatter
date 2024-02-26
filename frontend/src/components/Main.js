@@ -124,7 +124,7 @@ export default function Main({ sessionManager }) {
     setShowThinking(true);
     setChunks([]);
     setChunksUsedCount(0);
-    setChatHistory((h) => [...h, "#### User\n" + iQuery, answer]);
+    setChatHistory((h) => [...h, "#### User\n" + iQuery]);
 
     function getMessages(chunk) {
       chunk = chunk.trim()
@@ -157,6 +157,8 @@ export default function Main({ sessionManager }) {
         },
         body: JSON.stringify(queryObj),
       });
+      setChatHistory((h) => [...h, answer]);
+      setShowThinking(false);
       if (!response.ok) {
         const message = `An error has occurred: ${response.status}`;
         console.log('ERROR', message)
@@ -198,7 +200,6 @@ export default function Main({ sessionManager }) {
       }
 
       setConversationID(finalResponse.conversation_id);
-      setShowThinking(false);
       const responseChunks = Object.values(finalResponse.chunks).sort(
         (a, b) => b.score - a.score
       );
@@ -259,7 +260,7 @@ export default function Main({ sessionManager }) {
           promptDefault={promptDefault}
         />
 
-        <div style={{ display: "flex", paddingTop: 10 }}>
+        {/* <div style={{ display: "flex", paddingTop: 10 }}>
           <div style={{ flexGrow: 1, paddingRight: 10 }}>
             <Slider
               aria-label="Temperature"
@@ -286,11 +287,11 @@ export default function Main({ sessionManager }) {
               size="small"
             />
           </div>
-        </div>
+        </div> */}
 
         <ChatSessionHistory chatHistory={chatHistory} />
 
-        <Thinking show={false && showThinking} />
+        <Thinking show={showThinking} />
       </FormControl>
 
       <QueryInput formSubmit={formSubmit} />
