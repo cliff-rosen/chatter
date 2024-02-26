@@ -205,9 +205,9 @@ def process_chunks_and_get_as_text(chunks, max_chunks_token_count):
         chunk_text = ""
         url = f"{conf.KB_BASE_URL}/{urllib.parse.quote(chunk['uri'])}"
         chunk_meta_data = (
-            f"chunk_id: {str(id)}\n\nfilename: {chunk['uri']}\n\nurl: {url}\n\n"
+            f"chunk_id: {str(id)}\nfilename: {chunk['uri']}\nurl: {url}\n\n"
         )
-        chunk_text = "<CHUNK>" + chunk_meta_data + chunk["text"] + "</CHUNK>"
+        chunk_text = "<CHUNK>\n" + chunk_meta_data + chunk["text"] + "</CHUNK>"
         tokens_in_chunk = num_tokens_from_string(chunk_text, COMPLETION_MODEL_TIKTOKEN)
         if chunks_token_count + tokens_in_chunk > max_chunks_token_count:
             print(" chunk", id, "too long to fit.  moving on.")

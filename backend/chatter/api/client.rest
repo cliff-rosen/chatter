@@ -9,7 +9,8 @@ GET http://127.0.0.1:5000/hello
 accept: application/json
 
 ###
-POST http://127.0.0.1:5000/answer
+#POST http://127.0.0.1:5000/answer
+POST https://dosemerx-api.ironcliff.ai/answer
 content-type: application/json
 accept: application/json
 
