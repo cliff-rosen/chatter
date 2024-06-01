@@ -1,22 +1,28 @@
-"""
 from data_processor import (
-    step_1_doc_loader as step1,
+    step_1_spider as step1,
     step_2_chunk as step2,
-    step_3_upsert_index as step3,
+    #step_3_upsert_index as step3,
 )
 from utils import kb_service as kb
-"""
-
 from db import db
 
-# from utils import pinecone_wrappers as vdb, openai_wrappers as model
 from utils import openai_wrappers as model
-from utils import utils
-import local_secrets as secrets
 
-
+# from utils import pinecone_wrappers as vdb, openai_wrappers as model
+# from utils import utils
+# import local_secrets as secrets
 # emb = model.get_embedding('abc')
 # print(emb)
+
+# step1.run()
+step2.run()
+# step3.run()
+
+# step1.go1()
+# step2.test_chunker()
+# step2.test_chunker_single_doc()
+
+"""
 messages = [
     {"role": "system", "content": "You are a helpful assistant."},
     {"role": "user", "content": "Tell me a story"},
@@ -27,8 +33,6 @@ print("back")
 for chunk in stream:
     print(chunk.choices[0].delta.content, end="", flush=True)
 
-
-"""
 print('starting')
 messages=[
     {"role": "system", "content": "You are a helpful assistant."},
@@ -41,15 +45,6 @@ print(res)
 print('done')
 
 """
-
-# step1.run()
-# step2.run()
-# step3.run()
-
-# step1.go1()
-# step2.test_chunker()
-# step2.test_chunker_single_doc()
-
 
 """
 import random

@@ -1,16 +1,11 @@
-import openai
+from utils import openai_wrappers as model
 
 # from openai.embeddings_utils import get_embedding, cosine_similarity
 from langchain.text_splitter import (
     CharacterTextSplitter,
     RecursiveCharacterTextSplitter,
 )
-import re
 import os
-import sys
-
-# import sys
-# sys.path.append('.\..')
 from db import db
 import local_secrets as secrets
 
@@ -28,13 +23,8 @@ For each document
 MIN_CHUNK_LENGTH = 20
 MAX_CHUNK_LENGTH = 1500
 
-OPENAI_API_KEY = secrets.OPENAI_API_KEY
-openai.api_key = OPENAI_API_KEY
-
-
 def get_openai_embedding(text):
-    embedding_model = "text-embedding-ada-002"
-    return get_embedding(text, engine="text-embedding-ada-002")
+    return model.get_embedding(text)
 
 
 def get_all_docs_from_domain(conn, domain_id):

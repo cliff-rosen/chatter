@@ -26,6 +26,18 @@ LOG_LEVEL = logging.INFO
 logging.basicConfig(format='%(asctime)s  %(levelname)s - %(message)s', level=LOG_LEVEL, filename='spider.log', filemode='w')
 logger = logging.getLogger()
 
+# configure job
+file_name = "page.txt"
+domain_id = 2
+initial_url = 'https://www.newrootsinstitute.org'
+single = False
+
+# init
+urls_to_visit = set()
+urls_seen = {}
+logger.info("Starting spider for " + initial_url)
+
+
 def link_is_good(link_url):
     if link_url is None or link_url == "":
         return False
@@ -35,8 +47,8 @@ def link_is_good(link_url):
         return False
     if link_url in urls_seen:
         return False
-    if len(url) > MAX_URL_LENGTH:
-        print("url exceeded max length", url)
+    if len(link_url) > MAX_URL_LENGTH:
+        print("url exceeded max length", link_url)
         return False
 
     # work around for Exemplar
@@ -86,7 +98,7 @@ def clean_url(link_url):
 
 def write_text_to_db(uri, text):
     print("-> saving: ", uri)
-    if not db.insert_document(conn, domain_id, uri, "", text):
+    if not db.insert_document(domain_id, uri, "", text, ""):
         logger.info("DB ERROR: " + uri)
     return    
 
@@ -165,34 +177,23 @@ def get_page_contents(soup):
 
     return page_text
 
-# configure job
-file_name = "page.txt"
-domain_id = 31
-initial_url = 'https://karrikinsgroup.com'
-single = False
+def run():
+    # do it
+    urls_to_visit.add(initial_url)
+    urls_seen[initial_url] = {'status': 'PENDING'}
+    while(urls_to_visit):
+        print("-------------------------------------")
+        print("REMAINING: ", len(urls_to_visit))
+        url = urls_to_visit.pop()
+        spider(url, single)
 
-# init
-urls_to_visit = set()
-urls_seen = {}
-conn = db.get_connection()
-logger.info("Starting spider for " + initial_url)
+    # cleanup
+    print("------------------------")
+    print("URLs seen:\n", urls_seen)
+    logger.info("DONE")
+    for url in urls_seen:
+        logger.info(url + ': ' + json.dumps(urls_seen[url]))
 
-# do it
-urls_to_visit.add(initial_url)
-urls_seen[initial_url] = {'status': 'PENDING'}
-while(urls_to_visit):
-    print("-------------------------------------")
-    print("REMAINING: ", len(urls_to_visit))
-    url = urls_to_visit.pop()
-    spider(url, single)
-
-# cleanup
-db.close_connection(conn)
-print("------------------------")
-print("URLs seen:\n", urls_seen)
-logger.info("DONE")
-for url in urls_seen:
-    logger.info(url + ': ' + json.dumps(urls_seen[url]))
 
 """
 filter out pdfs but find another way to harvest them

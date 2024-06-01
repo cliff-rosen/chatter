@@ -1,4 +1,4 @@
-KB_BASE_URL = "http://kb.ironcliff.ai"
+KB_BASE_URL = "https://kb.ironcliff.ai"
 
 DEFAULT_INITIAL_PROMPT = """
 You are a professional working as a customer service representative for a company.
