@@ -87,6 +87,9 @@ def clean_url(link_url):
     if pos > -1:
         link_url = link_url[:pos]
 
+    if link_url.endswith("/"):
+        link_url = link_url[:-1]
+
     if link_url.startswith("//"):
         return 'https:' + link_url
 
@@ -145,6 +148,7 @@ def spider(url, single):
                 urls_to_visit.add(link_url)
                 urls_seen[link_url] = {'status': 'PENDING'}
 
+
 def get_page_contents(soup):
     page_text = ""
     contents = None
@@ -166,10 +170,12 @@ def get_page_contents(soup):
     if contents is not None:
         print("  contents found")  
         for content in contents:
-            page_text = page_text + content.get_text("\n")
+            page_text = page_text + content.get_text(" ", strip=True)
     else:
         print("getting all text from soup")
-        page_text = soup.get_text("\n")
+        page_text = soup.get_text("\n\n")
+        #page_text = soup.get_text(separator=' ', strip=True)
+
     page_text = page_text.encode(encoding='ASCII',errors='ignore').decode()
     #while bool(re.search(r'\s{3,}', page_text)):
     #    page_text = re.sub(r'\s{3,}', '\n\n', page_text)

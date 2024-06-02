@@ -36,8 +36,8 @@ def get_docs_from_ids(conn, ids):
 
 
 def get_chunks_from_text(text, maker_type):
-    if maker_type == "MAKER_2":
-        return get_chunks_from_text_maker_2(text)
+    if maker_type == "CUSTOM":
+        return get_chunks_from_text_custom(text)
 
     if maker_type == "CHAR":
         print("chunking with CharacterTextSplitter")
@@ -62,8 +62,8 @@ def get_chunks_from_text(text, maker_type):
 
 # create fragments, which are chunks delimited by \n\n
 # chunks are fragments concatenated until a fragment is min 20 words
-def get_chunks_from_text_maker_2(text):
-    print("chunk maker 2")
+def get_chunks_from_text_custom(text):
+    print("custom chunker")
     chunks = []
     fragments = []
 
@@ -91,12 +91,10 @@ def get_chunks_from_text_maker_2(text):
 
 
 # runtime settings
-# chunk_maker = "MAKER_2"
-# chunk_maker = "CHAR"
-chunk_maker = "MAKER_1"
-domain_id = 1
-# doc_ids = None
-doc_ids = [53, 54, 55, 56, 57]
+chunk_maker = "CUSTOM"
+domain_id = 2
+doc_ids = None
+# doc_ids = [53, 54, 55, 56, 57]
 
 
 def run():
@@ -122,7 +120,7 @@ def run():
             print(doc_id, chunk[:50])
             print("----------------------")
             embedding = get_openai_embedding(chunk[:MAX_CHUNK_LENGTH])
-            db.insert_document_chunk(conn, doc_id, chunk, embedding)
+            db.insert_document_chunk(doc_id, chunk, embedding)
 
     # cleanup
     db.close_connection(conn)

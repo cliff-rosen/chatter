@@ -16,7 +16,7 @@ accept: application/json
 
 {
     "conversation_id": "NEW",
-    "domain_id": 1,
+    "domain_id": 2,
     "user_id": 1,
     "query": "how are you?",
     "prompt_template": "Answer the question as honestly as you can.",

@@ -1,7 +1,7 @@
 from data_processor import (
     step_1_spider as step1,
     step_2_chunk as step2,
-    #step_3_upsert_index as step3,
+    step_3_upsert_index as step3,
 )
 from utils import kb_service as kb
 from db import db
@@ -15,8 +15,8 @@ from utils import openai_wrappers as model
 # print(emb)
 
 # step1.run()
-step2.run()
-# step3.run()
+# step2.run()
+step3.test()
 
 # step1.go1()
 # step2.test_chunker()

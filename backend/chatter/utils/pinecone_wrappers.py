@@ -1,16 +1,20 @@
 import local_secrets as secrets
 from utils import logging
-import pinecone
 import json
+from pinecone import Pinecone, ServerlessSpec
+
 
 PINECONE_API_KEY = secrets.PINECONE_API_KEY
-INDEX_NAME = "index-1"
+INDEX_NAME = "index-1s"
 TOP_K = 40
 
 logger = logging.getLogger()
 logger.info('pinecone_wrapper loaded')
 
-pinecone.init(api_key=PINECONE_API_KEY, environment="us-east1-gcp")
+pinecone = Pinecone(
+    api_key=PINECONE_API_KEY
+)
+#pinecone.init(api_key=PINECONE_API_KEY, environment="us-east1")
 index = pinecone.Index(INDEX_NAME)
 
 def upsert_index(doc_id, doc_chunk_id, vector, domain_id):
