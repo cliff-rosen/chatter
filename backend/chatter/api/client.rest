@@ -1,6 +1,5 @@
 #http://xogene-01.eba-zdq22h3k.us-east-1.elasticbeanstalk.com/auth/token
 #https://api.trippersalmanac.com/hello
-
 GET https://dosemerx-api.ironcliff.ai/hello
 accept: application/json
 
@@ -9,8 +8,8 @@ GET http://127.0.0.1:5000/hello
 accept: application/json
 
 ###
-#POST http://127.0.0.1:5000/answer
-POST https://dosemerx-api.ironcliff.ai/answer
+#POST https://dosemerx-api.ironcliff.ai/answer
+POST http://127.0.0.1:5000/answer
 content-type: application/json
 accept: application/json
 
@@ -18,18 +17,17 @@ accept: application/json
     "conversation_id": "NEW",
     "domain_id": 2,
     "user_id": 1,
-    "query": "how are you?",
+    "query": "who is monica chen?",
     "prompt_template": "Answer the question as honestly as you can.",
     "temp": 0.4,
     "deep_search": false
 }
-###
 
+###
 GET http://127.0.0.1:5000/conversations?domain_id=1&start_date=2023-10-25&end_date=2023-12-31
 accept: application/json
 
 ###
-
 POST http://127.0.0.1:5000/auth/token
 content-type: application/json
 accept: application/json
@@ -38,8 +36,8 @@ accept: application/json
     "username": "cliff",
     "password": "cmr123"
 }
-###
 
+###
 POST http://127.0.0.1:5000/document
 content-type: application/json
 accept: application/json

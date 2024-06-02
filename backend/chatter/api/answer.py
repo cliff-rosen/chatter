@@ -203,7 +203,11 @@ def process_chunks_and_get_as_text(chunks, max_chunks_token_count):
         chunks.items(), key=lambda item: item[1]["score"], reverse=True
     ):
         chunk_text = ""
-        url = f"{conf.KB_BASE_URL}/{urllib.parse.quote(chunk['uri'])}"
+        if chunk['metadata']['domain_id'] == 1:
+            url = f"{conf.KB_BASE_URL}/{urllib.parse.quote(chunk['uri'])}"
+        else:
+            url = chunk['uri']
+
         chunk_meta_data = (
             f"chunk_id: {str(id)}\nfilename: {chunk['uri']}\nurl: {url}\n\n"
         )
